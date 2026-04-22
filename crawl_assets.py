@@ -11,10 +11,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import mimetypes
-import os
 import re
 import time
 from collections import deque
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 from urllib.parse import parse_qs, urljoin, urlparse, urlunparse, urlencode
@@ -36,6 +36,15 @@ IMAGE_EXTENSIONS = {
     ".tif",
     ".tiff",
 }
+VIDEO_EXTENSIONS = {
+    ".mp4",
+    ".webm",
+    ".mov",
+    ".m4v",
+    ".avi",
+    ".mkv",
+    ".ogv",
+}
 MIME_EXTENSION_OVERRIDES = {
     "image/jpeg": ".jpg",
     "image/png": ".png",
@@ -45,7 +54,21 @@ MIME_EXTENSION_OVERRIDES = {
     "image/avif": ".avif",
     "image/bmp": ".bmp",
     "image/tiff": ".tiff",
+    "video/mp4": ".mp4",
+    "video/webm": ".webm",
+    "video/quicktime": ".mov",
+    "video/x-msvideo": ".avi",
+    "video/x-matroska": ".mkv",
+    "video/ogg": ".ogv",
 }
+
+
+@dataclass(frozen=True)
+class AssetOccurrence:
+    page_url: str
+    page_slug: str
+    order: int
+    asset_url: str
 
 
 def normalize_url(raw_url: str, base_url: str) -> str | None:
@@ -77,6 +100,16 @@ def is_image_like(url: str) -> bool:
     if "format=jpg" in query or "format=png" in query or "format=webp" in query:
         return True
     return False
+
+
+def is_video_like(url: str) -> bool:
+    parsed = urlparse(url)
+    path = parsed.path.lower()
+    return any(path.endswith(ext) for ext in VIDEO_EXTENSIONS)
+
+
+def is_media_like(url: str) -> bool:
+    return is_image_like(url) or is_video_like(url)
 
 
 def select_best_from_srcset(srcset: str, base_url: str) -> str | None:
@@ -183,59 +216,91 @@ def filename_for_url(url: str, content_type: str | None = None) -> str:
     return safe_name
 
 
-def extract_assets_and_links(page, current_url: str) -> tuple[set[str], set[str]]:
+def slugify_page_name(page_url: str, root_netloc: str) -> str:
+    parsed = urlparse(page_url)
+    if parsed.netloc != root_netloc:
+        return "External"
+    path = parsed.path.strip("/")
+    if not path:
+        return "Home"
+    last_segment = path.split("/")[-1]
+    words = re.split(r"[-_]+", last_segment)
+    words = [w for w in words if w]
+    if not words:
+        return "Page"
+    label = "_".join(word.capitalize() for word in words)
+    return re.sub(r"[^a-zA-Z0-9_]", "", label) or "Page"
+
+
+def extension_for_content_type(content_type: str | None) -> str:
+    if not content_type:
+        return ".bin"
+    normalized = content_type.split(";")[0].strip().lower()
+    if normalized in MIME_EXTENSION_OVERRIDES:
+        return MIME_EXTENSION_OVERRIDES[normalized]
+    guessed = mimetypes.guess_extension(normalized)
+    return guessed or ".bin"
+
+
+def extract_assets_and_links(page, current_url: str) -> tuple[list[str], set[str]]:
     payload = page.evaluate(
         """
         () => {
-            const images = [];
+            const assets = [];
             const links = [];
+            let idx = 0;
 
-            document.querySelectorAll("img").forEach((img) => {
-                if (img.currentSrc) images.push({kind: "src", value: img.currentSrc});
-                if (img.src) images.push({kind: "src", value: img.src});
-                if (img.srcset) images.push({kind: "srcset", value: img.srcset});
-            });
+            const elements = [...document.querySelectorAll("*")];
+            elements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                const top = Number.isFinite(rect.top) ? rect.top : 0;
 
-            document.querySelectorAll("picture source[srcset]").forEach((source) => {
-                images.push({kind: "srcset", value: source.srcset});
-            });
+                if (el.tagName === "IMG") {
+                    if (el.currentSrc) assets.push({kind: "src", value: el.currentSrc, top, idx});
+                    if (el.src) assets.push({kind: "src", value: el.src, top, idx});
+                    if (el.srcset) assets.push({kind: "srcset", value: el.srcset, top, idx});
+                }
 
-            document.querySelectorAll("video source[src], video[src]").forEach((v) => {
-                if (v.src) images.push({kind: "src", value: v.src});
-            });
+                if (el.tagName === "SOURCE" && el.srcset) {
+                    assets.push({kind: "srcset", value: el.srcset, top, idx});
+                }
 
-            document.querySelectorAll("*").forEach((el) => {
                 const bg = getComputedStyle(el).backgroundImage;
-                if (!bg || bg === "none") return;
-                const matches = [...bg.matchAll(/url\\((['"]?)(.*?)\\1\\)/g)];
-                matches.forEach((m) => {
-                    if (m[2]) images.push({kind: "src", value: m[2]});
-                });
+                if (bg && bg !== "none") {
+                    const matches = [...bg.matchAll(/url\\((['"]?)(.*?)\\1\\)/g)];
+                    matches.forEach((m) => {
+                        if (m[2]) assets.push({kind: "src", value: m[2], top, idx});
+                    });
+                }
+
+                idx += 1;
             });
 
             document.querySelectorAll("a[href]").forEach((a) => {
                 links.push(a.getAttribute("href"));
             });
 
-            return {images, links};
+            return {assets, links};
         }
         """
     )
 
-    asset_urls: set[str] = set()
+    assets_with_order: list[tuple[float, int, str]] = []
     internal_links: set[str] = set()
 
-    for entry in payload["images"]:
+    for entry in payload["assets"]:
         kind = entry["kind"]
         value = entry["value"]
+        top = float(entry.get("top", 0))
+        idx = int(entry.get("idx", 0))
         if kind == "srcset":
             best = select_best_from_srcset(value, current_url)
             if best:
-                asset_urls.add(best)
+                assets_with_order.append((top, idx, best))
         else:
             normalized = normalize_url(value, current_url)
             if normalized:
-                asset_urls.add(normalized)
+                assets_with_order.append((top, idx, normalized))
 
     root_netloc = urlparse(current_url).netloc
     for href in payload["links"]:
@@ -243,7 +308,16 @@ def extract_assets_and_links(page, current_url: str) -> tuple[set[str], set[str]
         if normalized and is_internal_link(normalized, root_netloc):
             internal_links.add(normalized)
 
-    return asset_urls, internal_links
+    assets_with_order.sort(key=lambda item: (item[0], item[1]))
+    ordered_unique_assets: list[str] = []
+    seen_asset_urls: set[str] = set()
+    for _, _, asset_url in assets_with_order:
+        if asset_url in seen_asset_urls:
+            continue
+        seen_asset_urls.add(asset_url)
+        ordered_unique_assets.append(asset_url)
+
+    return ordered_unique_assets, internal_links
 
 
 def fetch_asset_urls_with_browser(
@@ -251,11 +325,11 @@ def fetch_asset_urls_with_browser(
     max_pages: int,
     page_timeout_ms: int,
     delay_seconds: float,
-) -> set[str]:
+) -> list[AssetOccurrence]:
     root_netloc = urlparse(start_url).netloc
     seen_pages: set[str] = set()
     queue: deque[str] = deque([start_url])
-    assets: set[str] = set()
+    ordered_occurrences: list[AssetOccurrence] = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -298,11 +372,26 @@ def fetch_asset_urls_with_browser(
                 continue
 
             page_assets, page_links = extract_assets_and_links(page, url)
-
+            page_slug = slugify_page_name(url, root_netloc)
+            image_order = 1
+            seen_in_page: set[str] = set()
             for asset in page_assets:
                 upgraded = upscale_squarespace_url(asset)
-                assets.add(upgraded)
-                assets.add(asset)
+                candidate = upgraded if is_image_like(upgraded) else asset
+                if not is_media_like(candidate):
+                    continue
+                if candidate in seen_in_page:
+                    continue
+                seen_in_page.add(candidate)
+                ordered_occurrences.append(
+                    AssetOccurrence(
+                        page_url=url,
+                        page_slug=page_slug,
+                        order=image_order,
+                        asset_url=candidate,
+                    )
+                )
+                image_order += 1
 
             for link in page_links:
                 if is_internal_link(link, root_netloc) and link not in seen_pages:
@@ -310,7 +399,7 @@ def fetch_asset_urls_with_browser(
 
             seen_pages.add(url)
             print(
-                f"[crawl] {len(page_assets)} assets from page "
+                f"[crawl] {len(seen_in_page)} media assets from page "
                 f"({len(seen_pages)}/{max_pages} pages scanned)"
             )
             time.sleep(delay_seconds)
@@ -318,12 +407,11 @@ def fetch_asset_urls_with_browser(
         context.close()
         browser.close()
 
-    image_assets = {a for a in assets if is_image_like(a)}
-    return image_assets
+    return ordered_occurrences
 
 
 def download_assets(
-    urls: Iterable[str],
+    occurrences: Iterable[AssetOccurrence],
     output_dir: Path,
     timeout_seconds: int,
     delay_seconds: float,
@@ -344,8 +432,18 @@ def download_assets(
 
     downloaded = 0
     skipped = 0
+    duplicate = 0
+    seen_content_hashes: dict[str, Path] = {}
+    seen_urls: set[str] = set()
+    page_sequence: dict[str, int] = {}
 
-    for idx, url in enumerate(sorted(set(urls)), start=1):
+    occurrence_list = list(occurrences)
+    for idx, occurrence in enumerate(occurrence_list, start=1):
+        url = occurrence.asset_url
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+
         print(f"[download] ({idx}) {url}")
         try:
             response = session.get(url, timeout=timeout_seconds, stream=True)
@@ -357,37 +455,63 @@ def download_assets(
             continue
 
         content_type = response.headers.get("Content-Type", "").split(";")[0].lower()
-        if content_type and not content_type.startswith("image/"):
+        if content_type and not (
+            content_type.startswith("image/") or content_type.startswith("video/")
+        ):
             if "gif" not in content_type:
-                print(f"[skip] Not an image content type: {content_type}")
+                print(f"[skip] Not an image/video content type: {content_type}")
                 skipped += 1
                 response.close()
                 time.sleep(delay_seconds)
                 continue
 
-        filename = filename_for_url(url, content_type)
-        destination = ensure_unique_path(output_dir / filename)
+        extension = Path(filename_for_url(url, content_type)).suffix.lower()
+        if not extension:
+            extension = extension_for_content_type(content_type)
+
+        page_folder = output_dir / occurrence.page_slug
+        page_folder.mkdir(parents=True, exist_ok=True)
+        page_sequence[occurrence.page_slug] = page_sequence.get(occurrence.page_slug, 0) + 1
+        sequence_num = page_sequence[occurrence.page_slug]
+        filename = f"{occurrence.page_slug}_{sequence_num}{extension}"
+        destination = ensure_unique_path(page_folder / filename)
+        tmp_destination = destination.with_suffix(destination.suffix + ".part")
 
         try:
-            with destination.open("wb") as fh:
+            digest = hashlib.sha256()
+            with tmp_destination.open("wb") as fh:
                 for chunk in response.iter_content(chunk_size=1024 * 128):
                     if chunk:
+                        digest.update(chunk)
                         fh.write(chunk)
-            downloaded += 1
+            content_hash = digest.hexdigest()
+            if content_hash in seen_content_hashes:
+                duplicate += 1
+                original = seen_content_hashes[content_hash]
+                print(f"[dup] Same content as {original.name}, skipping")
+                tmp_destination.unlink(missing_ok=True)
+            else:
+                tmp_destination.rename(destination)
+                seen_content_hashes[content_hash] = destination
+                downloaded += 1
         except OSError as exc:
             print(f"[warn] File write failed for {destination.name}: {exc}")
             skipped += 1
+            tmp_destination.unlink(missing_ok=True)
         finally:
             response.close()
 
         time.sleep(delay_seconds)
 
-    print(f"[done] Downloaded: {downloaded}, skipped: {skipped}, total: {downloaded + skipped}")
+    print(
+        f"[done] Downloaded: {downloaded}, duplicate: {duplicate}, "
+        f"skipped: {skipped}, total processed: {downloaded + duplicate + skipped}"
+    )
 
 
 def build_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Crawl website pages and download image/GIF assets."
+        description="Crawl website pages and download image/GIF/video assets."
     )
     parser.add_argument(
         "--url",
@@ -434,16 +558,16 @@ def main() -> None:
     print(f"[start] Crawling {start_url}")
     print(f"[start] Saving assets into: {output_dir}")
 
-    asset_urls = fetch_asset_urls_with_browser(
+    asset_occurrences = fetch_asset_urls_with_browser(
         start_url=start_url,
         max_pages=args.max_pages,
         page_timeout_ms=args.page_timeout_ms,
         delay_seconds=args.delay,
     )
-    print(f"[crawl] Collected {len(asset_urls)} unique image-like asset URLs")
+    print(f"[crawl] Collected {len(asset_occurrences)} ordered media occurrences")
 
     download_assets(
-        urls=asset_urls,
+        occurrences=asset_occurrences,
         output_dir=output_dir,
         timeout_seconds=args.request_timeout,
         delay_seconds=args.delay,
