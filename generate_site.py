@@ -6,6 +6,7 @@ Generate a static GitHub Pages structure from downloaded assets.
 from __future__ import annotations
 
 import html
+import json
 import os
 import re
 from pathlib import Path
@@ -16,6 +17,7 @@ ASSETS_DIR = ROOT / "assets"
 PAGES_DIR = ROOT / "pages"
 STYLE_FILE = ROOT / "site.css"
 INDEX_FILE = ROOT / "index.html"
+MANIFEST_FILE = ROOT / "content_manifest.json"
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif", ".bmp", ".tif", ".tiff"}
 VIDEO_EXTENSIONS = {".mp4", ".webm", ".mov", ".m4v", ".avi", ".mkv", ".ogv"}
@@ -138,6 +140,79 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
     return section_slug, section_title, len(media_files)
 
 
+def block_to_markup(output_file: Path, block: dict) -> str:
+    block_type = block.get("type")
+    if block_type == "text":
+        text = html.escape(block.get("text", ""))
+        tag = block.get("tag", "p").lower()
+        if tag not in {"h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "blockquote", "figcaption"}:
+            tag = "p"
+        if tag == "li":
+            tag = "p"
+        return f"<article class=\"content-item\"><{tag}>{text}</{tag}></article>"
+    if block_type == "link":
+        url = html.escape(block.get("url", ""))
+        text = html.escape(block.get("text", url))
+        return (
+            "<article class=\"content-item\">"
+            f"<p><a class=\"file-link\" href=\"{url}\" target=\"_blank\" rel=\"noopener noreferrer\">{text}</a></p>"
+            "</article>"
+        )
+    if block_type == "embed":
+        url = html.escape(block.get("url", ""))
+        if not url:
+            return ""
+        return (
+            "<article class=\"content-item\">"
+            "<div class=\"embed-wrap\">"
+            f"<iframe src=\"{url}\" loading=\"lazy\" allowfullscreen referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+            "</div>"
+            "</article>"
+        )
+    if block_type == "media":
+        local = block.get("local_path")
+        source = local if local else block.get("url", "")
+        if not source:
+            return ""
+        media_path = ROOT / source if local else Path(source)
+        media_rel = relpath(output_file, media_path) if local else source
+        media_name = Path(source).name
+        return f"<article class=\"content-item\">{media_markup(media_rel, media_name)}</article>"
+    return ""
+
+
+def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
+    section_slug = page_data["slug"]
+    section_title = title_from_slug(section_slug)
+    output_file = PAGES_DIR / f"{section_slug}.html"
+    blocks = [block_to_markup(output_file, block) for block in page_data.get("blocks", [])]
+    blocks = [b for b in blocks if b]
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{html.escape(section_title)} - Gonzalo Builds</title>
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="back-link" href="../index.html">&larr; All Sections</a>
+      <h1>{html.escape(section_title)}</h1>
+      <p>{len(blocks)} content blocks</p>
+    </header>
+    <section class="media-list">
+      {"".join(blocks)}
+    </section>
+  </main>
+</body>
+</html>
+"""
+    output_file.write_text(page, encoding="utf-8")
+    return section_slug, section_title, len(blocks)
+
+
 def write_styles() -> None:
     css = """* { box-sizing: border-box; }
 body {
@@ -219,6 +294,31 @@ body {
 .file-link {
   color: #8cc7ff;
 }
+.content-item p,
+.content-item blockquote,
+.content-item figcaption,
+.content-item h1,
+.content-item h2,
+.content-item h3,
+.content-item h4,
+.content-item h5,
+.content-item h6 {
+  margin: 0;
+  line-height: 1.6;
+}
+.embed-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
 """
     STYLE_FILE.write_text(css, encoding="utf-8")
 
@@ -231,8 +331,14 @@ def main() -> None:
     write_styles()
 
     sections = []
-    for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
-        sections.append(build_section_page(section_dir))
+    if MANIFEST_FILE.exists():
+        manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
+        pages = manifest.get("pages", [])
+        for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
+            sections.append(build_section_page_from_manifest(page_data))
+    else:
+        for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
+            sections.append(build_section_page(section_dir))
 
     build_index(sections)
     print(f"Generated {len(sections)} section pages in {PAGES_DIR}")
