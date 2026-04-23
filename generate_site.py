@@ -473,7 +473,10 @@ body {
 }
 .media {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
   background: #0d1117;
   max-height: 80vh;
   object-fit: contain;
@@ -496,7 +499,7 @@ body {
 .embed-wrap {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  aspect-ratio: 16 / 9;
 }
 .embed-wrap iframe {
   position: absolute;
