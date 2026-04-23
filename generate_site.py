@@ -27,6 +27,14 @@ def title_from_slug(slug: str) -> str:
     return slug.replace("_", " ").strip()
 
 
+def styled_title(title: str) -> str:
+    match = re.match(r"^(.*?)(\s*\([^()]+\))$", title.strip())
+    if not match:
+        return html.escape(title)
+    base, year = match.groups()
+    return f'{html.escape(base.strip())} <span class="card-year">{html.escape(year.strip())}</span>'
+
+
 def parse_numeric_suffix(filename: str) -> int:
     match = re.search(r"_(\d+)\.[^.]+$", filename)
     if match:
@@ -36,6 +44,48 @@ def parse_numeric_suffix(filename: str) -> int:
 
 def relpath(from_path: Path, to_path: Path) -> str:
     return os.path.relpath(to_path, start=from_path.parent).replace("\\", "/")
+
+
+def parse_index_section_titles() -> dict[str, tuple[str, str]]:
+    """
+    When index.html is curated, map section slug -> (h1_inner_html, plain_title_for_document_title).
+
+    The index card <h2> inner HTML is reused as the section page <h1> (source of truth).
+    """
+    if not INDEX_FILE.exists():
+        return {}
+    raw = INDEX_FILE.read_text(encoding="utf-8")
+    if "INDEX_CURATED" not in raw[:800]:
+        return {}
+    pattern = re.compile(
+        r'<a class="card" href="pages/([^"]+)">\s*'
+        r'<div class="card-hero">.*?</div>\s*'
+        r'<div class="card-body"><h2>(.*?)</h2></div>\s*</a>',
+        re.DOTALL,
+    )
+    out: dict[str, tuple[str, str]] = {}
+    for href_file, h2_inner in pattern.findall(raw):
+        slug = Path(href_file).stem
+        inner_html = " ".join(h2_inner.split())
+        plain = re.sub(r"<[^>]+>", "", h2_inner)
+        plain = " ".join(plain.split())
+        out[slug] = (inner_html, plain)
+    return out
+
+
+def index_card_hero_src(section_slug: str) -> str | None:
+    """First <img> on a section page (hero), path relative to site root."""
+    page = PAGES_DIR / f"{section_slug}.html"
+    if not page.exists():
+        return None
+    text = page.read_text(encoding="utf-8")
+    match = re.search(r'<img\s[^>]*src="([^"]+)"', text)
+    if not match:
+        return None
+    src = match.group(1)
+    if src.startswith("../"):
+        return src[3:]
+    return src
 
 
 def media_markup(media_rel_path: str, media_name: str) -> str:
@@ -57,16 +107,29 @@ def media_markup(media_rel_path: str, media_name: str) -> str:
 
 
 def build_index(sections: list[tuple[str, str, int]]) -> None:
+    if INDEX_FILE.exists():
+        head = INDEX_FILE.read_text(encoding="utf-8")[:800]
+        if "INDEX_CURATED" in head:
+            return
     cards = []
-    for section_slug, section_title, count in sections:
+    for section_slug, section_title, _count in sections:
+        hero_src = index_card_hero_src(section_slug)
+        hero_html = ""
+        if hero_src:
+            hero_html = (
+                "<div class=\"card-hero\">"
+                f"<img src=\"{html.escape(hero_src)}\" alt=\"\" width=\"800\" height=\"450\" "
+                "loading=\"lazy\" class=\"card-hero-img\">"
+                "</div>"
+            )
         cards.append(
             "<a class=\"card\" href=\"pages/{slug}.html\">"
-            "<h2>{title}</h2>"
-            "<p>{count} assets</p>"
+            "{hero}"
+            "<div class=\"card-body\"><h2>{title}</h2></div>"
             "</a>".format(
                 slug=html.escape(section_slug),
-                title=html.escape(section_title),
-                count=count,
+                title=styled_title(section_title),
+                hero=hero_html,
             )
         )
 
@@ -82,9 +145,8 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
   <main class="container">
     <header class="header">
       <h1>Gonzalo Builds</h1>
-      <p>Recovered Squarespace structure and assets.</p>
     </header>
-    <section class="grid">
+    <section class="grid grid--compact-cards">
       {"".join(cards)}
     </section>
   </main>
@@ -97,6 +159,12 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
 def build_section_page(section_dir: Path) -> tuple[str, str, int]:
     section_slug = section_dir.name
     section_title = title_from_slug(section_slug)
+    index_titles = parse_index_section_titles()
+    if section_slug in index_titles:
+        h1_inner, title_plain = index_titles[section_slug]
+    else:
+        h1_inner = styled_title(section_title)
+        title_plain = section_title
     output_file = PAGES_DIR / f"{section_slug}.html"
 
     media_files = [p for p in section_dir.iterdir() if p.is_file()]
@@ -119,15 +187,14 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{html.escape(section_title)} - Gonzalo Builds</title>
+  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>
   <main class="container">
     <header class="header">
       <a class="back-link" href="../index.html">&larr; All Sections</a>
-      <h1>{html.escape(section_title)}</h1>
-      <p>{len(media_files)} assets</p>
+      <h1>{h1_inner}</h1>
     </header>
     <section class="media-list">
       {"".join(blocks)}
@@ -151,15 +218,21 @@ def block_to_markup(output_file: Path, block: dict) -> str:
             tag = "p"
         return f"<article class=\"content-item\"><{tag}>{text}</{tag}></article>"
     if block_type == "link":
-        url = html.escape(block.get("url", ""))
-        text = html.escape(block.get("text", url))
+        raw_url = block.get("url", "") or ""
+        if re.search(r"gonzalobuilds\.com", raw_url, re.IGNORECASE):
+            return ""
+        url = html.escape(raw_url)
+        text = html.escape(block.get("text", raw_url))
         return (
             "<article class=\"content-item\">"
             f"<p><a class=\"file-link\" href=\"{url}\" target=\"_blank\" rel=\"noopener noreferrer\">{text}</a></p>"
             "</article>"
         )
     if block_type == "embed":
-        url = html.escape(block.get("url", ""))
+        raw_embed = block.get("url", "") or ""
+        if re.search(r"gonzalobuilds\.com", raw_embed, re.IGNORECASE):
+            return ""
+        url = html.escape(raw_embed)
         if not url:
             return ""
         return (
@@ -184,6 +257,12 @@ def block_to_markup(output_file: Path, block: dict) -> str:
 def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
     section_slug = page_data["slug"]
     section_title = title_from_slug(section_slug)
+    index_titles = parse_index_section_titles()
+    if section_slug in index_titles:
+        h1_inner, title_plain = index_titles[section_slug]
+    else:
+        h1_inner = styled_title(section_title)
+        title_plain = section_title
     output_file = PAGES_DIR / f"{section_slug}.html"
     blocks = [block_to_markup(output_file, block) for block in page_data.get("blocks", [])]
     blocks = [b for b in blocks if b]
@@ -192,14 +271,14 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{html.escape(section_title)} - Gonzalo Builds</title>
+  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>
   <main class="container">
     <header class="header">
       <a class="back-link" href="../index.html">&larr; All Sections</a>
-      <h1>{html.escape(section_title)}</h1>
+      <h1>{h1_inner}</h1>
     </header>
     <section class="media-list">
       {"".join(blocks)}
@@ -213,15 +292,21 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
 
 
 def write_styles() -> None:
+    if STYLE_FILE.exists():
+        head = STYLE_FILE.read_text(encoding="utf-8")[:800]
+        if "SITE_CSS_LOCKED" in head:
+            return
     css = """* { box-sizing: border-box; }
 body {
   margin: 0;
+  padding-inline: clamp(24px, 12vw, 220px);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #0d1117;
   color: #e6edf3;
 }
 .container {
-  width: min(1100px, 92%);
+  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 32px 0 48px;
 }
@@ -229,6 +314,11 @@ body {
   margin: 0 0 10px;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   color: #58a6ff;
+}
+.header h1 .card-year {
+  font-size: 0.85em;
+  color: #9ea7b3;
+  font-weight: 500;
 }
 .header p {
   margin: 0;
@@ -242,16 +332,18 @@ body {
 }
 .grid {
   margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 10px;
-  padding: 16px;
+  padding: 0;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
 }
@@ -259,8 +351,58 @@ body {
   border-color: #58a6ff;
   transform: translateY(-1px);
 }
+.card-hero {
+  aspect-ratio: 16 / 9;
+  background: #0d1117;
+}
+.card-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.grid--compact-cards {
+  align-items: flex-start;
+  gap: 12px;
+}
+.grid--compact-cards .card {
+  width: fit-content;
+  max-width: min(560px, 100%);
+  align-self: flex-start;
+}
+.grid--compact-cards .card-hero {
+  aspect-ratio: unset;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  background: #0d1117;
+  box-sizing: border-box;
+}
+.grid--compact-cards .card-hero-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(168px, 28vh, 300px);
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+.grid--compact-cards .card-body {
+  padding: 10px 14px 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.grid--compact-cards .card-body h2 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.card-body {
+  padding: 14px 16px 16px;
+}
 .card h2 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 1.05rem;
 }
 .card p {

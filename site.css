@@ -1,12 +1,15 @@
+/* SITE_CSS_LOCKED: generate_site.py write_styles skips while this marker exists */
 * { box-sizing: border-box; }
 body {
   margin: 0;
+  padding-inline: clamp(24px, 12vw, 220px);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111111;
 }
 .container {
-  width: min(1100px, 92%);
+  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 32px 0 48px;
 }
@@ -14,6 +17,11 @@ body {
   margin: 0 0 10px;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   color: #111111;
+}
+.header h1 .card-year {
+  font-size: 0.85em;
+  color: #666666;
+  font-weight: 500;
 }
 .header p {
   margin: 0;
@@ -32,17 +40,70 @@ body {
   gap: 14px;
 }
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 10px;
-  padding: 16px;
+  padding: 0;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
 }
 .card:hover {
   border-color: #0b57d0;
   transform: translateY(-1px);
+}
+.card-hero {
+  aspect-ratio: 16 / 9;
+  background: #f0f0f0;
+}
+.card-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Index: larger previews, natural aspect ratio, shrink-wrapped cards */
+.grid--compact-cards {
+  align-items: flex-start;
+  gap: 12px;
+}
+.grid--compact-cards .card {
+  width: fit-content;
+  max-width: min(560px, 100%);
+  align-self: flex-start;
+}
+.grid--compact-cards .card-hero {
+  aspect-ratio: unset;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  background: #f0f0f0;
+  box-sizing: border-box;
+}
+.grid--compact-cards .card-hero-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(168px, 28vh, 300px);
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+.grid--compact-cards .card-body {
+  padding: 10px 14px 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.grid--compact-cards .card-body h2 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.card-body {
+  padding: 14px 16px 16px;
 }
 .card h2 {
   margin: 0;
