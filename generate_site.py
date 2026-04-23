@@ -19,6 +19,30 @@ STYLE_FILE = ROOT / "site.css"
 INDEX_FILE = ROOT / "index.html"
 MANIFEST_FILE = ROOT / "content_manifest.json"
 
+# Social links (index top + section page footers). Keep in sync with index.html when curated.
+_SOCIAL_LINK_ROWS = """        <a class="social-btn social-btn--linkedin" href="https://www.linkedin.com/in/gonzaloesp/" target="_blank" rel="noopener noreferrer">
+          <span class="social-btn__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+          <span class="social-btn__text">Connect on LinkedIn</span>
+        </a>
+        <a class="social-btn social-btn--x" href="https://x.com/geepytee" target="_blank" rel="noopener noreferrer">
+          <span class="social-btn__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+          <span class="social-btn__text">Follow me on X</span>
+        </a>
+        <a class="social-btn social-btn--youtube" href="https://www.youtube.com/@geepytee" target="_blank" rel="noopener noreferrer">
+          <span class="social-btn__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
+          <span class="social-btn__text">See my YouTube channel</span>
+        </a>"""
+
+SOCIAL_NAV_TOP = f"""    <nav class="social-nav social-nav--top" aria-label="Social links">
+{_SOCIAL_LINK_ROWS}
+    </nav>"""
+
+SOCIAL_FOOTER = f"""    <footer class="site-footer">
+      <nav class="social-nav social-nav--footer" aria-label="Social links">
+{_SOCIAL_LINK_ROWS}
+      </nav>
+    </footer>"""
+
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif", ".bmp", ".tif", ".tiff"}
 VIDEO_EXTENSIONS = {".mp4", ".webm", ".mov", ".m4v", ".avi", ".mkv", ".ogv"}
 
@@ -88,18 +112,32 @@ def index_card_hero_src(section_slug: str) -> str | None:
     return src
 
 
-def media_markup(media_rel_path: str, media_name: str) -> str:
+_MEDIA_PLACEHOLDER_CAPTION = "placeholder title"
+
+
+def media_markup(media_rel_path: str, media_name: str, *, with_placeholder_caption: bool = False) -> str:
     ext = Path(media_name).suffix.lower()
     escaped_alt = html.escape(media_name)
+    caption_html = (
+        f'<figcaption class="media-caption">{html.escape(_MEDIA_PLACEHOLDER_CAPTION)}</figcaption>'
+    )
+
+    def wrap_media(inner: str) -> str:
+        if not with_placeholder_caption:
+            return inner
+        return f'<figure class="media-figure">{inner}{caption_html}</figure>'
+
     if ext in VIDEO_EXTENSIONS:
-        return (
+        inner = (
             f'<video controls preload="metadata" playsinline class="media">'
             f'<source src="{media_rel_path}">'
             "Your browser does not support the video tag."
             "</video>"
         )
+        return wrap_media(inner)
     if ext in IMAGE_EXTENSIONS:
-        return f'<img src="{media_rel_path}" alt="{escaped_alt}" loading="lazy" class="media">'
+        inner = f'<img src="{media_rel_path}" alt="{escaped_alt}" loading="lazy" class="media">'
+        return wrap_media(inner)
     return (
         f'<a href="{media_rel_path}" class="file-link" target="_blank" rel="noopener noreferrer">'
         f"{escaped_alt}</a>"
@@ -138,14 +176,16 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gonzalo Builds</title>
+  <title>Gonzalo Graham</title>
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <main class="container">
     <header class="header">
-      <h1>Gonzalo Builds</h1>
+      <h1>Gonzalo Graham</h1>
+      <p>Welcome to my portfolio. Here are some personal projects I’ve enjoyed working on in my free time.</p>
     </header>
+{SOCIAL_NAV_TOP}
     <section class="grid grid--compact-cards">
       {"".join(cards)}
     </section>
@@ -178,7 +218,7 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
         blocks.append(
             "<article class=\"media-item\">"
             f"<h3>{html.escape(label)}</h3>"
-            f"{media_markup(media_rel, media.name)}"
+            f"{media_markup(media_rel, media.name, with_placeholder_caption=False)}"
             "</article>"
         )
 
@@ -199,6 +239,7 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
     <section class="media-list">
       {"".join(blocks)}
     </section>
+{SOCIAL_FOOTER}
   </main>
 </body>
 </html>
@@ -250,7 +291,11 @@ def block_to_markup(output_file: Path, block: dict) -> str:
         media_path = ROOT / source if local else Path(source)
         media_rel = relpath(output_file, media_path) if local else source
         media_name = Path(source).name
-        return f"<article class=\"content-item\">{media_markup(media_rel, media_name)}</article>"
+        return (
+            "<article class=\"content-item\">"
+            f"{media_markup(media_rel, media_name, with_placeholder_caption=True)}"
+            "</article>"
+        )
     return ""
 
 
@@ -283,6 +328,7 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
     <section class="media-list">
       {"".join(blocks)}
     </section>
+{SOCIAL_FOOTER}
   </main>
 </body>
 </html>
