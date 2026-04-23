@@ -200,7 +200,6 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
     <header class="header">
       <a class="back-link" href="../index.html">&larr; All Sections</a>
       <h1>{html.escape(section_title)}</h1>
-      <p>{len(blocks)} content blocks</p>
     </header>
     <section class="media-list">
       {"".join(blocks)}
