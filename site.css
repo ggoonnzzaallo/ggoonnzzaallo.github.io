@@ -27,8 +27,8 @@ body {
 }
 .grid {
   margin-top: 26px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 .card {
