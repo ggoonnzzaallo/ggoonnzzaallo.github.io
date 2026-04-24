@@ -40,6 +40,17 @@ body {
   display: inline-block;
   margin-bottom: 14px;
 }
+/* Section pages: keep “All Sections” + title visible while scrolling */
+.header:has(.back-link) {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 40;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
 .social-nav {
   display: flex;
   flex-wrap: wrap;
