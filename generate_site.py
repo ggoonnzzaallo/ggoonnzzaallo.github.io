@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 ASSETS_DIR = ROOT / "assets"
 PAGES_DIR = ROOT / "pages"
+MARKDOWNS_DIR = ROOT / "markdowns"
 STYLE_FILE = ROOT / "site.css"
 INDEX_FILE = ROOT / "index.html"
 MANIFEST_FILE = ROOT / "content_manifest.json"
@@ -299,6 +300,115 @@ def block_to_markup(output_file: Path, block: dict) -> str:
     return ""
 
 
+def split_frontmatter(raw: str) -> tuple[dict[str, str], str]:
+    """Optional YAML-like frontmatter between --- lines; values are single-line strings."""
+    raw = raw.lstrip("\ufeff")
+    if not raw.startswith("---\n"):
+        return {}, raw
+    end = raw.find("\n---\n", 4)
+    if end == -1:
+        return {}, raw
+    body = raw[end + 5 :]
+    meta: dict[str, str] = {}
+    for line in raw[4:end].splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if ":" not in line:
+            continue
+        key, _, rest = line.partition(":")
+        meta[key.strip()] = rest.strip().strip('"').strip("'")
+    return meta, body
+
+
+def postprocess_markdown_html(html: str) -> str:
+    """Match site conventions: external link classes, lazy images, figures for standalone images."""
+
+    def unwrap_img_in_p(m: re.Match) -> str:
+        inner = m.group(1)
+        if "loading=" not in inner.lower():
+            inner = inner.replace("<img ", '<img loading="lazy" ', 1)
+        if "class=" not in inner.lower():
+            inner = inner.replace("<img ", '<img class="media" ', 1)
+        return f'<figure class="media-figure">{inner}</figure>'
+
+    html = re.sub(r"<p>\s*(<img\b[^>]+>)\s*</p>", unwrap_img_in_p, html, flags=re.IGNORECASE)
+
+    html = html.replace(
+        '<a href="https://',
+        '<a class="file-link" target="_blank" rel="noopener noreferrer" href="https://',
+    )
+    html = html.replace(
+        '<a href="http://',
+        '<a class="file-link" target="_blank" rel="noopener noreferrer" href="http://',
+    )
+    return html
+
+
+def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] | None:
+    """
+    If markdowns/{slug}.md exists, render it into pages/{slug}.html and skip manifest blocks for that page.
+    Image paths in Markdown should be relative to the output HTML (e.g. ../assets/Double_Yc/foo.webp).
+    """
+    md_path = MARKDOWNS_DIR / f"{section_slug}.md"
+    if not md_path.is_file():
+        return None
+
+    try:
+        import markdown
+    except ImportError as e:
+        raise SystemExit(
+            "Building from markdowns/ requires the 'markdown' package. "
+            "Install dependencies: pip install -r requirements.txt"
+        ) from e
+
+    _meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+    if not body.strip():
+        raise SystemExit(f"Markdown body is empty: {md_path}")
+
+    md = markdown.Markdown(extensions=["extra", "sane_lists"])
+    body_html = postprocess_markdown_html(md.convert(body))
+
+    section_title = title_from_slug(section_slug)
+    index_titles = parse_index_section_titles()
+    if section_slug in index_titles:
+        h1_inner, title_plain = index_titles[section_slug]
+    else:
+        h1_inner = styled_title(section_title)
+        title_plain = section_title
+
+    output_file = PAGES_DIR / f"{section_slug}.html"
+    blocks_html = (
+        '<article class="content-item content-item--markdown">'
+        f'<div class="markdown-body">{body_html}</div>'
+        "</article>"
+    )
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="back-link" href="../index.html">&larr; All Sections</a>
+      <h1>{h1_inner}</h1>
+    </header>
+    <section class="media-list media-list--tight">
+      {blocks_html}
+    </section>
+{SOCIAL_FOOTER}
+  </main>
+</body>
+</html>
+"""
+    output_file.write_text(page, encoding="utf-8")
+    return section_slug, section_title, 1
+
+
 def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
     section_slug = page_data["slug"]
     section_title = title_from_slug(section_slug)
@@ -525,7 +635,12 @@ def main() -> None:
         manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
         pages = manifest.get("pages", [])
         for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
-            sections.append(build_section_page_from_manifest(page_data))
+            slug = page_data.get("slug", "")
+            from_md = build_section_page_from_markdown(slug) if slug else None
+            if from_md:
+                sections.append(from_md)
+            else:
+                sections.append(build_section_page_from_manifest(page_data))
     else:
         for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
             sections.append(build_section_page(section_dir))

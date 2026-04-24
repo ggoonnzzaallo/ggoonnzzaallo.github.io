@@ -272,8 +272,10 @@ body {
   padding-block: 0;
 }
 .media-list--tight .content-item p + p {
-  margin-top: 0 !important;
-  padding-top: 1em;
+  margin-top: 1.35em !important;
+}
+.media-list--tight .content-item--prose > p + p {
+  margin-top: 1.35rem !important;
 }
 .media-list--tight .content-item p {
   line-height: 1.35;
@@ -339,9 +341,13 @@ body {
   margin: 0;
   line-height: 1.6;
 }
+/* Multiple paragraphs in one block: one blank line (~1 line at default root font size) */
 .content-item p + p {
-  margin-top: 0 !important;
-  padding-top: 28px;
+  margin-top: 1.65rem !important;
+}
+/* Intro copy blocks: block flow + explicit margin (flex `gap` is unsupported in older Safari) */
+.content-item--prose > p + p {
+  margin-top: 1.65rem !important;
 }
 .embed-wrap {
   position: relative;
@@ -358,6 +364,31 @@ body {
 .content-item:has(> .embed-wrap) {
   padding-inline: clamp(20px, 5vw, 48px);
   padding-block: clamp(14px, 2.5vw, 28px);
+}
+/* markdowns/*.md → single article (see generate_site.py) */
+.markdown-body > * {
+  margin: 0;
+}
+.markdown-body > * + * {
+  margin-top: 1lh;
+}
+.markdown-body .media-figure {
+  margin: 0;
+}
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0;
+  padding-left: 1.35em;
+}
+.markdown-body pre {
+  overflow-x: auto;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  font-size: 0.9em;
+}
+.markdown-body code {
+  font-size: 0.92em;
 }
 @media (max-width: 640px) {
   body {
