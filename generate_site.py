@@ -44,6 +44,60 @@ SOCIAL_FOOTER = f"""    <footer class="site-footer">
       </nav>
     </footer>"""
 
+IMAGE_LIGHTBOX_MARKUP = """  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <button class="image-lightbox__close" type="button" aria-label="Close image viewer">&times;</button>
+    <img class="image-lightbox__img" alt="">
+  </div>
+  <script>
+    (function () {
+      var lightbox = document.getElementById("image-lightbox");
+      if (!lightbox) return;
+      var closeBtn = lightbox.querySelector(".image-lightbox__close");
+      var lightboxImg = lightbox.querySelector(".image-lightbox__img");
+      var activeTrigger = null;
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+        if (activeTrigger) activeTrigger.focus();
+      }
+
+      function openLightbox(trigger) {
+        var src = trigger.currentSrc || trigger.getAttribute("src");
+        if (!src || !lightboxImg) return;
+        activeTrigger = trigger;
+        lightboxImg.src = src;
+        lightboxImg.alt = trigger.getAttribute("alt") || "";
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+      }
+
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        if (!(target instanceof HTMLImageElement)) return;
+        if (!target.closest(".media-figure, .media-item, .hero-media-figure")) return;
+        if (target.closest("a")) return;
+        openLightbox(target);
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeLightbox);
+      }
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>"""
+
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif", ".bmp", ".tif", ".tiff"}
 VIDEO_EXTENSIONS = {".mp4", ".webm", ".mov", ".m4v", ".avi", ".mkv", ".ogv"}
 
@@ -185,6 +239,7 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
       {"".join(cards)}
     </section>
   </main>
+{IMAGE_LIGHTBOX_MARKUP}
 </body>
 </html>
 """
@@ -236,6 +291,7 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
     </section>
 {SOCIAL_FOOTER}
   </main>
+{IMAGE_LIGHTBOX_MARKUP}
 </body>
 </html>
 """
@@ -245,8 +301,10 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
 
 def block_to_markup(output_file: Path, block: dict) -> str:
     block_type = block.get("type")
+    if block_type == "raw_html":
+        return str(block.get("html", ""))
     if block_type == "text":
-        text = html.escape(block.get("text", ""))
+        text = render_text_with_inline_links(block.get("text", ""))
         tag = block.get("tag", "p").lower()
         if tag not in {"h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "blockquote", "figcaption"}:
             tag = "p"
@@ -296,6 +354,201 @@ def block_to_markup(output_file: Path, block: dict) -> str:
             "</article>"
         )
     return ""
+
+
+def render_text_with_inline_links(raw_text: str) -> str:
+    """Escape text while honoring markdown-style inline links."""
+    text = str(raw_text or "")
+    parts: list[str] = []
+    cursor = 0
+    pattern = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+|[A-Za-z0-9_][A-Za-z0-9_.-]*\.html)\)")
+    for match in pattern.finditer(text):
+        parts.append(html.escape(text[cursor : match.start()]))
+        label = html.escape(match.group(1))
+        href = html.escape(match.group(2), quote=True)
+        if href.startswith(("http://", "https://")):
+            parts.append(
+                f'<a class="file-link" href="{href}" target="_blank" rel="noopener noreferrer">{label}</a>'
+            )
+        else:
+            parts.append(f'<a class="file-link" href="{href}">{label}</a>')
+        cursor = match.end()
+    parts.append(html.escape(text[cursor:]))
+    return "".join(parts)
+
+
+def merge_following_link_into_text(blocks: list[dict]) -> list[dict]:
+    """
+    If a paragraph already mentions the following link text, convert that mention
+    into an inline markdown link and drop the standalone link block.
+    """
+    updated_blocks = [dict(b) for b in blocks]
+    remove_indices: set[int] = set()
+
+    for i, current in enumerate(updated_blocks):
+        if current.get("type") != "text" or (current.get("tag", "p") or "p").lower() != "p":
+            continue
+
+        paragraph = str(current.get("text", "") or "")
+        if not paragraph:
+            continue
+
+        j = i + 1
+        while j < len(updated_blocks) and updated_blocks[j].get("type") == "link":
+            link_block = updated_blocks[j]
+            raw_url = str(link_block.get("url", "") or "")
+            link_text = str(link_block.get("text", "") or "")
+            if (
+                raw_url
+                and link_text
+                and not re.search(r"gonzalobuilds\.com", raw_url, re.IGNORECASE)
+                and link_text in paragraph
+            ):
+                paragraph = paragraph.replace(link_text, f"[{link_text}]({raw_url})", 1)
+                remove_indices.add(j)
+            j += 1
+
+        current["text"] = paragraph
+
+    return [block for idx, block in enumerate(updated_blocks) if idx not in remove_indices]
+
+
+def group_specific_media_triplet(
+    output_file: Path,
+    blocks: list[dict],
+    local_paths: tuple[str, str, str],
+    extra_class: str = "",
+) -> list[dict]:
+    """Replace one exact 3-media run with a responsive triplet block."""
+    grouped: list[dict] = []
+    i = 0
+    while i < len(blocks):
+        if i + 2 < len(blocks):
+            b0, b1, b2 = blocks[i], blocks[i + 1], blocks[i + 2]
+            if (
+                b0.get("type") == "media"
+                and b1.get("type") == "media"
+                and b2.get("type") == "media"
+                and b0.get("local_path") == local_paths[0]
+                and b1.get("local_path") == local_paths[1]
+                and b2.get("local_path") == local_paths[2]
+            ):
+                media_cells = []
+                for local_path in local_paths:
+                    media_rel = relpath(output_file, ROOT / local_path)
+                    media_cells.append(
+                        f"<figure class=\"media-figure\">{media_markup(media_rel, Path(local_path).name, wrap_in_figure=False)}</figure>"
+                    )
+                class_suffix = f" {extra_class}" if extra_class else ""
+                grouped.append(
+                    {
+                        "type": "raw_html",
+                        "html": (
+                            "<article class=\"content-item\">"
+                            f"<div class=\"media-triplet{class_suffix}\">"
+                            f"{''.join(media_cells)}"
+                            "</div>"
+                            "</article>"
+                        ),
+                    }
+                )
+                i += 3
+                continue
+        grouped.append(blocks[i])
+        i += 1
+    return grouped
+
+
+def group_specific_media_quad(
+    output_file: Path,
+    blocks: list[dict],
+    local_paths: tuple[str, str, str, str],
+    extra_class: str = "",
+) -> list[dict]:
+    """Replace one exact 4-media run with a responsive quad block."""
+    grouped: list[dict] = []
+    i = 0
+    while i < len(blocks):
+        if i + 3 < len(blocks):
+            b0, b1, b2, b3 = blocks[i], blocks[i + 1], blocks[i + 2], blocks[i + 3]
+            if (
+                b0.get("type") == "media"
+                and b1.get("type") == "media"
+                and b2.get("type") == "media"
+                and b3.get("type") == "media"
+                and b0.get("local_path") == local_paths[0]
+                and b1.get("local_path") == local_paths[1]
+                and b2.get("local_path") == local_paths[2]
+                and b3.get("local_path") == local_paths[3]
+            ):
+                media_cells = []
+                for local_path in local_paths:
+                    media_rel = relpath(output_file, ROOT / local_path)
+                    media_cells.append(
+                        f"<figure class=\"media-figure\">{media_markup(media_rel, Path(local_path).name, wrap_in_figure=False)}</figure>"
+                    )
+                class_suffix = f" {extra_class}" if extra_class else ""
+                grouped.append(
+                    {
+                        "type": "raw_html",
+                        "html": (
+                            "<article class=\"content-item\">"
+                            f"<div class=\"media-quad{class_suffix}\">"
+                            f"{''.join(media_cells)}"
+                            "</div>"
+                            "</article>"
+                        ),
+                    }
+                )
+                i += 4
+                continue
+        grouped.append(blocks[i])
+        i += 1
+    return grouped
+
+
+def group_specific_media_pair(
+    output_file: Path,
+    blocks: list[dict],
+    local_paths: tuple[str, str],
+    extra_class: str = "",
+) -> list[dict]:
+    """Replace one exact 2-media run with a responsive pair block."""
+    grouped: list[dict] = []
+    i = 0
+    while i < len(blocks):
+        if i + 1 < len(blocks):
+            b0, b1 = blocks[i], blocks[i + 1]
+            if (
+                b0.get("type") == "media"
+                and b1.get("type") == "media"
+                and b0.get("local_path") == local_paths[0]
+                and b1.get("local_path") == local_paths[1]
+            ):
+                media_cells = []
+                for local_path in local_paths:
+                    media_rel = relpath(output_file, ROOT / local_path)
+                    media_cells.append(
+                        f"<figure class=\"media-figure\">{media_markup(media_rel, Path(local_path).name, wrap_in_figure=False)}</figure>"
+                    )
+                class_suffix = f" {extra_class}" if extra_class else ""
+                grouped.append(
+                    {
+                        "type": "raw_html",
+                        "html": (
+                            "<article class=\"content-item\">"
+                            f"<div class=\"media-pair{class_suffix}\">"
+                            f"{''.join(media_cells)}"
+                            "</div>"
+                            "</article>"
+                        ),
+                    }
+                )
+                i += 2
+                continue
+        grouped.append(blocks[i])
+        i += 1
+    return grouped
 
 
 def split_frontmatter(raw: str) -> tuple[dict[str, str], str]:
@@ -406,6 +659,7 @@ def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] 
     </section>
 {SOCIAL_FOOTER}
   </main>
+{IMAGE_LIGHTBOX_MARKUP}
 </body>
 </html>
 """
@@ -423,7 +677,477 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
         h1_inner = styled_title(section_title)
         title_plain = section_title
     output_file = PAGES_DIR / f"{section_slug}.html"
-    blocks = [block_to_markup(output_file, block) for block in page_data.get("blocks", [])]
+    normalized_blocks = merge_following_link_into_text(page_data.get("blocks", []))
+    if section_slug == "Red_Bull_Flugtag_2022":
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_2.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_3.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_4.webp",
+            ),
+            "media-triplet--flugtag-a",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_5.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_6.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_7.webp",
+            ),
+            "media-triplet--flugtag-a2",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_8.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_9.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_10.webp",
+            ),
+            "media-triplet--flugtag-b",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_11.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_12.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_13.webp",
+            ),
+            "media-triplet--flugtag-c",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_14.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_15.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_16.webp",
+            ),
+            "media-triplet--flugtag-d",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_17.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_18.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_19.webp",
+            ),
+            "media-triplet--flugtag-e",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_20.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_21.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_22.webp",
+            ),
+            "media-triplet--flugtag-f",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_23.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_24.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_25.webp",
+            ),
+            "media-triplet--flugtag-g",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_26.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_27.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_28.webp",
+            ),
+            "media-triplet--flugtag-h",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_29.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_30.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_31.webp",
+            ),
+            "media-triplet--flugtag-i",
+        )
+        normalized_blocks = group_specific_media_quad(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_32.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_33.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_34.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_35.webp",
+            ),
+            "media-quad--flugtag-a",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_36.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_37.webp",
+                "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_38.webp",
+            ),
+            "media-triplet--flugtag-j",
+        )
+    if section_slug == "Amy_20152016":
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_2.webp",
+                "assets/Amy_20152016/Amy_20152016_3.webp",
+            ),
+            "media-pair--amy-a",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_4.webp",
+                "assets/Amy_20152016/Amy_20152016_5.webp",
+                "assets/Amy_20152016/Amy_20152016_6.webp",
+            ),
+            "media-triplet--amy-b",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_7.webp",
+                "assets/Amy_20152016/Amy_20152016_8.webp",
+                "assets/Amy_20152016/Amy_20152016_9.webp",
+            ),
+            "media-triplet--amy-c",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_10.webp",
+                "assets/Amy_20152016/Amy_20152016_11.webp",
+            ),
+            "media-pair--amy-d",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_12.webp",
+                "assets/Amy_20152016/Amy_20152016_13.webp",
+                "assets/Amy_20152016/Amy_20152016_14.webp",
+            ),
+            "media-triplet--amy-e",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_15.webp",
+                "assets/Amy_20152016/Amy_20152016_16.webp",
+            ),
+            "media-pair--amy-f",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_17.webp",
+                "assets/Amy_20152016/Amy_20152016_18.webp",
+            ),
+            "media-pair--amy-g",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Amy_20152016/Amy_20152016_19.webp",
+                "assets/Amy_20152016/Amy_20152016_20.webp",
+            ),
+            "media-pair--amy-h",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Home/Home_13.webp",
+                "assets/Amy_20152016/Amy_20152016_22.webp",
+            ),
+            "media-pair--amy-i",
+        )
+    if section_slug == "Bolt_20162017":
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_3.webp",
+                "assets/Bolt_20162017/Bolt_20162017_4.webp",
+            ),
+            "media-pair--bolt-a",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_5.webp",
+                "assets/Bolt_20162017/Bolt_20162017_6.webp",
+            ),
+            "media-pair--bolt-b",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_7.webp",
+                "assets/Bolt_20162017/Bolt_20162017_8.webp",
+                "assets/Bolt_20162017/Bolt_20162017_9.webp",
+            ),
+            "media-triplet--bolt-c",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_10.webp",
+                "assets/Bolt_20162017/Bolt_20162017_11.webp",
+                "assets/Bolt_20162017/Bolt_20162017_12.webp",
+            ),
+            "media-triplet--bolt-d",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_13.webp",
+                "assets/Bolt_20162017/Bolt_20162017_14.webp",
+                "assets/Bolt_20162017/Bolt_20162017_15.webp",
+            ),
+            "media-triplet--bolt-e",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_16.webp",
+                "assets/Bolt_20162017/Bolt_20162017_17.webp",
+            ),
+            "media-pair--bolt-f",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_18.webp",
+                "assets/Bolt_20162017/Bolt_20162017_19.webp",
+                "assets/Bolt_20162017/Bolt_20162017_20.webp",
+            ),
+            "media-triplet--bolt-g",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_21.webp",
+                "assets/Bolt_20162017/Bolt_20162017_22.webp",
+            ),
+            "media-pair--bolt-h",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_23.webp",
+                "assets/Bolt_20162017/Bolt_20162017_24.webp",
+                "assets/Bolt_20162017/Bolt_20162017_25.webp",
+            ),
+            "media-triplet--bolt-i",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_26.webp",
+                "assets/Bolt_20162017/Bolt_20162017_27.webp",
+                "assets/Bolt_20162017/Bolt_20162017_28.webp",
+            ),
+            "media-triplet--bolt-j",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_29.webp",
+                "assets/Bolt_20162017/Bolt_20162017_30.webp",
+            ),
+            "media-pair--bolt-k",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_31.webp",
+                "assets/Bolt_20162017/Bolt_20162017_32.webp",
+                "assets/Bolt_20162017/Bolt_20162017_33.webp",
+            ),
+            "media-triplet--bolt-l",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Bolt_20162017/Bolt_20162017_34.webp",
+                "assets/Bolt_20162017/Bolt_20162017_35.webp",
+            ),
+            "media-pair--bolt-m",
+        )
+    if section_slug == "Clare_20172019":
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_2.webp",
+                "assets/Clare_20172019/Clare_20172019_3.webp",
+            ),
+            "media-pair--clare-a",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_4.webp",
+                "assets/Clare_20172019/Clare_20172019_5.webp",
+            ),
+            "media-pair--clare-b",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_6.webp",
+                "assets/Clare_20172019/Clare_20172019_7.webp",
+            ),
+            "media-pair--clare-c",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_8.webp",
+                "assets/Clare_20172019/Clare_20172019_9.webp",
+                "assets/Clare_20172019/Clare_20172019_10.webp",
+            ),
+            "media-triplet--clare-d",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_11.webp",
+                "assets/Clare_20172019/Clare_20172019_12.webp",
+                "assets/Clare_20172019/Clare_20172019_13.webp",
+            ),
+            "media-triplet--clare-e",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_14.webp",
+                "assets/Clare_20172019/Clare_20172019_15.webp",
+                "assets/Clare_20172019/Clare_20172019_16.webp",
+            ),
+            "media-triplet--clare-f",
+        )
+        normalized_blocks = group_specific_media_quad(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_17.webp",
+                "assets/Clare_20172019/Clare_20172019_18.webp",
+                "assets/Clare_20172019/Clare_20172019_19.webp",
+                "assets/Clare_20172019/Clare_20172019_20.webp",
+            ),
+            "media-quad--clare-g",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_21.webp",
+                "assets/Clare_20172019/Clare_20172019_22.webp",
+            ),
+            "media-pair--clare-h",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_23.webp",
+                "assets/Clare_20172019/Clare_20172019_24.webp",
+                "assets/Clare_20172019/Clare_20172019_25.webp",
+            ),
+            "media-triplet--clare-i",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_26.webp",
+                "assets/Clare_20172019/Clare_20172019_27.webp",
+                "assets/Clare_20172019/Clare_20172019_28.webp",
+            ),
+            "media-triplet--clare-j",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_29.webp",
+                "assets/Clare_20172019/Clare_20172019_30.webp",
+                "assets/Clare_20172019/Clare_20172019_31.webp",
+            ),
+            "media-triplet--clare-k",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_32.webp",
+                "assets/Clare_20172019/Clare_20172019_33.webp",
+                "assets/Clare_20172019/Clare_20172019_34.webp",
+            ),
+            "media-triplet--clare-l",
+        )
+        normalized_blocks = group_specific_media_triplet(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_35.webp",
+                "assets/Clare_20172019/Clare_20172019_36.webp",
+                "assets/Clare_20172019/Clare_20172019_37.webp",
+            ),
+            "media-triplet--clare-m",
+        )
+        normalized_blocks = group_specific_media_pair(
+            output_file,
+            normalized_blocks,
+            (
+                "assets/Clare_20172019/Clare_20172019_38.webp",
+                "assets/Clare_20172019/Clare_20172019_39.webp",
+            ),
+            "media-pair--clare-n",
+        )
+    blocks = [block_to_markup(output_file, block) for block in normalized_blocks]
     blocks = [b for b in blocks if b]
     page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -444,6 +1168,7 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
     </section>
 {SOCIAL_FOOTER}
   </main>
+{IMAGE_LIGHTBOX_MARKUP}
 </body>
 </html>
 """

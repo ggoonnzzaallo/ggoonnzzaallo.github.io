@@ -32,5 +32,58 @@
       </nav>
     </footer>
   </main>
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <button class="image-lightbox__close" type="button" aria-label="Close image viewer">&times;</button>
+    <img class="image-lightbox__img" alt="">
+  </div>
+  <script>
+    (function () {
+      var lightbox = document.getElementById("image-lightbox");
+      if (!lightbox) return;
+      var closeBtn = lightbox.querySelector(".image-lightbox__close");
+      var lightboxImg = lightbox.querySelector(".image-lightbox__img");
+      var activeTrigger = null;
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+        if (activeTrigger) activeTrigger.focus();
+      }
+
+      function openLightbox(trigger) {
+        var src = trigger.currentSrc || trigger.getAttribute("src");
+        if (!src || !lightboxImg) return;
+        activeTrigger = trigger;
+        lightboxImg.src = src;
+        lightboxImg.alt = trigger.getAttribute("alt") || "";
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+      }
+
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        if (!(target instanceof HTMLImageElement)) return;
+        if (!target.closest(".media-figure, .media-item, .hero-media-figure")) return;
+        if (target.closest("a")) return;
+        openLightbox(target);
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeLightbox);
+      }
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

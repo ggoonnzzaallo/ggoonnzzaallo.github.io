@@ -13,17 +13,17 @@ Back then the hype was so high that you could tweet any scrappy demo and get a t
 
 I’m skipping some steps here but we eventually talked to everyone in our waitlist and network who would entertain a discovery call, and narrowed down the groups of people who would be willing to pay for this spreadsheet. The most motivated appeared to be sales teams who wanted to use it for lead generation, enrichment, and qualification. This is how [https://usedouble.com/](https://usedouble.com/) was born ([Archive link](https://archive.is/hiJ8r) just in case).
 
-![](../assets/Double_Yc/Double_Yc_2.webp)
+<div class="media-triplet">
+  <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_2.webp" /></figure>
+  <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_3.webp" /></figure>
+  <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_4.webp" /></figure>
+</div>
 
-![](../assets/Double_Yc/Double_Yc_3.webp)
-
-![](../assets/Double_Yc/Double_Yc_4.webp)
-
-Left: Final usedouble.com landing page. Center: Our Product Hunt launch scoring 3rd place for the day. Right: Wesley, my co-founder pitching usedouble.com at the YC W23 demo day
+<u>Left:</u> Our Product Hunt launch scoring 3rd place for the day. <u>Center:</u> Wesley, my co-founder pitching usedouble.com at the YC W23 demo day. <u>Right:</u> Final usedouble.com landing page.
 
 There are many thinks to be said about this first product that we launched. This is the first time I write about a software project and I don’t think listing everything we tried would be useful, or listing our lessons would be helpful (without the full context). Once again, I’m going to jump ahead and let you know that we end up pivoting from this product roughly a year in.
 
-If I had to summarize some of the biggest takeaways from this first product, I’d say that I highly advise against building companies in areas where you have no domain expertise and a deep interest (before this I knew nothing about sales, and can’t say I had a natural passion for it). I also advise against free tiers, having low prices, and competing on price (most of our MRR growth came after our YC partner, Jared, told us to switch to B2B sales and start charging 3 digits per month. Our chart started pointing up overnight, it was night and day). Lastly, know what industry you’re getting into, lead enrichment is a super competitive space with no barriers to entry, where people drag their feet if you make them pay for than 10 cents for a lead.
+If I had to summarize some of the biggest takeaways from this first product, I’d say that I highly advise against building companies in areas where you have no domain expertise and a deep interest (before this I knew nothing about sales, and can’t say I had a natural passion for it). I also advise against free tiers, having low prices, and competing on price (most of our MRR growth came after our YC partner, [Jared](https://x.com/snowmaker), told us to switch to B2B sales and start charging 3 digits per month. Our chart started pointing up overnight, it was night and day). Lastly, know what industry you’re getting into, lead enrichment is a super competitive space with no barriers to entry, where people drag their feet if you make them pay for than 10 cents for a lead.
 
 For a way more detailed write-up on why we pivoted, I’ve written about it [here](https://docs.double.bot/blog/pivot) ([Archive link](https://archive.is/BgXoe) just in case). As the title suggests, we grew it to $5k MRR in a decent amount of time. If you want to dissect more about the story, you can also see our [Product Hunt launch](https://www.producthunt.com/products/double-3) (ranked #3 for the day, which took a lot of growth hacking and 24 hours of no sleep), our original [Launch YC post](https://www.ycombinator.com/launches/IJF-double-internet-capable-gpt-bots-to-automate-repetitive-work), and my original [launch tweet](https://x.com/geepytee/status/1636066726973702149). If you’re building in this space, hit me up, always happy to chat about our experience.
 
@@ -31,11 +31,12 @@ So why pivot? The decision came after a couple of months working with some big n
 
 \*Note: If you want to see how usedouble.com worked, there are some archived tutorials [here](https://www.youtube.com/playlist?list=PL55VZ7oDEoRmFhwtCxBuHGxR-2N6K9z6Y). This was not the final version but it shows the basic idea.
 
-![](../assets/Double_Yc/Double_Yc_5.webp)
+<div class="media-pair">
+  <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_5.webp" /></figure>
+  <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_6.webp" /></figure>
+</div>
 
-![](../assets/Double_Yc/Double_Yc_6.webp)
-
-Left: One of our launch posts on Reddit with hundreds of upvotes and comments. Right: Our VS Code marketplace extension page with over 30,000 installs.
+<u>Left:</u> One of our launch posts on Reddit with hundreds of upvotes and comments. <u>Right:</u> Our VS Code marketplace extension page with over 30,000 installs.
 
 The main motivation for working on AI coding tools (which is super cliche, as most developers love building developer tools) was that the biggest tool at the time, GitHub Copilot, was fully of bugs and the GitHub team was not moving fast towards fixing them. There were super upvoted GitHub issues unanswered that were over a year old. We’ve written about it [here](https://docs.double.bot/copilot) ([Archive link](https://archive.is/ze9yh) just in case). The other motivation was that AI coding copilots was a rapidly growing market, and from what we could tell at the time it was likely the AI application with the most traction (in $ amount).
 

@@ -7,6 +7,9 @@ body {
   background: #ffffff;
   color: #111111;
 }
+body.lightbox-open {
+  overflow: hidden;
+}
 .container {
   max-width: 1200px;
   width: 100%;
@@ -313,7 +316,7 @@ body {
 }
 .media-figure {
   margin: 0;
-  border-radius: 14px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .content-item .media-figure .media {
@@ -359,7 +362,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 2px;
   overflow: hidden;
   background: #ffffff;
   max-height: 80vh;
@@ -426,6 +429,232 @@ body {
   /* Do not use margin shorthand here — it runs after `> * + *` and was overriding that rule’s margin-top on figures. */
   margin-inline: 0;
 }
+.markdown-body .media-triplet {
+  display: grid;
+  /* Match each column to image aspect ratio so displayed heights align without cropping. */
+  grid-template-columns: 1.03fr 0.57fr 1.48fr;
+  gap: 0.9rem;
+}
+.content-item .media-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-quad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-triplet--flugtag-b {
+  /* Ratios from native dimensions of 8/9/10 to equalize displayed heights. */
+  grid-template-columns: 0.75fr 0.75fr 1.33fr;
+}
+.content-item .media-triplet--flugtag-a2 {
+  /* Ratios from native dimensions of 5/6/7 to equalize displayed heights. */
+  grid-template-columns: 1.33fr 1.33fr 0.94fr;
+}
+.content-item .media-triplet--flugtag-c {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--flugtag-d {
+  /* Ratios from native dimensions of 14/15/16 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-triplet--flugtag-e {
+  /* Ratios from native dimensions of 17/18/19 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-triplet--flugtag-f {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--flugtag-g {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--flugtag-h {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--flugtag-i {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--flugtag-j {
+  /* Ratios from native dimensions of 36/37/38 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-quad--flugtag-a {
+  /* Ratios from native dimensions of 32/33/34/35 for equal visual height. */
+  grid-template-columns: 0.75fr 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-pair--amy-a {
+  /* Ratios from native dimensions of Amy_2/Amy_3 for equal visual height. */
+  grid-template-columns: 1.79fr 1.78fr;
+}
+.content-item .media-triplet--amy-b {
+  /* Ratios from native dimensions of Amy_4/Amy_5/Amy_6 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-triplet--amy-c {
+  /* Ratios from native dimensions of Amy_7/Amy_8/Amy_9 for equal visual height. */
+  grid-template-columns: 1.33fr 0.76fr 1.33fr;
+}
+.content-item .media-pair--amy-d {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--amy-e {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-pair--amy-f {
+  /* Ratios from native dimensions of Amy_15/Amy_16 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr;
+}
+.content-item .media-pair--amy-g {
+  /* Ratios from native dimensions of Amy_17/Amy_18 for equal visual height. */
+  grid-template-columns: 1.78fr 0.57fr;
+}
+.content-item .media-pair--amy-h {
+  /* Ratios from native dimensions of Amy_19/Amy_20 for equal visual height. */
+  grid-template-columns: 1.91fr 1.29fr;
+}
+.content-item .media-pair--amy-i {
+  /* Ratios from native dimensions of Home_13/Amy_22 for equal visual height. */
+  grid-template-columns: 1.33fr 0.75fr;
+}
+.content-item .media-pair--bolt-a {
+  /* Ratios from native dimensions of Bolt_3/Bolt_4 for equal visual height. */
+  grid-template-columns: 1.26fr 1fr;
+}
+.content-item .media-pair--bolt-b {
+  /* Ratios from native dimensions of Bolt_5/Bolt_6 for equal visual height. */
+  grid-template-columns: 1.33fr 1.79fr;
+}
+.content-item .media-triplet--bolt-c {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--bolt-d {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--bolt-e {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-pair--bolt-f {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--bolt-g {
+  /* Ratios from native dimensions of Bolt_18/Bolt_19/Bolt_20 for equal visual height. */
+  grid-template-columns: 0.75fr 0.75fr 1.33fr;
+}
+.content-item .media-pair--bolt-h {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--bolt-i {
+  /* Ratios from native dimensions of Bolt_23/Bolt_24/Bolt_25 for equal visual height. */
+  grid-template-columns: 1.33fr 0.75fr 1.33fr;
+}
+.content-item .media-triplet--bolt-j {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-pair--bolt-k {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--bolt-l {
+  /* Ratios from native dimensions of Bolt_31/Bolt_32/Bolt_33 for equal visual height. */
+  grid-template-columns: 1.33fr 1.33fr 0.75fr;
+}
+.content-item .media-pair--bolt-m {
+  /* Ratios from native dimensions of Bolt_34/Bolt_35 for equal visual height. */
+  grid-template-columns: 1.33fr 0.72fr;
+}
+.content-item .media-pair--clare-a {
+  /* Ratios from native dimensions of Clare_2/Clare_3 for equal visual height. */
+  grid-template-columns: 1.33fr 1.5fr;
+}
+.content-item .media-pair--clare-b {
+  /* Ratios from native dimensions of Clare_4/Clare_5 for equal visual height. */
+  grid-template-columns: 1.85fr 1.82fr;
+}
+.content-item .media-pair--clare-c {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--clare-d {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--clare-e {
+  /* Ratios from native dimensions of Clare_11/Clare_12/Clare_13 for equal visual height. */
+  grid-template-columns: 1.33fr 1.33fr 0.48fr;
+}
+.content-item .media-triplet--clare-f {
+  /* Ratios from native dimensions of Clare_14/Clare_15/Clare_16 for equal visual height. */
+  grid-template-columns: 1.33fr 0.75fr 1.33fr;
+}
+.content-item .media-quad--clare-g {
+  /* Ratios from native dimensions of Clare_17/18/19/20 for equal visual height. */
+  grid-template-columns: 0.75fr 0.75fr 1.33fr 0.75fr;
+}
+.content-item .media-pair--clare-h {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.content-item .media-triplet--clare-i {
+  /* Ratios from native dimensions of Clare_23/Clare_24/Clare_25 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 1.33fr;
+}
+.content-item .media-triplet--clare-j {
+  /* Ratios from native dimensions of Clare_26/Clare_27/Clare_28 for equal visual height. */
+  grid-template-columns: 1.33fr 0.75fr 1.33fr;
+}
+.content-item .media-triplet--clare-k {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--clare-l {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.content-item .media-triplet--clare-m {
+  /* Ratios from native dimensions of Clare_35/Clare_36/Clare_37 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 0.75fr;
+}
+.content-item .media-pair--clare-n {
+  /* Ratios from native dimensions of Clare_38/Clare_39 for equal visual height. */
+  grid-template-columns: 1.33fr 0.75fr;
+}
+.markdown-body .media-triplet .media-figure {
+  margin: 0;
+}
+.content-item .media-triplet .media-figure {
+  margin: 0;
+}
+.content-item .media-quad .media-figure {
+  margin: 0;
+}
+.content-item .media-pair .media-figure {
+  margin: 0;
+}
+.markdown-body .media-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.markdown-body .media-pair .media-figure {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .markdown-body .media-triplet,
+  .markdown-body .media-pair,
+  .content-item .media-triplet,
+  .content-item .media-quad,
+  .content-item .media-pair {
+    grid-template-columns: 1fr;
+  }
+}
+/* Ensure a clear one-line gap between top hero image and first paragraph in markdown pages. */
+.markdown-body > .media-figure:first-child {
+  margin-bottom: 1lh !important;
+}
+.markdown-body > .media-figure:first-child + p {
+  margin-top: 0 !important;
+}
 .markdown-body ul,
 .markdown-body ol {
   margin: 0;
@@ -440,6 +669,44 @@ body {
 }
 .markdown-body code {
   font-size: 0.92em;
+}
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(14px, 3vw, 28px);
+  background: rgba(10, 12, 18, 0.88);
+  z-index: 9999;
+}
+.image-lightbox.is-open {
+  display: flex;
+}
+.image-lightbox__img {
+  max-width: min(1200px, 96vw);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+.image-lightbox__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+}
+.image-lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.26);
 }
 @media (max-width: 640px) {
   body {
