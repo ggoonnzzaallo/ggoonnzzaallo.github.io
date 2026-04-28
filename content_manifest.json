@@ -22,7 +22,7 @@
         },
         {
           "type": "text",
-          "text": "Welcome! This is a library of personal projects I\u2019ve worked on. You can click on any of the pictures to see more about the project. This isn\u2019t a mobile friendly website, go to your laptop and open it there.",
+          "text": "Welcome! This is a library of personal projects I’ve worked on. You can click on any of the pictures to see more about the project. This isn’t a mobile friendly website, go to your laptop and open it there.",
           "tag": "p"
         },
         {
@@ -303,7 +303,7 @@
         },
         {
           "type": "text",
-          "text": "This is what a submarine race looks like if you\u2019ve never seen one.",
+          "text": "This is what a submarine race looks like if you’ve never seen one.",
           "tag": "figcaption"
         },
         {
@@ -323,7 +323,7 @@
         },
         {
           "type": "text",
-          "text": "Similarly with the filtering talent problem, our first reaction was to recruit only students with demonstrated skills. Again, this did not work, and we ended up striking a balance. You do need to realize that this was a student team -meaning students were spending their free time to work on this- so building a social aspect and enjoyable atmosphere was key for the long term success of the team (you can push people during crunch time, but that won\u2019t work throughout the term).",
+          "text": "Similarly with the filtering talent problem, our first reaction was to recruit only students with demonstrated skills. Again, this did not work, and we ended up striking a balance. You do need to realize that this was a student team -meaning students were spending their free time to work on this- so building a social aspect and enjoyable atmosphere was key for the long term success of the team (you can push people during crunch time, but that won’t work throughout the term).",
           "tag": "p"
         },
         {
@@ -363,12 +363,12 @@
         },
         {
           "type": "text",
-          "text": "After much deliberation of what a human powered race submarine looks like, we settled on a shape that looked somewhat hydrodynamic, and was also large enough to fit a person plus the rest of the components we would need (we didn\u2019t know it back then, but packaging a person would become one of the most contested topics for the team when designing future submarines).",
+          "text": "After much deliberation of what a human powered race submarine looks like, we settled on a shape that looked somewhat hydrodynamic, and was also large enough to fit a person plus the rest of the components we would need (we didn’t know it back then, but packaging a person would become one of the most contested topics for the team when designing future submarines).",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Because making the hull of the submarine would take significantly longer to fabricate than any other component, we decided to get started on it before the design of everything else was finalized (a calculated risk). We pulled the trigger on a 4 digit purchase order for MDF, we bought over one tonne of it to fabricate a single female mould. By then we had raised enough funding such that we could afford the material, but we could not afford any routing or CNC machine time. We cut MDF panels close to the final surface of the mould to save machining time plus struck a deal with a local CNC shop: we will put your logo on the submarine and clean your machines if you machine this for free! In hindsight I\u2019m surprised my friends agreed to wake up at 5AM to go clean MDF dust off a machine.",
+          "text": "Because making the hull of the submarine would take significantly longer to fabricate than any other component, we decided to get started on it before the design of everything else was finalized (a calculated risk). We pulled the trigger on a 4 digit purchase order for MDF, we bought over one tonne of it to fabricate a single female mould. By then we had raised enough funding such that we could afford the material, but we could not afford any routing or CNC machine time. We cut MDF panels close to the final surface of the mould to save machining time plus struck a deal with a local CNC shop: we will put your logo on the submarine and clean your machines if you machine this for free! In hindsight I’m surprised my friends agreed to wake up at 5AM to go clean MDF dust off a machine.",
           "tag": "p"
         },
         {
@@ -408,7 +408,7 @@
         },
         {
           "type": "text",
-          "text": "Putting the mould together was the first big win for the team. We had not win a race, we didn\u2019t have a submarine, but suddenly it all seemed more real. In hindsight we should have been building in public and posting all of this journey on social media in real time (this is a technique I finessed in future endeavours and would highly recommend to any hardware builders).",
+          "text": "Putting the mould together was the first big win for the team. We had not win a race, we didn’t have a submarine, but suddenly it all seemed more real. In hindsight we should have been building in public and posting all of this journey on social media in real time (this is a technique I finessed in future endeavours and would highly recommend to any hardware builders).",
           "tag": "p"
         },
         {
@@ -543,7 +543,7 @@
         },
         {
           "type": "text",
-          "text": "As the team continued to make progress in building our first submarine (and arguably Ontario\u2019s first human powered submarine) we also continued to gain traction with sponsors. Above you can see the 3D printed SLS nylon control system hub. An unnecessarily complicated and expensive part that reduced the part count of our control systems significantly, just because we can. Of course nylon needs to be sealed as it absorbs humidity, we used epoxy for it. At the end of the day, part of going to an international engineering competition is showing off.",
+          "text": "As the team continued to make progress in building our first submarine (and arguably Ontario’s first human powered submarine) we also continued to gain traction with sponsors. Above you can see the 3D printed SLS nylon control system hub. An unnecessarily complicated and expensive part that reduced the part count of our control systems significantly, just because we can. Of course nylon needs to be sealed as it absorbs humidity, we used epoxy for it. At the end of the day, part of going to an international engineering competition is showing off.",
           "tag": "p"
         },
         {
@@ -588,7 +588,7 @@
         },
         {
           "type": "text",
-          "text": "Competition was a week long. We would start early and go straight to the pool, only coming out for food and oxygen. Repairing the submarine underwater was by far my favourite part of the experience (we would repair underwater because coming out of the pool took too long, and we didn\u2019t want to waste any time so we could put more runs in). It wasn\u2019t just any pool, it was a navy pool where they tested actual submarine models. Every night we would come back to the trailer park were we staying at and as the team ate spaghetti every single night, we would start to compile ideas on how to build a better submarine. Go check out my post on Bolt.",
+          "text": "Competition was a week long. We would start early and go straight to the pool, only coming out for food and oxygen. Repairing the submarine underwater was by far my favourite part of the experience (we would repair underwater because coming out of the pool took too long, and we didn’t want to waste any time so we could put more runs in). It wasn’t just any pool, it was a navy pool where they tested actual submarine models. Every night we would come back to the trailer park were we staying at and as the team ate spaghetti every single night, we would start to compile ideas on how to build a better submarine. Go check out my post on Bolt.",
           "tag": "p"
         },
         {
@@ -617,19 +617,9 @@
           "text": "Previous Previous Bolt (2016-2017)"
         },
         {
-          "type": "text",
-          "text": "Bolt (2016-2017)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/everything-else",
           "text": "Next Next Everything else"
-        },
-        {
-          "type": "text",
-          "text": "Everything else",
-          "tag": "h2"
         }
       ]
     },
@@ -659,7 +649,7 @@
         },
         {
           "type": "text",
-          "text": "I\u2019m still working on this one\u2026 Check back later",
+          "text": "I’m still working on this one… Check back later",
           "tag": "p"
         },
         {
@@ -669,23 +659,23 @@
         },
         {
           "type": "text",
-          "text": "Previously I talked about building tele-operated robots, running a food delivery service, and then scrapping the robots to launch Canada\u2019s first 10-minute grocery delivery service using e-bikes. The 10-minute delivery service experiment we ran in Waterloo was a success, growing 20%+ WoW throughout the summer of 2021, so what did we do next? We raised another $2.8M to expand the service to Toronto (aka downtown Canada, the country\u2019s largest and most densely populated city).",
+          "text": "Previously I talked about building tele-operated robots, running a food delivery service, and then scrapping the robots to launch Canada’s first 10-minute grocery delivery service using e-bikes. The 10-minute delivery service experiment we ran in Waterloo was a success, growing 20%+ WoW throughout the summer of 2021, so what did we do next? We raised another $2.8M to expand the service to Toronto (aka downtown Canada, the country’s largest and most densely populated city).",
           "tag": "p"
         },
         {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/caravel-robotics-2021",
-          "text": "building tele-operated robots, running a food delivery service, and then scrapping the robots to launch Canada\u2019s first 10-minute grocery delivery service"
+          "text": "building tele-operated robots, running a food delivery service, and then scrapping the robots to launch Canada’s first 10-minute grocery delivery service"
         },
         {
           "type": "text",
-          "text": "At the time of writing this, we are deep into a market downturn. Many of Ninja\u2019s competitors have gone bankrupt, others have slashed their valuations dramatically, everyone is laying off employees, VC twitter is dunking on instant delivery startups left and right.",
+          "text": "At the time of writing this, we are deep into a market downturn. Many of Ninja’s competitors have gone bankrupt, others have slashed their valuations dramatically, everyone is laying off employees, VC twitter is dunking on instant delivery startups left and right.",
           "tag": "p"
         },
         {
           "type": "link",
           "url": "https://www.bloomberg.com/news/articles/2022-03-10/grocery-startup-fridge-no-more-shutters-in-failed-doordash-deal",
-          "text": "Many of Ninja\u2019s competitors have gone bankrupt"
+          "text": "Many of Ninja’s competitors have gone bankrupt"
         },
         {
           "type": "link",
@@ -704,7 +694,7 @@
         },
         {
           "type": "text",
-          "text": "I usually write about projects chronologically and try to capture the exact order of events as they developed, but as of May 2nd 2022 Ninja is no longer taking orders, so let\u2019s skip ahead to what happened: Almost exactly 1-year into its conception, after fulfilling 30,000+ orders, crossing $1M in revenue run rate, expanding to 3 dark stores, running successful campaigns with world-renowned CPG brands, Ninja was acquired. Won\u2019t go into details about and deal and won\u2019t be buying a lambo with the proceeds either. We started Ninja with the intention of building an empire and that did not pan out, this outcome was strategic as we looked to do what was best for our employees, investors and customers given the evolving market condition. In this post I\u2019ll talk about some things I thought were cool about Ninja.",
+          "text": "I usually write about projects chronologically and try to capture the exact order of events as they developed, but as of May 2nd 2022 Ninja is no longer taking orders, so let’s skip ahead to what happened: Almost exactly 1-year into its conception, after fulfilling 30,000+ orders, crossing $1M in revenue run rate, expanding to 3 dark stores, running successful campaigns with world-renowned CPG brands, Ninja was acquired. Won’t go into details about and deal and won’t be buying a lambo with the proceeds either. We started Ninja with the intention of building an empire and that did not pan out, this outcome was strategic as we looked to do what was best for our employees, investors and customers given the evolving market condition. In this post I’ll talk about some things I thought were cool about Ninja.",
           "tag": "p"
         },
         {
@@ -714,37 +704,37 @@
         },
         {
           "type": "text",
-          "text": "Let\u2019s start with why it made sense to build Ninja, a 10-minute grocery delivery service, in Canada. The key insight here is that three companies hold 63% of the Canadian grocery market share, this translates into superior margins compared to US counterparts. The EBITDA margin for Canadian legacy grocers is 9% (5.6% EBIT) versus 4.9% for US based legacy grocers (2.7% EBIT). This alone makes Canada an appealing market for a model which struggles with its bottom line.",
+          "text": "Let’s start with why it made sense to build Ninja, a 10-minute grocery delivery service, in Canada. The key insight here is that three companies hold 63% of the Canadian grocery market share, this translates into superior margins compared to US counterparts. The EBITDA margin for Canadian legacy grocers is 9% (5.6% EBIT) versus 4.9% for US based legacy grocers (2.7% EBIT). This alone makes Canada an appealing market for a model which struggles with its bottom line.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Canada\u2019s smaller population means a smaller TAM with a $78B grocery market versus $757B in the US. Although Canada\u2019s market size is comparable to Australia\u2019s $89B, only a mere $7M has been invested in instant grocery startups in Canada (which basically all went to Ninja and Tiggy) compared to $78M in Australia and $4B in the US. This makes the case for Canada being the last blue ocean in this space, hinting the potential for a \u2018land grab\u2019 opportunity.",
+          "text": "Canada’s smaller population means a smaller TAM with a $78B grocery market versus $757B in the US. Although Canada’s market size is comparable to Australia’s $89B, only a mere $7M has been invested in instant grocery startups in Canada (which basically all went to Ninja and Tiggy) compared to $78M in Australia and $4B in the US. This makes the case for Canada being the last blue ocean in this space, hinting the potential for a ‘land grab’ opportunity.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Last, Canada\u2019s grocery e-commerce market has a lower penetration than the US, the exact figure varies depending on your source and how long since the last COVID lockdown but I read 1% vs 5%. Other markets love the convenience of ordering groceries online and Canadians will love it too, the market has just been underinvested for some time given the large market share of legacy grocers and them not having any real incentive to disrupt the industry.",
+          "text": "Last, Canada’s grocery e-commerce market has a lower penetration than the US, the exact figure varies depending on your source and how long since the last COVID lockdown but I read 1% vs 5%. Other markets love the convenience of ordering groceries online and Canadians will love it too, the market has just been underinvested for some time given the large market share of legacy grocers and them not having any real incentive to disrupt the industry.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "So to sum it up, Canada\u2019s rapid delivery market is comparatively underinvested, has less players and better margins. What Ninja did was simply apply a novel model with global traction and VC interest, into arguably one of the best suiting markets in the world.",
+          "text": "So to sum it up, Canada’s rapid delivery market is comparatively underinvested, has less players and better margins. What Ninja did was simply apply a novel model with global traction and VC interest, into arguably one of the best suiting markets in the world.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "I won\u2019t try to sell you on the 10-minute delivery aspect of the business, at this point you either get it or you don\u2019t. My take is that customers will always want to get things faster and not slower, you can take the limit on this all the way to teleportation. Some will question whether we really need to get stuff that fast, others will doubt the economics of the model. I strongly believe that if it was up to some of you, we would still be living in caves.",
+          "text": "I won’t try to sell you on the 10-minute delivery aspect of the business, at this point you either get it or you don’t. My take is that customers will always want to get things faster and not slower, you can take the limit on this all the way to teleportation. Some will question whether we really need to get stuff that fast, others will doubt the economics of the model. I strongly believe that if it was up to some of you, we would still be living in caves.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Ninja\u2019s business and team could be split into Growth and Operations. Growth was responsible for bringing in new customers, making sure they are placing frequent and big orders, building a great customer experience that leads to high retention, and doing it all with capital efficiency. Operations ran the show, everything from running the dark stores, managing the supply chain, managing the delivery team, building processes, standardizing day-to-day operations, order batching, delivery route planning, and squeezing more efficiency out of everything that happens from order to delivery.",
+          "text": "Ninja’s business and team could be split into Growth and Operations. Growth was responsible for bringing in new customers, making sure they are placing frequent and big orders, building a great customer experience that leads to high retention, and doing it all with capital efficiency. Operations ran the show, everything from running the dark stores, managing the supply chain, managing the delivery team, building processes, standardizing day-to-day operations, order batching, delivery route planning, and squeezing more efficiency out of everything that happens from order to delivery.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "At first glance, a dark store is \u2018just\u2019 a convenience store that does delivery. Delivering thousands of SKUs in 10-minutes though? That requieres operational excellence and there\u2019re opportunities to gain efficiency throughout the delivery process with measurable impact (I call it the Formula 1 of commerce). Where to place the dark stores in the city to minimize delivery times to customer clusters and maximize the addressable audience, indexing shelves for faster picking, packing orders live as customers add items to their carts, shelving products frequently bought together closely to reduce picking time, arranging the interior of the store so that you can fit as many SKUs as possible, optimizing shift schedules to have just the right amount of staff when needed, these were just some of the things our Operations team handled. No detail was too small, we would spend time ironing out simple things like making sure doors were easy to open with a bicycle, improving the design of the delivery backpack so that it\u2019s easy to open and minimizes the chance of spilling, and even choosing the right chairs to use at the stores to promote an active workplace. Another huge part was building a team culture such that everyone in the team cares about the 10-minute promise, something that became increasingly more difficult as we scaled.",
+          "text": "At first glance, a dark store is ‘just’ a convenience store that does delivery. Delivering thousands of SKUs in 10-minutes though? That requieres operational excellence and there’re opportunities to gain efficiency throughout the delivery process with measurable impact (I call it the Formula 1 of commerce). Where to place the dark stores in the city to minimize delivery times to customer clusters and maximize the addressable audience, indexing shelves for faster picking, packing orders live as customers add items to their carts, shelving products frequently bought together closely to reduce picking time, arranging the interior of the store so that you can fit as many SKUs as possible, optimizing shift schedules to have just the right amount of staff when needed, these were just some of the things our Operations team handled. No detail was too small, we would spend time ironing out simple things like making sure doors were easy to open with a bicycle, improving the design of the delivery backpack so that it’s easy to open and minimizes the chance of spilling, and even choosing the right chairs to use at the stores to promote an active workplace. Another huge part was building a team culture such that everyone in the team cares about the 10-minute promise, something that became increasingly more difficult as we scaled.",
           "tag": "p"
         },
         {
@@ -769,7 +759,7 @@
         },
         {
           "type": "text",
-          "text": "Back in the food delivery robot days I had been responsible for promoting the service both on social media and around town, this made me the de facto Growth lead as we started to expand Ninja. Mind you up to this point I had no direct experience in growth, marketing, or product. In fact, no one in the team had a marketing background, we only hired our first \u2018real\u2019 marketing person in Q1 2022. Our approach to Growth was the same approach we took to building robots: reason everything from first principles. Assume nothing, formulate hypothesis, run experiments to validate them, measure it all, and continue to place bigger bets on what the data shows is working (Highly recommend watching this presentation from Gustaf Alstromer if this is not how you run your growth team).",
+          "text": "Back in the food delivery robot days I had been responsible for promoting the service both on social media and around town, this made me the de facto Growth lead as we started to expand Ninja. Mind you up to this point I had no direct experience in growth, marketing, or product. In fact, no one in the team had a marketing background, we only hired our first ‘real’ marketing person in Q1 2022. Our approach to Growth was the same approach we took to building robots: reason everything from first principles. Assume nothing, formulate hypothesis, run experiments to validate them, measure it all, and continue to place bigger bets on what the data shows is working (Highly recommend watching this presentation from Gustaf Alstromer if this is not how you run your growth team).",
           "tag": "p"
         },
         {
@@ -779,17 +769,17 @@
         },
         {
           "type": "text",
-          "text": "We knew what had worked in Waterloo to kickstart Ninja, but as we landed in Toronto we had a bigger audience, more channels to reach them, and a bigger budget we needed to allocate effectively. Below I\u2019ll expand on some early growth initiatives that I think were interesting. Won\u2019t be mentioning the obvious SEO/Paid Acquisition/Emails but of course all of that is important and works too. For context, Ninja\u2019s growth team was optimizing for: New Users, Retention, and AOV, these metrics drove decision making and defined the objectives of each initiative.",
+          "text": "We knew what had worked in Waterloo to kickstart Ninja, but as we landed in Toronto we had a bigger audience, more channels to reach them, and a bigger budget we needed to allocate effectively. Below I’ll expand on some early growth initiatives that I think were interesting. Won’t be mentioning the obvious SEO/Paid Acquisition/Emails but of course all of that is important and works too. For context, Ninja’s growth team was optimizing for: New Users, Retention, and AOV, these metrics drove decision making and defined the objectives of each initiative.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "The art of the flyer. Ninja\u2019s first customer ever placed her order after receiving one of our flyers under her door. This was in Waterloo where you could walk into student housing and slide as many flyers as you wanted under every door, put them up on elevators, and even on the lobbies. This worked well and we spammed it to the point building managers were calling us and asking us to stop. This medium however would not work in Toronto, where buildings had concierges and security, even when you managed to sneak in, stuff would get taken down immediately. We worked around this in 3 ways:Branded paper bags: Originally we were doing deliveries using plastic bags we would buy off Amazon. We upgraded to recyclable paper bags, branding these had a long lead time so we started by placing stickers on top. We then started dropping these bags in lobbies across the city. You see, a concierge will take down a poster, but a food delivery bag flies under their radar. The bags would sit in the lobbies where everyone could see them, and the branded stickers would catch their attention and incentivize an action through coupon codes and extra discounts for sharing or interacting with the bags through scanning a QR code (classic AIDA playbook). Door Hangers: Our first successful flyer campaign in Toronto was printing door hanger shaped flyers and putting them on the front door of every house around our stores. It was often our own delivery team putting these out during their downtime, and we took the time to include a hand written personalized message in each flyer to emphasize we are a new small local business. We literally spammed these until we were getting calls from angry neighbours (There is something to be said about flyers wasting paper and polluting).Direct Mail: Running mail campaigns through the postal service was relatively expensive but it allowed for a bigger distribution scale than anything we\u2019d done before. It was also easy to measure and attribute orders, easy to A/B test different coupon structures and creatives, and also introduced new variables such as frequency of mailing, and pairing mail campaigns with other mediums such as OOH or digital. Targeting households based on demographics and census data was good as it allowed us to tune our message for specific customer profiles, but the most impactful feature of direct mail targeting for our business model was the ability to target every household within 5 minutes from our stores. These were households we knew we would deliver to in less than 10 minutes, ensuring a 5-star experience and allowing us to be more aggressive with our promotions (and ergo increase conversions) with campaigns such as \u201cget it in 10-minutes or it\u2019s free\u201d. We had many tricks to maximize and even \u2018hack\u2019 5-star customer experiences, these were great and would compound as these people would share their experiences with friends and leave favourable reviews.",
+          "text": "The art of the flyer. Ninja’s first customer ever placed her order after receiving one of our flyers under her door. This was in Waterloo where you could walk into student housing and slide as many flyers as you wanted under every door, put them up on elevators, and even on the lobbies. This worked well and we spammed it to the point building managers were calling us and asking us to stop. This medium however would not work in Toronto, where buildings had concierges and security, even when you managed to sneak in, stuff would get taken down immediately. We worked around this in 3 ways:Branded paper bags: Originally we were doing deliveries using plastic bags we would buy off Amazon. We upgraded to recyclable paper bags, branding these had a long lead time so we started by placing stickers on top. We then started dropping these bags in lobbies across the city. You see, a concierge will take down a poster, but a food delivery bag flies under their radar. The bags would sit in the lobbies where everyone could see them, and the branded stickers would catch their attention and incentivize an action through coupon codes and extra discounts for sharing or interacting with the bags through scanning a QR code (classic AIDA playbook). Door Hangers: Our first successful flyer campaign in Toronto was printing door hanger shaped flyers and putting them on the front door of every house around our stores. It was often our own delivery team putting these out during their downtime, and we took the time to include a hand written personalized message in each flyer to emphasize we are a new small local business. We literally spammed these until we were getting calls from angry neighbours (There is something to be said about flyers wasting paper and polluting).Direct Mail: Running mail campaigns through the postal service was relatively expensive but it allowed for a bigger distribution scale than anything we’d done before. It was also easy to measure and attribute orders, easy to A/B test different coupon structures and creatives, and also introduced new variables such as frequency of mailing, and pairing mail campaigns with other mediums such as OOH or digital. Targeting households based on demographics and census data was good as it allowed us to tune our message for specific customer profiles, but the most impactful feature of direct mail targeting for our business model was the ability to target every household within 5 minutes from our stores. These were households we knew we would deliver to in less than 10 minutes, ensuring a 5-star experience and allowing us to be more aggressive with our promotions (and ergo increase conversions) with campaigns such as “get it in 10-minutes or it’s free”. We had many tricks to maximize and even ‘hack’ 5-star customer experiences, these were great and would compound as these people would share their experiences with friends and leave favourable reviews.",
           "tag": "li"
         },
         {
           "type": "text",
-          "text": "The art of the flyer. Ninja\u2019s first customer ever placed her order after receiving one of our flyers under her door. This was in Waterloo where you could walk into student housing and slide as many flyers as you wanted under every door, put them up on elevators, and even on the lobbies. This worked well and we spammed it to the point building managers were calling us and asking us to stop. This medium however would not work in Toronto, where buildings had concierges and security, even when you managed to sneak in, stuff would get taken down immediately. We worked around this in 3 ways:",
+          "text": "The art of the flyer. Ninja’s first customer ever placed her order after receiving one of our flyers under her door. This was in Waterloo where you could walk into student housing and slide as many flyers as you wanted under every door, put them up on elevators, and even on the lobbies. This worked well and we spammed it to the point building managers were calling us and asking us to stop. This medium however would not work in Toronto, where buildings had concierges and security, even when you managed to sneak in, stuff would get taken down immediately. We worked around this in 3 ways:",
           "tag": "p"
         },
         {
@@ -804,17 +794,17 @@
         },
         {
           "type": "text",
-          "text": "Direct Mail: Running mail campaigns through the postal service was relatively expensive but it allowed for a bigger distribution scale than anything we\u2019d done before. It was also easy to measure and attribute orders, easy to A/B test different coupon structures and creatives, and also introduced new variables such as frequency of mailing, and pairing mail campaigns with other mediums such as OOH or digital. Targeting households based on demographics and census data was good as it allowed us to tune our message for specific customer profiles, but the most impactful feature of direct mail targeting for our business model was the ability to target every household within 5 minutes from our stores. These were households we knew we would deliver to in less than 10 minutes, ensuring a 5-star experience and allowing us to be more aggressive with our promotions (and ergo increase conversions) with campaigns such as \u201cget it in 10-minutes or it\u2019s free\u201d. We had many tricks to maximize and even \u2018hack\u2019 5-star customer experiences, these were great and would compound as these people would share their experiences with friends and leave favourable reviews.",
+          "text": "Direct Mail: Running mail campaigns through the postal service was relatively expensive but it allowed for a bigger distribution scale than anything we’d done before. It was also easy to measure and attribute orders, easy to A/B test different coupon structures and creatives, and also introduced new variables such as frequency of mailing, and pairing mail campaigns with other mediums such as OOH or digital. Targeting households based on demographics and census data was good as it allowed us to tune our message for specific customer profiles, but the most impactful feature of direct mail targeting for our business model was the ability to target every household within 5 minutes from our stores. These were households we knew we would deliver to in less than 10 minutes, ensuring a 5-star experience and allowing us to be more aggressive with our promotions (and ergo increase conversions) with campaigns such as “get it in 10-minutes or it’s free”. We had many tricks to maximize and even ‘hack’ 5-star customer experiences, these were great and would compound as these people would share their experiences with friends and leave favourable reviews.",
           "tag": "li"
         },
         {
           "type": "text",
-          "text": "Weaponize every interaction. Every touchpoint a customer had with our brand was an opportunity to provide a great experience and get them to talk about us. Here\u2019re two simple ideas which seem obvious but I see a lot of brands and competitors not implementing them:Thank you cards: Originally we were trying to figure out how to get people to share us on socials, so we thought, why not just ask? We started to include thank you notes with every order, these had a written component to make them feel personalized, and a simple call to action: Impressed by our service? Share us on social media and tag us to get $5 off your next order! As simple as it sounds, this worked and people were regularly sharing us over Instagram and TikTok. We would then leverage their posts and compile them on our main page to create social proof.Receipts: Some customers will opt out of your mail marketing but no one will opt out of email receipts, this made receipts and order confirmation emails a great place to promote stuff like our referrals program. We also made receipts shareable by highlighting how much money you had saved today by ordering Ninja, or how fast your order got delivered today in minutes and seconds. Imagine seeing a friend got something delivered in 5 minutes? That\u2019s worth a double take.",
+          "text": "Weaponize every interaction. Every touchpoint a customer had with our brand was an opportunity to provide a great experience and get them to talk about us. Here’re two simple ideas which seem obvious but I see a lot of brands and competitors not implementing them:Thank you cards: Originally we were trying to figure out how to get people to share us on socials, so we thought, why not just ask? We started to include thank you notes with every order, these had a written component to make them feel personalized, and a simple call to action: Impressed by our service? Share us on social media and tag us to get $5 off your next order! As simple as it sounds, this worked and people were regularly sharing us over Instagram and TikTok. We would then leverage their posts and compile them on our main page to create social proof.Receipts: Some customers will opt out of your mail marketing but no one will opt out of email receipts, this made receipts and order confirmation emails a great place to promote stuff like our referrals program. We also made receipts shareable by highlighting how much money you had saved today by ordering Ninja, or how fast your order got delivered today in minutes and seconds. Imagine seeing a friend got something delivered in 5 minutes? That’s worth a double take.",
           "tag": "li"
         },
         {
           "type": "text",
-          "text": "Weaponize every interaction. Every touchpoint a customer had with our brand was an opportunity to provide a great experience and get them to talk about us. Here\u2019re two simple ideas which seem obvious but I see a lot of brands and competitors not implementing them:",
+          "text": "Weaponize every interaction. Every touchpoint a customer had with our brand was an opportunity to provide a great experience and get them to talk about us. Here’re two simple ideas which seem obvious but I see a lot of brands and competitors not implementing them:",
           "tag": "p"
         },
         {
@@ -824,17 +814,17 @@
         },
         {
           "type": "text",
-          "text": "Receipts: Some customers will opt out of your mail marketing but no one will opt out of email receipts, this made receipts and order confirmation emails a great place to promote stuff like our referrals program. We also made receipts shareable by highlighting how much money you had saved today by ordering Ninja, or how fast your order got delivered today in minutes and seconds. Imagine seeing a friend got something delivered in 5 minutes? That\u2019s worth a double take.",
+          "text": "Receipts: Some customers will opt out of your mail marketing but no one will opt out of email receipts, this made receipts and order confirmation emails a great place to promote stuff like our referrals program. We also made receipts shareable by highlighting how much money you had saved today by ordering Ninja, or how fast your order got delivered today in minutes and seconds. Imagine seeing a friend got something delivered in 5 minutes? That’s worth a double take.",
           "tag": "li"
         },
         {
           "type": "text",
-          "text": "Feedback loops. In order to run growth experiments and validate hypothesis, you\u2019ll need to have the tools to measure all of the relevant metrics. Some metrics are qualitative and harder to quantify, and at our scale we had the opportunity to simply call every single one of our customers (we had a person on the team whose entire job was dialling customers). Also, as good as your team might be, talking with customers and hearing what they have to say will uncover insights that the data could not have always told you. Every single person who ordered Ninja for the first time would get a phone call within 7 days of placing their order, similarly VIP / high LTV customers, and churned customers would also get follow up calls to gather insights around their experience and promote growth initiatives (listen, you can launch a referral program, but it won\u2019t work unless everyone knows about it). These calls helped uncover which were the true value props of our service, hone in on customer acquisition attributions, expand our SKU selection (customers loved when we added products they specifically asked for), and get customers\u2019 thoughts on changes we planned to roll out in the future. The phone calls themselves were also an experiment: Do customers who got the call retain better than those which did not? Was spending time calling them justified?",
+          "text": "Feedback loops. In order to run growth experiments and validate hypothesis, you’ll need to have the tools to measure all of the relevant metrics. Some metrics are qualitative and harder to quantify, and at our scale we had the opportunity to simply call every single one of our customers (we had a person on the team whose entire job was dialling customers). Also, as good as your team might be, talking with customers and hearing what they have to say will uncover insights that the data could not have always told you. Every single person who ordered Ninja for the first time would get a phone call within 7 days of placing their order, similarly VIP / high LTV customers, and churned customers would also get follow up calls to gather insights around their experience and promote growth initiatives (listen, you can launch a referral program, but it won’t work unless everyone knows about it). These calls helped uncover which were the true value props of our service, hone in on customer acquisition attributions, expand our SKU selection (customers loved when we added products they specifically asked for), and get customers’ thoughts on changes we planned to roll out in the future. The phone calls themselves were also an experiment: Do customers who got the call retain better than those which did not? Was spending time calling them justified?",
           "tag": "li"
         },
         {
           "type": "text",
-          "text": "Leverage existing platforms. While we were trying to funnel people into our app, we would still leverage existing platforms including UberEATS and DoorDash for top of funnel initiatives. We did this in two ways:Ninja listed on UberEATS as a grocery store under its recently launched (and hence not very crowded) grocery section on their app. The timing was great as Uber was investing heavily into promoting grocery purchases on their app. Customers who ordered from Ninja through Uber\u2019s app would then be encouraged to download our app for a wider selection, faster delivery, and a discount on their next order. Uber also allowed to run ads on their app, and indexed every product so customers searching for specific things would land on your store if no one else had it (which was the case for many alcohol and COVID-19 products).We would offer popular restaurants on UberEATS money in exchange for them to include our flyers with every order they shipped. We would often word this so it looked like the restaurant was gifting their customers free dessert through Ninja (a win for the restaurants and for the customers).",
+          "text": "Leverage existing platforms. While we were trying to funnel people into our app, we would still leverage existing platforms including UberEATS and DoorDash for top of funnel initiatives. We did this in two ways:Ninja listed on UberEATS as a grocery store under its recently launched (and hence not very crowded) grocery section on their app. The timing was great as Uber was investing heavily into promoting grocery purchases on their app. Customers who ordered from Ninja through Uber’s app would then be encouraged to download our app for a wider selection, faster delivery, and a discount on their next order. Uber also allowed to run ads on their app, and indexed every product so customers searching for specific things would land on your store if no one else had it (which was the case for many alcohol and COVID-19 products).We would offer popular restaurants on UberEATS money in exchange for them to include our flyers with every order they shipped. We would often word this so it looked like the restaurant was gifting their customers free dessert through Ninja (a win for the restaurants and for the customers).",
           "tag": "li"
         },
         {
@@ -844,7 +834,7 @@
         },
         {
           "type": "text",
-          "text": "Ninja listed on UberEATS as a grocery store under its recently launched (and hence not very crowded) grocery section on their app. The timing was great as Uber was investing heavily into promoting grocery purchases on their app. Customers who ordered from Ninja through Uber\u2019s app would then be encouraged to download our app for a wider selection, faster delivery, and a discount on their next order. Uber also allowed to run ads on their app, and indexed every product so customers searching for specific things would land on your store if no one else had it (which was the case for many alcohol and COVID-19 products).",
+          "text": "Ninja listed on UberEATS as a grocery store under its recently launched (and hence not very crowded) grocery section on their app. The timing was great as Uber was investing heavily into promoting grocery purchases on their app. Customers who ordered from Ninja through Uber’s app would then be encouraged to download our app for a wider selection, faster delivery, and a discount on their next order. Uber also allowed to run ads on their app, and indexed every product so customers searching for specific things would land on your store if no one else had it (which was the case for many alcohol and COVID-19 products).",
           "tag": "li"
         },
         {
@@ -858,19 +848,9 @@
           "text": "Previous Previous Wingsuit Propulsion (2022)"
         },
         {
-          "type": "text",
-          "text": "Wingsuit Propulsion (2022)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/caravel-robotics-2021",
           "text": "Next Next Caravel Robotics (2021)"
-        },
-        {
-          "type": "text",
-          "text": "Caravel Robotics (2021)",
-          "tag": "h2"
         }
       ]
     },
@@ -900,7 +880,7 @@
         },
         {
           "type": "text",
-          "text": "I am currently building a robot dog during whatever free time I have outside of Double. The project is named Antarctic because its original goal was to build a robot, fly it to the Antarctic, and stream it surviving live (the Antarctic is the most accessible place that is somewhat equivalent to Mars). We\u2019ll see if we eventually reach that goal, for v1 of the project I am focused on an affordable BOM and developing an ML controller based on Disney\u2019s Bipedal Robotic Character paper.",
+          "text": "I am currently building a robot dog during whatever free time I have outside of Double. The project is named Antarctic because its original goal was to build a robot, fly it to the Antarctic, and stream it surviving live (the Antarctic is the most accessible place that is somewhat equivalent to Mars). We’ll see if we eventually reach that goal, for v1 of the project I am focused on an affordable BOM and developing an ML controller based on Disney’s Bipedal Robotic Character paper.",
           "tag": "p"
         },
         {
@@ -915,7 +895,7 @@
         },
         {
           "type": "text",
-          "text": "Instead of designing this behind closed doors, I am documenting every minute of the design process on Youtube. The videos are multiple hours long each and shows every part of CADing, 3D printing, assembling, programming firmware, training models, etc. I don\u2019t know who wants to watch that but I found myself watching that type of content often (shoutout to George Hotz and Martin Shkreli who also put out that type of content in the regular) except there was no hardware / robotics equivalent, so this is it.",
+          "text": "Instead of designing this behind closed doors, I am documenting every minute of the design process on Youtube. The videos are multiple hours long each and shows every part of CADing, 3D printing, assembling, programming firmware, training models, etc. I don’t know who wants to watch that but I found myself watching that type of content often (shoutout to George Hotz and Martin Shkreli who also put out that type of content in the regular) except there was no hardware / robotics equivalent, so this is it.",
           "tag": "p"
         },
         {
@@ -1004,19 +984,9 @@
           "text": "Previous Previous Self-Balancing Robot (2025-2026)"
         },
         {
-          "type": "text",
-          "text": "Self-Balancing Robot (2025-2026)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/double-yc",
           "text": "Next Next Double (2023-2025)"
-        },
-        {
-          "type": "text",
-          "text": "Double (2023-2025)",
-          "tag": "h2"
         }
       ]
     },
@@ -1051,7 +1021,7 @@
         },
         {
           "type": "text",
-          "text": "After spending the last 2 years working towards an electric vertical take-off and landing aircraft, diligently validating our technology and gaining traction with investors and customers, the COVID-19 pandemic hit us hard. It was April 2020 and raising funds for a \u2018moonshot\u2019 startup seemed impossible, we couldn\u2019t even fly to go fundraise in the Bay Area.",
+          "text": "After spending the last 2 years working towards an electric vertical take-off and landing aircraft, diligently validating our technology and gaining traction with investors and customers, the COVID-19 pandemic hit us hard. It was April 2020 and raising funds for a ‘moonshot’ startup seemed impossible, we couldn’t even fly to go fundraise in the Bay Area.",
           "tag": "p"
         },
         {
@@ -1091,7 +1061,7 @@
         },
         {
           "type": "text",
-          "text": "Let\u2019s skip the design and go straight to fabrication. In order to minimize the cost of tool making as much as possible, we got rid of all curvature on the passenger cell, making it a \u201cdihedral\u201d design (what we\u2019ve come to know as the cool Tesla Cybertruck design). This meant that instead of CNCing tools to a curvature, we could just contour mill MDF panels and screw them together with some ribbing, and so we did. Below you will see us assemble a series of flat panels together, plus doing body-filling to hide any screw caps (we also body filled some light radii because sharp edges can be tricky for composite layups) and the gap lines in between the panels.",
+          "text": "Let’s skip the design and go straight to fabrication. In order to minimize the cost of tool making as much as possible, we got rid of all curvature on the passenger cell, making it a “dihedral” design (what we’ve come to know as the cool Tesla Cybertruck design). This meant that instead of CNCing tools to a curvature, we could just contour mill MDF panels and screw them together with some ribbing, and so we did. Below you will see us assemble a series of flat panels together, plus doing body-filling to hide any screw caps (we also body filled some light radii because sharp edges can be tricky for composite layups) and the gap lines in between the panels.",
           "tag": "p"
         },
         {
@@ -1136,7 +1106,7 @@
         },
         {
           "type": "text",
-          "text": "There\u2019re quite a few people working on the moulds at this point, although we were not paying anyone we did manage to get some help: mostly friends and also enthusiasts who had heard about what we were building and wanted to help (we even got a Formula 1 Mercedes engineer to help out with the aerodynamics). Since most of the design was done on remote, we were also able to crowdsource a lot of expertise during the design process, mostly for free.",
+          "text": "There’re quite a few people working on the moulds at this point, although we were not paying anyone we did manage to get some help: mostly friends and also enthusiasts who had heard about what we were building and wanted to help (we even got a Formula 1 Mercedes engineer to help out with the aerodynamics). Since most of the design was done on remote, we were also able to crowdsource a lot of expertise during the design process, mostly for free.",
           "tag": "p"
         },
         {
@@ -1171,7 +1141,7 @@
         },
         {
           "type": "text",
-          "text": "In order to bond the two halves of the passenger cell we would need a flange, but the simple flat MDF panel geometry of the mould meant we would have to add one on top. We formed a flange by heating up a 1/4\u201d strip of polyurethane foam and then wrapping it in tape (to seal it from absorbing resins) and hot glueing it around the edge of the mould as you can see below.",
+          "text": "In order to bond the two halves of the passenger cell we would need a flange, but the simple flat MDF panel geometry of the mould meant we would have to add one on top. We formed a flange by heating up a 1/4” strip of polyurethane foam and then wrapping it in tape (to seal it from absorbing resins) and hot glueing it around the edge of the mould as you can see below.",
           "tag": "p"
         },
         {
@@ -1296,7 +1266,7 @@
         },
         {
           "type": "text",
-          "text": "You\u2019ll see that our manpower started to take a hit, it was the middle of the summer and we were working inside a warehouse that was way too hot for volunteers to actually come and help willingly, but hey, an investor during a visit once told us it showed \u2018grit\u2019.",
+          "text": "You’ll see that our manpower started to take a hit, it was the middle of the summer and we were working inside a warehouse that was way too hot for volunteers to actually come and help willingly, but hey, an investor during a visit once told us it showed ‘grit’.",
           "tag": "p"
         },
         {
@@ -1501,7 +1471,7 @@
         },
         {
           "type": "text",
-          "text": "In December 2020, after completing the build of all exterior surfaces, plus sourcing the powertrain, batteries, chargers, and machined parts, I left the company to pursue other interests. I\u2019m incredibly proud for all that Watfly accomplished in 3 years: going from a student team to a company that builds aircraft. Later this year when Atlas takes flight, it will become one of the first hundred electric aircraft in history, and I foresee Watfly will be one of the first companies in the world to commercialize an EVTOL vehicle. What a ride.",
+          "text": "In December 2020, after completing the build of all exterior surfaces, plus sourcing the powertrain, batteries, chargers, and machined parts, I left the company to pursue other interests. I’m incredibly proud for all that Watfly accomplished in 3 years: going from a student team to a company that builds aircraft. Later this year when Atlas takes flight, it will become one of the first hundred electric aircraft in history, and I foresee Watfly will be one of the first companies in the world to commercialize an EVTOL vehicle. What a ride.",
           "tag": "p"
         },
         {
@@ -1550,19 +1520,9 @@
           "text": "Previous Previous Caravel Robotics (2021)"
         },
         {
-          "type": "text",
-          "text": "Caravel Robotics (2021)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/bigdrones-2019",
           "text": "Next Next Bigger Drones (2019-2020)"
-        },
-        {
-          "type": "text",
-          "text": "Bigger Drones (2019-2020)",
-          "tag": "h2"
         }
       ]
     },
@@ -1702,7 +1662,7 @@
         },
         {
           "type": "text",
-          "text": "Finally, for the first time in the team\u2019s fabrication history, the entire fabrication process was described step-by-step and a manufacturing guide was created, which the team could refer to throughout the process and in future projects.",
+          "text": "Finally, for the first time in the team’s fabrication history, the entire fabrication process was described step-by-step and a manufacturing guide was created, which the team could refer to throughout the process and in future projects.",
           "tag": "p"
         },
         {
@@ -1782,7 +1742,7 @@
         },
         {
           "type": "text",
-          "text": "After body filling the fibre glass layer, we applied a primer layer of Duratec EZ sand (the white layer), this helped get rid of any remaining fibre glass weave texture and allowed us to sand to finer levels, as well as help bond the next layer of primer. Last we applied a final coat of surface primer (the dark grey layer) which we polished to a mirror shine. Yup, that was a ton of sanding, the team\u2019s patience surely tested.",
+          "text": "After body filling the fibre glass layer, we applied a primer layer of Duratec EZ sand (the white layer), this helped get rid of any remaining fibre glass weave texture and allowed us to sand to finer levels, as well as help bond the next layer of primer. Last we applied a final coat of surface primer (the dark grey layer) which we polished to a mirror shine. Yup, that was a ton of sanding, the team’s patience surely tested.",
           "tag": "p"
         },
         {
@@ -1922,7 +1882,7 @@
         },
         {
           "type": "text",
-          "text": "The ply schedule for this year was similar to that of Bolt\u2019s, with a 4 layer, 250 gsm, twill weave carbon fibre composition. Reinforced with polyurethane foam core around the edges of the hatch, around areas that required extra stiffness (such as propulsion mounts), and in strategic areas to balance the buoyancy of the submarine. Additionally we placed a light plain weave layer of fibre glass on the outside for additional protection and should any body work would be required (it\u2019s easier to sand glass than carbon). Last, instead of bonding components to the hull, we decided to embed aluminum blocks with tapped holes to it, these also had to be placed during the layup process.",
+          "text": "The ply schedule for this year was similar to that of Bolt’s, with a 4 layer, 250 gsm, twill weave carbon fibre composition. Reinforced with polyurethane foam core around the edges of the hatch, around areas that required extra stiffness (such as propulsion mounts), and in strategic areas to balance the buoyancy of the submarine. Additionally we placed a light plain weave layer of fibre glass on the outside for additional protection and should any body work would be required (it’s easier to sand glass than carbon). Last, instead of bonding components to the hull, we decided to embed aluminum blocks with tapped holes to it, these also had to be placed during the layup process.",
           "tag": "p"
         },
         {
@@ -2112,22 +2072,22 @@
         },
         {
           "type": "text",
-          "text": "Claire\u2019s metal frame.",
+          "text": "Claire’s metal frame.",
           "tag": "figcaption"
         },
         {
           "type": "text",
-          "text": "CNC\u2019d and formed hingers.",
+          "text": "CNC’d and formed hingers.",
           "tag": "figcaption"
         },
         {
           "type": "text",
-          "text": "The team drove from Waterloo to Maryland for the International Submarine Races the summer of 2019, hosted in the Naval Surface Warfare Center, Carderock Division (one of the coolest parts of going to competition is seeing the huge R&D facilities inside the navy\u2019s base). That yearI did not go to competition but I heard all kinds of crazy stories.",
+          "text": "The team drove from Waterloo to Maryland for the International Submarine Races the summer of 2019, hosted in the Naval Surface Warfare Center, Carderock Division (one of the coolest parts of going to competition is seeing the huge R&D facilities inside the navy’s base). That yearI did not go to competition but I heard all kinds of crazy stories.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Just like that, after 5 wild years, my role in the team came to an end. Claire was my far the best submarine I ever designed, and left incredibly proud of what the team had accomplished in only 5 years. Most importantly, I left incredibly excited to see what the team\u2019s next generation would accomplish. In a recent interview, the new WatSub lead talked about the upcoming 4th generation submarine: Darwin.",
+          "text": "Just like that, after 5 wild years, my role in the team came to an end. Claire was my far the best submarine I ever designed, and left incredibly proud of what the team had accomplished in only 5 years. Most importantly, I left incredibly excited to see what the team’s next generation would accomplish. In a recent interview, the new WatSub lead talked about the upcoming 4th generation submarine: Darwin.",
           "tag": "p"
         },
         {
@@ -2137,7 +2097,7 @@
         },
         {
           "type": "text",
-          "text": "I finish this post with a picture of Claire in the shape it came from competition, and a picture of the insides of Claire as seen by the pilot. Hopefully you can imagine how it felt to travel the world with our racing submarine. These 5 years were not only a great start for my engineering career, but also the most fun I\u2019ve ever had.",
+          "text": "I finish this post with a picture of Claire in the shape it came from competition, and a picture of the insides of Claire as seen by the pilot. Hopefully you can imagine how it felt to travel the world with our racing submarine. These 5 years were not only a great start for my engineering career, but also the most fun I’ve ever had.",
           "tag": "p"
         },
         {
@@ -2166,19 +2126,9 @@
           "text": "Previous Previous Drones (2018-2019)"
         },
         {
-          "type": "text",
-          "text": "Drones (2018-2019)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/bolt-20162017",
           "text": "Next Next Bolt (2016-2017)"
-        },
-        {
-          "type": "text",
-          "text": "Bolt (2016-2017)",
-          "tag": "h2"
         }
       ]
     },
@@ -2213,7 +2163,7 @@
         },
         {
           "type": "text",
-          "text": "Some time in 2018 during my senior year at the University of Waterloo I read about the \u201cGoFly\u201d challenge, a Boeing sponsored competition with a $1MM prize for whomever builds a small and quiet VTOL aircraft. I had a friend who had been talking about flying contraptions since first year, so we decided to partner and build such a vehicle.",
+          "text": "Some time in 2018 during my senior year at the University of Waterloo I read about the “GoFly” challenge, a Boeing sponsored competition with a $1MM prize for whomever builds a small and quiet VTOL aircraft. I had a friend who had been talking about flying contraptions since first year, so we decided to partner and build such a vehicle.",
           "tag": "p"
         },
         {
@@ -2293,7 +2243,7 @@
         },
         {
           "type": "text",
-          "text": "Our first drone was MAVIS, a quad-rotor, tilt-wing configuration. It would take-off vertically and then rotate its wings and propellers forward for horizontal wing-lift assisted flight. We built the passenger cell out of fibre glass and epoxy resin through a wet layup process on a CNC\u2019d poly-urethane foam mould. The wings were 3D-printed and coupled to a servo motor through an aluminum shaft for the rotating motion. All of the motors, motor controllers, servos, telemetry radio, propellers, and batteries were bought online at drone hobby stores (it\u2019s remarkable how far the hobby drone community has come). The brain on board lived in an off the shelf PX4 board running custom firmware built on top of Pixhawk open source flight controller, specifically for our airframe configuration.",
+          "text": "Our first drone was MAVIS, a quad-rotor, tilt-wing configuration. It would take-off vertically and then rotate its wings and propellers forward for horizontal wing-lift assisted flight. We built the passenger cell out of fibre glass and epoxy resin through a wet layup process on a CNC’d poly-urethane foam mould. The wings were 3D-printed and coupled to a servo motor through an aluminum shaft for the rotating motion. All of the motors, motor controllers, servos, telemetry radio, propellers, and batteries were bought online at drone hobby stores (it’s remarkable how far the hobby drone community has come). The brain on board lived in an off the shelf PX4 board running custom firmware built on top of Pixhawk open source flight controller, specifically for our airframe configuration.",
           "tag": "p"
         },
         {
@@ -2333,7 +2283,7 @@
         },
         {
           "type": "text",
-          "text": "A few dozens of crashes later we iterated to MAVIS 2.0, a sheet metal drone. The thought here was that it would be easier to repair and also lighter, granting us higher thrust margins and controls authority. For the most part this was a good next step. I will warn you that electrically insulating your metal airframe is crucial, and said insulation must withstand crashes, don\u2019t ask me how I know.",
+          "text": "A few dozens of crashes later we iterated to MAVIS 2.0, a sheet metal drone. The thought here was that it would be easier to repair and also lighter, granting us higher thrust margins and controls authority. For the most part this was a good next step. I will warn you that electrically insulating your metal airframe is crucial, and said insulation must withstand crashes, don’t ask me how I know.",
           "tag": "p"
         },
         {
@@ -2363,7 +2313,7 @@
         },
         {
           "type": "text",
-          "text": "Having built our first drone, conducting tests, and validating our initial models, we started to look for areas of big improvement. The team moved from the original tilt-wing quad-rotor design onto a dual-rotor tail-sitter. Within the spatial constraints indicated by GoFly, a lower rotor count seemed optimal in order to maximize the rotor size and ultimately minimize disk loading (which was key for the hover take-off and landing, as well as to keep power consumption within a realistic range). Similarly getting rid of the mechanical complexity and mass of the tilt mechanisms improved our vehicle\u2019s overall performance. On the other hand, controls would get tougher as we could no longer rely solely on thrust differentials to maneuver the vehicle, but would rather use blown control surfaces. You can see a render of the vehicle below, and on hindsight the team\u2019s decisions were accurate and we saw other teams converging on similar configurations as the GoFly competition progressed.",
+          "text": "Having built our first drone, conducting tests, and validating our initial models, we started to look for areas of big improvement. The team moved from the original tilt-wing quad-rotor design onto a dual-rotor tail-sitter. Within the spatial constraints indicated by GoFly, a lower rotor count seemed optimal in order to maximize the rotor size and ultimately minimize disk loading (which was key for the hover take-off and landing, as well as to keep power consumption within a realistic range). Similarly getting rid of the mechanical complexity and mass of the tilt mechanisms improved our vehicle’s overall performance. On the other hand, controls would get tougher as we could no longer rely solely on thrust differentials to maneuver the vehicle, but would rather use blown control surfaces. You can see a render of the vehicle below, and on hindsight the team’s decisions were accurate and we saw other teams converging on similar configurations as the GoFly competition progressed.",
           "tag": "p"
         },
         {
@@ -2418,7 +2368,7 @@
         },
         {
           "type": "text",
-          "text": "CNC\u2019d a foam wing.",
+          "text": "CNC’d a foam wing.",
           "tag": "figcaption"
         },
         {
@@ -2508,7 +2458,7 @@
         },
         {
           "type": "text",
-          "text": "But building drones was not what we were after, we wanted to build an aircraft in which we could fly ourselves, and for this we needed more money. I\u2019ve seen a lot of early hardware projects fail at this point, although any company has a chasm to cross in terms of product-market fit, capital intensive companies have a much earlier chasm to cross in terms of securing enough funding to even validate the concept.",
+          "text": "But building drones was not what we were after, we wanted to build an aircraft in which we could fly ourselves, and for this we needed more money. I’ve seen a lot of early hardware projects fail at this point, although any company has a chasm to cross in terms of product-market fit, capital intensive companies have a much earlier chasm to cross in terms of securing enough funding to even validate the concept.",
           "tag": "p"
         },
         {
@@ -2547,19 +2497,9 @@
           "text": "Previous Previous Bigger Drones (2019-2020)"
         },
         {
-          "type": "text",
-          "text": "Bigger Drones (2019-2020)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/clare-20172019",
           "text": "Next Next Claire (2017-2019)"
-        },
-        {
-          "type": "text",
-          "text": "Claire (2017-2019)",
-          "tag": "h2"
         }
       ]
     },
@@ -2594,7 +2534,7 @@
         },
         {
           "type": "text",
-          "text": "With a fresh cheque from winning a pitch competition, we got to work on scaling up our tiny 2 feet wingspan drone. We designed the next iteration to be the geometric 1/2 scale of the final aircraft which put us at an 8 feet wingspan. The fabrication method was similar to that of the smaller drone: we would laser cut the entire airframe out of 1/4\u201d foam board and tape it together, this included the interior spar structure as shown below. We would then reinforce the spar with carbon fibre, and wrap the entire airframe in fibreglass.",
+          "text": "With a fresh cheque from winning a pitch competition, we got to work on scaling up our tiny 2 feet wingspan drone. We designed the next iteration to be the geometric 1/2 scale of the final aircraft which put us at an 8 feet wingspan. The fabrication method was similar to that of the smaller drone: we would laser cut the entire airframe out of 1/4” foam board and tape it together, this included the interior spar structure as shown below. We would then reinforce the spar with carbon fibre, and wrap the entire airframe in fibreglass.",
           "tag": "p"
         },
         {
@@ -2609,7 +2549,7 @@
         },
         {
           "type": "text",
-          "text": "The motors were mounted onto 3D printed hubs with an in-between sheet metal part which served as heat sink, the hubs would attach to two aluminum extrusions which were bonded onto the wing\u2019s outer fibreglass surface.",
+          "text": "The motors were mounted onto 3D printed hubs with an in-between sheet metal part which served as heat sink, the hubs would attach to two aluminum extrusions which were bonded onto the wing’s outer fibreglass surface.",
           "tag": "p"
         },
         {
@@ -2649,7 +2589,7 @@
         },
         {
           "type": "text",
-          "text": "For the drivetrain we sourced T-Motor\u2019s MN805-S KV150 motors and Flame 100A HV controllers. We could produce over 30kgf of combined thrust on a 42VDC 8kW system which would give us enough authority on our 20kg airframe. The propeller blades also came from T-Motor, and later we also got custom made propellers from Mejzlik in Europe. We had previously learnt that making propellers in-house requires top quality tooling and a good balancing process so we left this risk for later.",
+          "text": "For the drivetrain we sourced T-Motor’s MN805-S KV150 motors and Flame 100A HV controllers. We could produce over 30kgf of combined thrust on a 42VDC 8kW system which would give us enough authority on our 20kg airframe. The propeller blades also came from T-Motor, and later we also got custom made propellers from Mejzlik in Europe. We had previously learnt that making propellers in-house requires top quality tooling and a good balancing process so we left this risk for later.",
           "tag": "p"
         },
         {
@@ -2739,7 +2679,7 @@
         },
         {
           "type": "text",
-          "text": "After validating the propulsion assembly as well as benching the motors independently to validate the supplier\u2019s thrust figures (you can see our propulsion load cells setup on the background in the bottom pictures), we assembled the drone. As you can see from the pictures below, there was a lot of hot glue involved, and more wires than you would expect. Ultimately this was still a drone -not large enough to carry a person- but seeing it next to our previous drones made it feel like a significant step. The aircraft came together with a total mass of just over 18kg.",
+          "text": "After validating the propulsion assembly as well as benching the motors independently to validate the supplier’s thrust figures (you can see our propulsion load cells setup on the background in the bottom pictures), we assembled the drone. As you can see from the pictures below, there was a lot of hot glue involved, and more wires than you would expect. Ultimately this was still a drone -not large enough to carry a person- but seeing it next to our previous drones made it feel like a significant step. The aircraft came together with a total mass of just over 18kg.",
           "tag": "p"
         },
         {
@@ -2859,7 +2799,7 @@
         },
         {
           "type": "text",
-          "text": "To keep momentum rolling while we assessed the COVID-19 situation, we started to work on a passenger cockpit mockup for the drone. All of our final aircraft renders had a cockpit and we would often get asked why our drone did not match. Our aircraft was characterized as a tail sitter, meaning it lands and take-offs from its tail and then flips 90 degrees into horizontal flight. Most humans don\u2019t enjoy getting flipped nor starring into the ground while flying, so the cockpit was gimballed and the pilot would always be sitting down and facing the horizon (similar to a car). We designed the the gimbal mechanism (mostly 3D printed parts, servos, and two IMUs), a cockpit, and started the fabrication of it in my living room (we lost the office due to the pandemic lockdown).",
+          "text": "To keep momentum rolling while we assessed the COVID-19 situation, we started to work on a passenger cockpit mockup for the drone. All of our final aircraft renders had a cockpit and we would often get asked why our drone did not match. Our aircraft was characterized as a tail sitter, meaning it lands and take-offs from its tail and then flips 90 degrees into horizontal flight. Most humans don’t enjoy getting flipped nor starring into the ground while flying, so the cockpit was gimballed and the pilot would always be sitting down and facing the horizon (similar to a car). We designed the the gimbal mechanism (mostly 3D printed parts, servos, and two IMUs), a cockpit, and started the fabrication of it in my living room (we lost the office due to the pandemic lockdown).",
           "tag": "p"
         },
         {
@@ -2894,7 +2834,7 @@
         },
         {
           "type": "text",
-          "text": "Incorporating the passenger cell onto the drone also meant having to cutout enough space on the wing for it, including cutting out the middle section of the spar. This required reinforcement all around the new cutout wing profile (as the passenger cell itself did not carry any of the load) which lead to increased mass and decreased stiffness. The reinforcement was done through a series of carbon fibre tubes interconnected and glued to the wing. We had some concerns about resonance given the loss of stiffness in the wing, but after a few flights we regained confidence in the structure. At this point it was April 2020 and we had taken this 1/2 scale prototype as far as we could, I\u2019ve written a follow up post on what we did next.",
+          "text": "Incorporating the passenger cell onto the drone also meant having to cutout enough space on the wing for it, including cutting out the middle section of the spar. This required reinforcement all around the new cutout wing profile (as the passenger cell itself did not carry any of the load) which lead to increased mass and decreased stiffness. The reinforcement was done through a series of carbon fibre tubes interconnected and glued to the wing. We had some concerns about resonance given the loss of stiffness in the wing, but after a few flights we regained confidence in the structure. At this point it was April 2020 and we had taken this 1/2 scale prototype as far as we could, I’ve written a follow up post on what we did next.",
           "tag": "p"
         },
         {
@@ -2933,19 +2873,9 @@
           "text": "Previous Previous Atlas (2020)"
         },
         {
-          "type": "text",
-          "text": "Atlas (2020)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/drones-20182019",
           "text": "Next Next Drones (2018-2019)"
-        },
-        {
-          "type": "text",
-          "text": "Drones (2018-2019)",
-          "tag": "h2"
         }
       ]
     },
@@ -2980,7 +2910,7 @@
         },
         {
           "type": "text",
-          "text": "After leaving Watfly and going through a short stint helping run a derivatives trading Discord (thank you GME/AMC for the gains) I reconnected with one of the smartest guys I know, a friend who had worked on Watfly\u2019s very early days back when it was a student team. He was leaving his cushy tech job in a Bay Area AP company to start a robotics startup, and I was invited to lead the design and build of their hardware platform.",
+          "text": "After leaving Watfly and going through a short stint helping run a derivatives trading Discord (thank you GME/AMC for the gains) I reconnected with one of the smartest guys I know, a friend who had worked on Watfly’s very early days back when it was a student team. He was leaving his cushy tech job in a Bay Area AP company to start a robotics startup, and I was invited to lead the design and build of their hardware platform.",
           "tag": "p"
         },
         {
@@ -3005,7 +2935,7 @@
         },
         {
           "type": "text",
-          "text": "It was early 2020 and there were already a number of food delivery robot startups, a bunch had been around for many years, some had gone bankrupt, none had really scaled, but Caravel\u2019s platform would be built from scratch on the learnings of their mistakes. Most food delivery robots operate in sidewalks, constrained by regulations to low speeds and small sizes. Others are attempting to drive on roads, which basically requieres developing full AP car capabilities a la Waymo. Caravel\u2019s \u201cKona\u201d would be a bicycle lane robot, allowing us to drive at higher speeds and support greater payloads (delivering multiple orders per trip, or \u201cbatching\u201d, which is key for unit economics), meanwhile a human driver in Mexico would tele-operate the robot in the US, allowing us to monetize the wage arbitrage.",
+          "text": "It was early 2020 and there were already a number of food delivery robot startups, a bunch had been around for many years, some had gone bankrupt, none had really scaled, but Caravel’s platform would be built from scratch on the learnings of their mistakes. Most food delivery robots operate in sidewalks, constrained by regulations to low speeds and small sizes. Others are attempting to drive on roads, which basically requieres developing full AP car capabilities a la Waymo. Caravel’s “Kona” would be a bicycle lane robot, allowing us to drive at higher speeds and support greater payloads (delivering multiple orders per trip, or “batching”, which is key for unit economics), meanwhile a human driver in Mexico would tele-operate the robot in the US, allowing us to monetize the wage arbitrage.",
           "tag": "p"
         },
         {
@@ -3015,12 +2945,12 @@
         },
         {
           "type": "text",
-          "text": "Caravel\u2019s first prototype (unnamed), Caravel\u2019s Kona V1 final 3D CAD, An artistic render I made for our investors deck.",
+          "text": "Caravel’s first prototype (unnamed), Caravel’s Kona V1 final 3D CAD, An artistic render I made for our investors deck.",
           "tag": "figcaption"
         },
         {
           "type": "text",
-          "text": "We immediately got to work, first as a fully remote team (just COVID-19 things you know) operating from 4 different time zones (Palo Alto, Toronto, Zagreb, and Cape Town). We started from a blank slate so the first step was to establish the platform\u2019s characteristics. I usually start with the numbers that dictate the platform\u2019s physics: payload capacity, maximum speed, acceleration, braking distance, range, turn radius, terrainability, gradeability, weatherability, mass, centre of gravity, lifetime, etc. Then move onto nice to have product features: exact camera placement, closures, lighting, proportions, aesthetics. You then iterate a couple of times through this process, as many parameters directly impact the platform\u2019s mass primarily through battery size, and changes in mass impact the suspension design and kinematic performance. Other elements like wheels can affect the entire platform\u2019s dynamics and can even involve input from an industrial design point of view (this is where your team\u2019s priorities come into play).",
+          "text": "We immediately got to work, first as a fully remote team (just COVID-19 things you know) operating from 4 different time zones (Palo Alto, Toronto, Zagreb, and Cape Town). We started from a blank slate so the first step was to establish the platform’s characteristics. I usually start with the numbers that dictate the platform’s physics: payload capacity, maximum speed, acceleration, braking distance, range, turn radius, terrainability, gradeability, weatherability, mass, centre of gravity, lifetime, etc. Then move onto nice to have product features: exact camera placement, closures, lighting, proportions, aesthetics. You then iterate a couple of times through this process, as many parameters directly impact the platform’s mass primarily through battery size, and changes in mass impact the suspension design and kinematic performance. Other elements like wheels can affect the entire platform’s dynamics and can even involve input from an industrial design point of view (this is where your team’s priorities come into play).",
           "tag": "p"
         },
         {
@@ -3050,7 +2980,7 @@
         },
         {
           "type": "text",
-          "text": "The team decided to go with a \u201ccab-on-frame\u201d construction with a frame inspired by an all-terrain wheelchair (originally we tried to get them to make a modified wheelchair for us, but they were like who are you). The cab or top portion would house two separate, thermally insulated food enclosures, each with dedicated lids, all of which are customer-facing surfaces. This assembly would also have lights, a safety flag, and a weather-proof enclosure to house all the electronics, onboard computers, and batteries.",
+          "text": "The team decided to go with a “cab-on-frame” construction with a frame inspired by an all-terrain wheelchair (originally we tried to get them to make a modified wheelchair for us, but they were like who are you). The cab or top portion would house two separate, thermally insulated food enclosures, each with dedicated lids, all of which are customer-facing surfaces. This assembly would also have lights, a safety flag, and a weather-proof enclosure to house all the electronics, onboard computers, and batteries.",
           "tag": "p"
         },
         {
@@ -3060,7 +2990,7 @@
         },
         {
           "type": "text",
-          "text": "Meanwhile the rolling chassis assembly had the structural frame, wheel assemblies, MacPherson Strut suspension assemblies on the front, simple trapezoidal suspension nodes on the rear, a rear axle disc brake and its actuator, an Ackermann steering with redundant actuators, and the full drivetrain including a gearbox. This also de-risked development as the biggest risks around the platform\u2019s lifetime (another key metric for the unit economics of the food delivery robot model) where on the rolling chassis, so we could build multiple rolling chassis for the engineering team to use for homologation, tuning dynamic components and accelerated-aging activities. Looking back it would have been ideal to test reliability at a component level, as at this size and budget we were mostly dealing with hobby grade parts and they can be pretty hit or miss. This time around we had no time for that, we had set an aggressive timeline in order to get customer feedback ASAP.",
+          "text": "Meanwhile the rolling chassis assembly had the structural frame, wheel assemblies, MacPherson Strut suspension assemblies on the front, simple trapezoidal suspension nodes on the rear, a rear axle disc brake and its actuator, an Ackermann steering with redundant actuators, and the full drivetrain including a gearbox. This also de-risked development as the biggest risks around the platform’s lifetime (another key metric for the unit economics of the food delivery robot model) where on the rolling chassis, so we could build multiple rolling chassis for the engineering team to use for homologation, tuning dynamic components and accelerated-aging activities. Looking back it would have been ideal to test reliability at a component level, as at this size and budget we were mostly dealing with hobby grade parts and they can be pretty hit or miss. This time around we had no time for that, we had set an aggressive timeline in order to get customer feedback ASAP.",
           "tag": "p"
         },
         {
@@ -3075,7 +3005,7 @@
         },
         {
           "type": "text",
-          "text": "Having no in-house prototype capabilities (we did eventually buy a bunch of 3D printers and tools) was also a constraint which made things slower and expensive, as we relied on fabrication shops to turn around parts in weeks rather than hours. I think scrappy prototypes are a key part of any hardware develop project -the scrappier the better- but it\u2019s especially hard for remote teams that rely on a single person trying to building something in their kitchen with no tools. Before I knew it I had parts from all over the world arriving at my apartment, and I started assembling the first rolling chassis while my girlfriend looked at me confused and my remote team cheered me on. It\u2019s an unfortunate reality that as soon as you start assembling the first iteration of a product, you\u2019ll notice obvious flaws and this was no exception.",
+          "text": "Having no in-house prototype capabilities (we did eventually buy a bunch of 3D printers and tools) was also a constraint which made things slower and expensive, as we relied on fabrication shops to turn around parts in weeks rather than hours. I think scrappy prototypes are a key part of any hardware develop project -the scrappier the better- but it’s especially hard for remote teams that rely on a single person trying to building something in their kitchen with no tools. Before I knew it I had parts from all over the world arriving at my apartment, and I started assembling the first rolling chassis while my girlfriend looked at me confused and my remote team cheered me on. It’s an unfortunate reality that as soon as you start assembling the first iteration of a product, you’ll notice obvious flaws and this was no exception.",
           "tag": "p"
         },
         {
@@ -3085,12 +3015,12 @@
         },
         {
           "type": "text",
-          "text": "Acrylic forming mould, Enclosure skeleton coming together with black acrylic curved panel, Caravel\u2019s AirBnB HQ.",
+          "text": "Acrylic forming mould, Enclosure skeleton coming together with black acrylic curved panel, Caravel’s AirBnB HQ.",
           "tag": "figcaption"
         },
         {
           "type": "text",
-          "text": "The team then converged in an AirBnB in Waterloo after a mid-pandemic grey area border crossing from the US to Canada, this became Caravel\u2019s official HQ for a couple of weeks. Here the electrical wiring and firmware programming was done and for the first time we had a working robot with steering, brakes, and acceleration. With more tools in hand we started working on the food enclosure bit, despite the limited resources we still wanted to build a sexy robot so we came up with a strategy to thermoform acrylic sheets using wood and aluminum moulds, we would then throw them in my kitchen\u2019s oven and we would get some nice big radii (heatguns wouldn\u2019t cut it as the acrylic was too thick at 1/8\u201d, another lesson learned).",
+          "text": "The team then converged in an AirBnB in Waterloo after a mid-pandemic grey area border crossing from the US to Canada, this became Caravel’s official HQ for a couple of weeks. Here the electrical wiring and firmware programming was done and for the first time we had a working robot with steering, brakes, and acceleration. With more tools in hand we started working on the food enclosure bit, despite the limited resources we still wanted to build a sexy robot so we came up with a strategy to thermoform acrylic sheets using wood and aluminum moulds, we would then throw them in my kitchen’s oven and we would get some nice big radii (heatguns wouldn’t cut it as the acrylic was too thick at 1/8”, another lesson learned).",
           "tag": "p"
         },
         {
@@ -3115,7 +3045,7 @@
         },
         {
           "type": "text",
-          "text": "Soon enough it was time for the first drive or \u2018shakedown\u2019, this is always an eventful event and we broke the drive pulley, bent some brackets, and encountered an electric issue where EM from the motor was being amplified by the non-insulated metal chassis and causing the on-board Jetson to reboot (the robot controller had a level of redundancy so it would not go crazy, but the remote driver would still lose connection). On top of this it became apparent that the robot was too heavy. Despite all of that, a few days later we were soon at a point where the robot was functional enough to drive around town, and while there were a number of improvements being worked on by the engineering team, it was time to start making money.",
+          "text": "Soon enough it was time for the first drive or ‘shakedown’, this is always an eventful event and we broke the drive pulley, bent some brackets, and encountered an electric issue where EM from the motor was being amplified by the non-insulated metal chassis and causing the on-board Jetson to reboot (the robot controller had a level of redundancy so it would not go crazy, but the remote driver would still lose connection). On top of this it became apparent that the robot was too heavy. Despite all of that, a few days later we were soon at a point where the robot was functional enough to drive around town, and while there were a number of improvements being worked on by the engineering team, it was time to start making money.",
           "tag": "p"
         },
         {
@@ -3130,7 +3060,7 @@
         },
         {
           "type": "text",
-          "text": "Caravel had started building partnerships with restaurants in the Bay Area but we were starting from scratch in Waterloo, the pitch was simple: UberEats takes a 30% cut to fulfill orders, unless you bring your own delivery drivers in which case they reduce it to 15%. You don\u2019t want to deal with hiring and managing drivers, use our robot instead for a fraction of the 15% savings. With this general pitch we went door to door to every restaurant around our HQ (by now we were out of the AirBnB and working from a student townhouse), we quickly got a restaurant to agree to do a trial delivery to a real customer. Completing this order was the team\u2019s first win!",
+          "text": "Caravel had started building partnerships with restaurants in the Bay Area but we were starting from scratch in Waterloo, the pitch was simple: UberEats takes a 30% cut to fulfill orders, unless you bring your own delivery drivers in which case they reduce it to 15%. You don’t want to deal with hiring and managing drivers, use our robot instead for a fraction of the 15% savings. With this general pitch we went door to door to every restaurant around our HQ (by now we were out of the AirBnB and working from a student townhouse), we quickly got a restaurant to agree to do a trial delivery to a real customer. Completing this order was the team’s first win!",
           "tag": "p"
         },
         {
@@ -3145,7 +3075,7 @@
         },
         {
           "type": "text",
-          "text": "By talking to restaurants and running a first real order (plus a bunch of other orders to get lunch to the team on a daily basis) we got to learn more about restaurants\u2019 needs and worries. They would often talk about controlling the presentation of the product, ensuring food was delivered quickly and hot, and general concerns that the robots would threaten their existing human delivery drivers (especially as the robots would initially only serve the shorter delivery routers, which were the most profitable for human drivers). It also quickly became apparent that the idea of having to deal with robots scared many of them: it was just another step that their employees would have to be trained on and worry about. I\u2019ll just say that restaurant owners are simply not early adopters, they are super risk adverse (there is a reason why your local restaurant will not grow to be McDonalds). Meanwhile on the other side of the equation, the people receiving their food on our robot were loving it, and we started making appearances on social media.",
+          "text": "By talking to restaurants and running a first real order (plus a bunch of other orders to get lunch to the team on a daily basis) we got to learn more about restaurants’ needs and worries. They would often talk about controlling the presentation of the product, ensuring food was delivered quickly and hot, and general concerns that the robots would threaten their existing human delivery drivers (especially as the robots would initially only serve the shorter delivery routers, which were the most profitable for human drivers). It also quickly became apparent that the idea of having to deal with robots scared many of them: it was just another step that their employees would have to be trained on and worry about. I’ll just say that restaurant owners are simply not early adopters, they are super risk adverse (there is a reason why your local restaurant will not grow to be McDonalds). Meanwhile on the other side of the equation, the people receiving their food on our robot were loving it, and we started making appearances on social media.",
           "tag": "p"
         },
         {
@@ -3175,7 +3105,7 @@
         },
         {
           "type": "text",
-          "text": "Restaurants were not playing along but we felt the love of customers, so we launched a concierge-like delivery service where instead of partnering with restaurants, we would go straight to customers: you tell us what you want, and our robot gets it for you. We launch with a domain (www.WaterlooRobotDelivery.com) pointing to a Google Form and promoted the service with a sticker slapped on the side of our robot with the URL on it, super effective. Orders started coming in, this was our own version of \u201cdo things that don\u2019t scale\u201d. On the technical side this also helped get more miles on the robot so that we could continue improving the platform, some new issues surfaced and the robot even learnt a new trick: crashing onto things, repairs became a big time sink. This scale to the point where we started building a 2nd delivery robot (with a bunch of tech improvements on it)",
+          "text": "Restaurants were not playing along but we felt the love of customers, so we launched a concierge-like delivery service where instead of partnering with restaurants, we would go straight to customers: you tell us what you want, and our robot gets it for you. We launch with a domain (www.WaterlooRobotDelivery.com) pointing to a Google Form and promoted the service with a sticker slapped on the side of our robot with the URL on it, super effective. Orders started coming in, this was our own version of “do things that don’t scale”. On the technical side this also helped get more miles on the robot so that we could continue improving the platform, some new issues surfaced and the robot even learnt a new trick: crashing onto things, repairs became a big time sink. This scale to the point where we started building a 2nd delivery robot (with a bunch of tech improvements on it)",
           "tag": "p"
         },
         {
@@ -3205,12 +3135,12 @@
         },
         {
           "type": "text",
-          "text": "Our prototype 10-minute convenience store delivery service first launched in Waterloo under the name \u201cNinja\u201d (because ninjas are fast and I was obsessed with Gorillas\u2019 dark-palette branding and wanted to do something similar). All it took was setting up a Shopify store to route orders (takes 5 minutes) and an OpenPhone account to text customers, that was pretty much the whole infrastructure. The products listed on our website were based off the best selling items of local convenience stores listed on UberEats and DoorDash, ordering them on Instacart to our address and stocking them in our kitchen cabinet. We went as far as removing cabinet doors just so we could access them quicker, it may sound dumb but it\u2019s small things like this that show a startup\u2019s DNA even from early on. Then we texted every person who had ordered from our robot delivery service in the past, letting them know about the new lighting speed convenience store delivery service. On top of that, 500 flyers deployed strategically around a 1 mile radius of our house got us our first customer within minutes of launching.",
+          "text": "Our prototype 10-minute convenience store delivery service first launched in Waterloo under the name “Ninja” (because ninjas are fast and I was obsessed with Gorillas’ dark-palette branding and wanted to do something similar). All it took was setting up a Shopify store to route orders (takes 5 minutes) and an OpenPhone account to text customers, that was pretty much the whole infrastructure. The products listed on our website were based off the best selling items of local convenience stores listed on UberEats and DoorDash, ordering them on Instacart to our address and stocking them in our kitchen cabinet. We went as far as removing cabinet doors just so we could access them quicker, it may sound dumb but it’s small things like this that show a startup’s DNA even from early on. Then we texted every person who had ordered from our robot delivery service in the past, letting them know about the new lighting speed convenience store delivery service. On top of that, 500 flyers deployed strategically around a 1 mile radius of our house got us our first customer within minutes of launching.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Your first order hits different but this didn\u2019t really mean we had traction, no one really knew of our service and people who saw our flyers didn\u2019t know if they could trust our website. Next we got listed on UberEats and DoorDash as a way of funnelling new customers and compete hand-to-hand with the inferior services, deployed even more flyers, launched Facebook ads and a social media campaign primarily focused on Reddit and Discord. Orders were growing but the wheels were not coming off, so we decided to throw more fuel into the fire by sponsoring university events. We started targeting student clubs and associations as promotional opportunities, in the past (pre-pandemic) they would host on-campus events with free food to attract students, but now that campus was closed and events were online there was no more free pizza. What if we could help them make the people attending their online events feel the love with some ice cream delivered to their door? And so we sponsored a weekend long hackathon: orders exploded and we simply could not keep up, delivering ice cream through the night during a storm (a night I will never forget). It was at that moment when it became obvious this model had traction and it was time to go all in on this and scrap the robots. Unfortunately this also meant restructuring our team and letting go of some talented individuals, but delivering on electric bicycles simply aligned better with the new model and the robots did not add immediate value.",
+          "text": "Your first order hits different but this didn’t really mean we had traction, no one really knew of our service and people who saw our flyers didn’t know if they could trust our website. Next we got listed on UberEats and DoorDash as a way of funnelling new customers and compete hand-to-hand with the inferior services, deployed even more flyers, launched Facebook ads and a social media campaign primarily focused on Reddit and Discord. Orders were growing but the wheels were not coming off, so we decided to throw more fuel into the fire by sponsoring university events. We started targeting student clubs and associations as promotional opportunities, in the past (pre-pandemic) they would host on-campus events with free food to attract students, but now that campus was closed and events were online there was no more free pizza. What if we could help them make the people attending their online events feel the love with some ice cream delivered to their door? And so we sponsored a weekend long hackathon: orders exploded and we simply could not keep up, delivering ice cream through the night during a storm (a night I will never forget). It was at that moment when it became obvious this model had traction and it was time to go all in on this and scrap the robots. Unfortunately this also meant restructuring our team and letting go of some talented individuals, but delivering on electric bicycles simply aligned better with the new model and the robots did not add immediate value.",
           "tag": "p"
         },
         {
@@ -3230,12 +3160,12 @@
         },
         {
           "type": "text",
-          "text": "We started expanding our SKUs and inventory, including launching a new concierge-style service where we would deliver any item to you regardless of it was listed on our website or not, at no extra price. This allowed us to do product discovery (what products do people want that we don\u2019t currently stock?), keep growing our orders, and also increase our AOV (average order value) which is an important KPI for this space. Soon we were buying fridges and freezers to hold more and more inventory, expanding into categories such as produce, frozen treats, dairy products and what not.",
+          "text": "We started expanding our SKUs and inventory, including launching a new concierge-style service where we would deliver any item to you regardless of it was listed on our website or not, at no extra price. This allowed us to do product discovery (what products do people want that we don’t currently stock?), keep growing our orders, and also increase our AOV (average order value) which is an important KPI for this space. Soon we were buying fridges and freezers to hold more and more inventory, expanding into categories such as produce, frozen treats, dairy products and what not.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Ninja kept on sponsoring student events to the point where we talked to every single student club in town (mind you there are 3 different universities in Waterloo), and even expanded our hours from 10AM to 3AM. We also maintained a permanent presence with our flyers throughout town (whenever we had someone delivering to a building, this was also an opportunity to place flyers in the lobby and elevators) to the point where we were getting emails from building managers asking us to stop. The efforts on social media continued and maybe even went too far, getting banned off r/uwaterloo (lol). All of these decisions were data driven: Should we expand our hours? Let\u2019s check the orders time heat map. Should we spend more on flyers or should we do Facebook ads instead? Let\u2019s check the customer attribution data. Should we stock more of any item? Let\u2019s look at what\u2019s going out of stock too quickly. Even from day 1 when Ninja was a shot in the dark, we were collecting data and running experiments methodically, this is the culture that ultimately I believe will make Ninja succeed in a market that is getting increasingly competitive.",
+          "text": "Ninja kept on sponsoring student events to the point where we talked to every single student club in town (mind you there are 3 different universities in Waterloo), and even expanded our hours from 10AM to 3AM. We also maintained a permanent presence with our flyers throughout town (whenever we had someone delivering to a building, this was also an opportunity to place flyers in the lobby and elevators) to the point where we were getting emails from building managers asking us to stop. The efforts on social media continued and maybe even went too far, getting banned off r/uwaterloo (lol). All of these decisions were data driven: Should we expand our hours? Let’s check the orders time heat map. Should we spend more on flyers or should we do Facebook ads instead? Let’s check the customer attribution data. Should we stock more of any item? Let’s look at what’s going out of stock too quickly. Even from day 1 when Ninja was a shot in the dark, we were collecting data and running experiments methodically, this is the culture that ultimately I believe will make Ninja succeed in a market that is getting increasingly competitive.",
           "tag": "p"
         },
         {
@@ -3260,17 +3190,17 @@
         },
         {
           "type": "text",
-          "text": "We got even more aggressive with our marketing campaigns, recruiting UberEats drivers to hand out our flyers with every order they delivered. Next we expanded our product selection: how can we get customers coming back every single day? Ninja Cafe, a Starbucks-esque coffee delivery service that delivered freshly brewed coffee to your door in 10 minutes, with a ton of customization options (inspired by the huge line I saw every morning outside of a coffee shop on my way to work). People who drink coffee tend to do it every day and coffee immediately made it into our top 5 sellers, what other products are legal and addicting? Cigarettes, cannabis and alcoholic beverages are highly regulated in Ontario but we were able to launch electronic vapes, another successful launch right off the gate boosted by the fact that all the local vape stores closed at 10PM and we went until 3AM ( a small but important market inefficiency that the team was able to spot). Other products included fireworks for festive dates, moving supplies for the end of school term, and a printing service (the campus library was closed so there was basically no where else to print). Another marketing strategy we came up with was placing Ninja stickers on every product that went out of the door, specially large products that people would share or would last a long time such as large Coca Cola bottles or a ketchup bottle. Stickers on products were not only a promise of quality but also a way of staying in our customers\u2019 minds throughout the day, plus it created an opportunity for their friends and roommates to see and wonder what Ninja was (the great thing about selling to students is that they often live closely packed together and are usually very social). On the same social note, we started giving away Ninja-branded beer pong sets on weekend nights whenever we suspected we were delivering to a party. If you are thinking that\u2019s a lot of different initiatives, I\u2019d say that we were very focused on adding value on top of our initial service, and as per Ninja\u2019s DNA, running a lot of experiments to determine what\u2019s the best way of doing so.",
+          "text": "We got even more aggressive with our marketing campaigns, recruiting UberEats drivers to hand out our flyers with every order they delivered. Next we expanded our product selection: how can we get customers coming back every single day? Ninja Cafe, a Starbucks-esque coffee delivery service that delivered freshly brewed coffee to your door in 10 minutes, with a ton of customization options (inspired by the huge line I saw every morning outside of a coffee shop on my way to work). People who drink coffee tend to do it every day and coffee immediately made it into our top 5 sellers, what other products are legal and addicting? Cigarettes, cannabis and alcoholic beverages are highly regulated in Ontario but we were able to launch electronic vapes, another successful launch right off the gate boosted by the fact that all the local vape stores closed at 10PM and we went until 3AM ( a small but important market inefficiency that the team was able to spot). Other products included fireworks for festive dates, moving supplies for the end of school term, and a printing service (the campus library was closed so there was basically no where else to print). Another marketing strategy we came up with was placing Ninja stickers on every product that went out of the door, specially large products that people would share or would last a long time such as large Coca Cola bottles or a ketchup bottle. Stickers on products were not only a promise of quality but also a way of staying in our customers’ minds throughout the day, plus it created an opportunity for their friends and roommates to see and wonder what Ninja was (the great thing about selling to students is that they often live closely packed together and are usually very social). On the same social note, we started giving away Ninja-branded beer pong sets on weekend nights whenever we suspected we were delivering to a party. If you are thinking that’s a lot of different initiatives, I’d say that we were very focused on adding value on top of our initial service, and as per Ninja’s DNA, running a lot of experiments to determine what’s the best way of doing so.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Eventually we filled the entirety of our house with shelves, fridges and electric bicycles. Orders were growing at a rate of well over 20% week over week (what YC calls success for cohort companies), AOV was steadily increasing as we grew our selection, and most importantly customers were coming back (this is where it gets really fun, as you can then responsibly increase your CAC). It may all sound like an odyssey now but it all happened during 4 eventful months with a team of 2 founders and 1 intern. The team that originally started making robots to take over the world was now delivering goods in less than 10 minutes, the business changed but the ambition did not and so it was time to start expanding into new cities. Ultimately how many people you can serve (aka how much you can grow) is a function of how many people are in your delivery area, so with our model validated and some rough idea of how to launch and operate the service, we aimed for the most densely populated cities in the country. I won\u2019t say much beyond this point as it still feels very fresh but Ninja raised a substantial funding round and started signing leases for commercial locations, hiring aggressively, and negotiating all kinds of contracts for electric bicycles, contractors, supply chain, marketing campaigns and what not. Our original store was \u2018operational intensive\u2019 but that term got a whole new meaning once Ninja started to expand.",
+          "text": "Eventually we filled the entirety of our house with shelves, fridges and electric bicycles. Orders were growing at a rate of well over 20% week over week (what YC calls success for cohort companies), AOV was steadily increasing as we grew our selection, and most importantly customers were coming back (this is where it gets really fun, as you can then responsibly increase your CAC). It may all sound like an odyssey now but it all happened during 4 eventful months with a team of 2 founders and 1 intern. The team that originally started making robots to take over the world was now delivering goods in less than 10 minutes, the business changed but the ambition did not and so it was time to start expanding into new cities. Ultimately how many people you can serve (aka how much you can grow) is a function of how many people are in your delivery area, so with our model validated and some rough idea of how to launch and operate the service, we aimed for the most densely populated cities in the country. I won’t say much beyond this point as it still feels very fresh but Ninja raised a substantial funding round and started signing leases for commercial locations, hiring aggressively, and negotiating all kinds of contracts for electric bicycles, contractors, supply chain, marketing campaigns and what not. Our original store was ‘operational intensive’ but that term got a whole new meaning once Ninja started to expand.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "I get asked what\u2019s the difference between the Ninja model and Uber, certainly I am no expert but I see it as a bet between the current 3rd party (3P) status quo where: Uber doesn\u2019t have any stores, own any inventory and does not have any employees. Versus a 1st party (1P) model where a company owns the inventory, locations, and directly employees people. Where companies like Ninja bet that the higher efficiency of 1P vertical integration will eventually lead to better margins compared to 3P, despite the higher capital requirements. And to the people questioning whether we really need 10 minute delivery, I think some of us will not be satisfied until we\u2019ve achieved teleportation.",
+          "text": "I get asked what’s the difference between the Ninja model and Uber, certainly I am no expert but I see it as a bet between the current 3rd party (3P) status quo where: Uber doesn’t have any stores, own any inventory and does not have any employees. Versus a 1st party (1P) model where a company owns the inventory, locations, and directly employees people. Where companies like Ninja bet that the higher efficiency of 1P vertical integration will eventually lead to better margins compared to 3P, despite the higher capital requirements. And to the people questioning whether we really need 10 minute delivery, I think some of us will not be satisfied until we’ve achieved teleportation.",
           "tag": "p"
         },
         {
@@ -3279,19 +3209,9 @@
           "text": "Previous Previous Ninja Delivery (2021-2022)"
         },
         {
-          "type": "text",
-          "text": "Ninja Delivery (2021-2022)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/atlas-2020",
           "text": "Next Next Atlas (2020)"
-        },
-        {
-          "type": "text",
-          "text": "Atlas (2020)",
-          "tag": "h2"
         }
       ]
     },
@@ -3321,7 +3241,7 @@
         },
         {
           "type": "text",
-          "text": "During the holidays in 2022, I reconnected with Wesley who was my co-founder at Caravel Robotics and Ninja Delivery, he was looking to start a new company. If you\u2019re not familiar with the time period, ChatGPT launched on November 30, 2022. The world was awakening to the potential of generative AI and large language models, and even though we had played around with GPT-2 back in the Ninja days, we never felt like dropping everything to pursue it. This time around, it was obvious that the right thing to do was to drop everything and pursue what I believe is an opportunity akin to the creation of the internet.",
+          "text": "During the holidays in 2022, I reconnected with Wesley who was my co-founder at Caravel Robotics and Ninja Delivery, he was looking to start a new company. If you’re not familiar with the time period, ChatGPT launched on November 30, 2022. The world was awakening to the potential of generative AI and large language models, and even though we had played around with GPT-2 back in the Ninja days, we never felt like dropping everything to pursue it. This time around, it was obvious that the right thing to do was to drop everything and pursue what I believe is an opportunity akin to the creation of the internet.",
           "tag": "p"
         },
         {
@@ -3336,7 +3256,7 @@
         },
         {
           "type": "text",
-          "text": "We got into the Y Combinator Winter 2023 batch with a \u201cspreadsheet with AI\u201d idea. Back in the Ninja days, we faced some challenges with managing inventory across our different warehouses, having to place daily resupply orders, and having to keep the SKU names and descriptions accurate. All of those tasks were low leverage but were hard to automated, as they required small bits of decision making. At Ninja, our solution was a small team of virtual assistants from overseas, but with davinci-003 it was possible to automate a lot of these decisions in a spreadsheet, so we built that.",
+          "text": "We got into the Y Combinator Winter 2023 batch with a “spreadsheet with AI” idea. Back in the Ninja days, we faced some challenges with managing inventory across our different warehouses, having to place daily resupply orders, and having to keep the SKU names and descriptions accurate. All of those tasks were low leverage but were hard to automated, as they required small bits of decision making. At Ninja, our solution was a small team of virtual assistants from overseas, but with davinci-003 it was possible to automate a lot of these decisions in a spreadsheet, so we built that.",
           "tag": "p"
         },
         {
@@ -3351,7 +3271,7 @@
         },
         {
           "type": "text",
-          "text": "I\u2019m skipping some steps here but we eventually talked to everyone in our waitlist and network who would entertain a discovery call, and narrowed down the groups of people who would be willing to pay for this spreadsheet. The most motivated appeared to be sales teams who wanted to use it for lead generation, enrichment, and qualification. This is how https://usedouble.com/ was born (Archive link just in case).",
+          "text": "I’m skipping some steps here but we eventually talked to everyone in our waitlist and network who would entertain a discovery call, and narrowed down the groups of people who would be willing to pay for this spreadsheet. The most motivated appeared to be sales teams who wanted to use it for lead generation, enrichment, and qualification. This is how https://usedouble.com/ was born (Archive link just in case).",
           "tag": "p"
         },
         {
@@ -3386,17 +3306,17 @@
         },
         {
           "type": "text",
-          "text": "There are many thinks to be said about this first product that we launched. This is the first time I write about a software project and I don\u2019t think listing everything we tried would be useful, or listing our lessons would be helpful (without the full context). Once again, I\u2019m going to jump ahead and let you know that we end up pivoting from this product roughly a year in.",
+          "text": "There are many thinks to be said about this first product that we launched. This is the first time I write about a software project and I don’t think listing everything we tried would be useful, or listing our lessons would be helpful (without the full context). Once again, I’m going to jump ahead and let you know that we end up pivoting from this product roughly a year in.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "If I had to summarize some of the biggest takeaways from this first product, I\u2019d say that I highly advise against building companies in areas where you have no domain expertise and a deep interest (before this I knew nothing about sales, and can\u2019t say I had a natural passion for it). I also advise against free tiers, having low prices, and competing on price (most of our MRR growth came after our YC partner, Jared, told us to switch to B2B sales and start charging 3 digits per month. Our chart started pointing up overnight, it was night and day). Lastly, know what industry you\u2019re getting into, lead enrichment is a super competitive space with no barriers to entry, where people drag their feet if you make them pay for than 10 cents for a lead.",
+          "text": "If I had to summarize some of the biggest takeaways from this first product, I’d say that I highly advise against building companies in areas where you have no domain expertise and a deep interest (before this I knew nothing about sales, and can’t say I had a natural passion for it). I also advise against free tiers, having low prices, and competing on price (most of our MRR growth came after our YC partner, Jared, told us to switch to B2B sales and start charging 3 digits per month. Our chart started pointing up overnight, it was night and day). Lastly, know what industry you’re getting into, lead enrichment is a super competitive space with no barriers to entry, where people drag their feet if you make them pay for than 10 cents for a lead.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "For a way more detailed write-up on why we pivoted, I\u2019ve written about it here (Archive link just in case). As the title suggests, we grew it to $5k MRR in a decent amount of time. If you want to dissect more about the story, you can also see our Product Hunt launch (ranked #3 for the day, which took a lot of growth hacking and 24 hours of no sleep), our original Launch YC post, and my original launch tweet. If you\u2019re building in this space, hit me up, always happy to chat about our experience.",
+          "text": "For a way more detailed write-up on why we pivoted, I’ve written about it here (Archive link just in case). As the title suggests, we grew it to $5k MRR in a decent amount of time. If you want to dissect more about the story, you can also see our Product Hunt launch (ranked #3 for the day, which took a lot of growth hacking and 24 hours of no sleep), our original Launch YC post, and my original launch tweet. If you’re building in this space, hit me up, always happy to chat about our experience.",
           "tag": "p"
         },
         {
@@ -3426,7 +3346,7 @@
         },
         {
           "type": "text",
-          "text": "So why pivot? The decision came after a couple of months working with some big name B2B customers. We had decided that lead enrichment on its own was not a big enough opportunity, so we started also managing outbound campaigns for them, with the hypothesis being that our AI enriched data would allow us to write better personalized emails automatically at scale, and therefor conversion rates would jump. This was\u2019t the case and we were performing on par with the template emails that the sales orgs were using before us. During this time, we also started doubting whether this was the biggest opportunity to pursue in the era of AI, and if perhaps there was something better aligned with our interests (founder-product fit they call it). We started experimenting with a lot of ideas (this is what led to the Messi tweet that went mega viral) and eventually narrowed down on our favorite tool at the time: AI coding copilots.",
+          "text": "So why pivot? The decision came after a couple of months working with some big name B2B customers. We had decided that lead enrichment on its own was not a big enough opportunity, so we started also managing outbound campaigns for them, with the hypothesis being that our AI enriched data would allow us to write better personalized emails automatically at scale, and therefor conversion rates would jump. This was’t the case and we were performing on par with the template emails that the sales orgs were using before us. During this time, we also started doubting whether this was the biggest opportunity to pursue in the era of AI, and if perhaps there was something better aligned with our interests (founder-product fit they call it). We started experimenting with a lot of ideas (this is what led to the Messi tweet that went mega viral) and eventually narrowed down on our favorite tool at the time: AI coding copilots.",
           "tag": "p"
         },
         {
@@ -3461,7 +3381,7 @@
         },
         {
           "type": "text",
-          "text": "The main motivation for working on AI coding tools (which is super cliche, as most developers love building developer tools) was that the biggest tool at the time, GitHub Copilot, was fully of bugs and the GitHub team was not moving fast towards fixing them. There were super upvoted GitHub issues unanswered that were over a year old. We\u2019ve written about it here (Archive link just in case). The other motivation was that AI coding copilots was a rapidly growing market, and from what we could tell at the time it was likely the AI application with the most traction (in $ amount).",
+          "text": "The main motivation for working on AI coding tools (which is super cliche, as most developers love building developer tools) was that the biggest tool at the time, GitHub Copilot, was fully of bugs and the GitHub team was not moving fast towards fixing them. There were super upvoted GitHub issues unanswered that were over a year old. We’ve written about it here (Archive link just in case). The other motivation was that AI coding copilots was a rapidly growing market, and from what we could tell at the time it was likely the AI application with the most traction (in $ amount).",
           "tag": "p"
         },
         {
@@ -3476,7 +3396,7 @@
         },
         {
           "type": "text",
-          "text": "We are still working on this second product so I can\u2019t tell you how this story ends and I won\u2019t go over all of the learnings, instead you can check it out yourself: https://double.bot/ (Archive link just in case)",
+          "text": "We are still working on this second product so I can’t tell you how this story ends and I won’t go over all of the learnings, instead you can check it out yourself: https://double.bot/ (Archive link just in case)",
           "tag": "p"
         },
         {
@@ -3491,28 +3411,8 @@
         },
         {
           "type": "text",
-          "text": "The one thing I will say is that we had a super successful launch and quickly overcame out last product in terms of MRR, which validated the pivot. We lined up the launch of our VS Code extension with the launch of Anthropic\u2019s Opus model. We didn\u2019t really know it was going to become the best coding LLM at the time so there was a bit of luck, but essentially Double was the first coding copilot in the world to offer Opus for free. The best part was that we had access to Opus thanks to being a YC company, while most people didn\u2019t, and Twitter was getting filled with demos of Opus generating amazing code. People had to come to us to access Opus, and this got us our first 20,000 installs in a matter of weeks. This is a strategy that we\u2019ve replicated with Llama 3.1, GPT-4o, Claude 3.5 Sonnet, OpenAI o1-preview, and we\u2019ll probably keep replicating it because it keeps on winning. We are always the first to ship the new models, speed is the moat.",
+          "text": "The one thing I will say is that we had a super successful launch and quickly overcame out last product in terms of MRR, which validated the pivot. We lined up the launch of our VS Code extension with the launch of Anthropic’s Opus model. We didn’t really know it was going to become the best coding LLM at the time so there was a bit of luck, but essentially Double was the first coding copilot in the world to offer Opus for free. The best part was that we had access to Opus thanks to being a YC company, while most people didn’t, and Twitter was getting filled with demos of Opus generating amazing code. People had to come to us to access Opus, and this got us our first 20,000 installs in a matter of weeks. This is a strategy that we’ve replicated with Llama 3.1, GPT-4o, Claude 3.5 Sonnet, OpenAI o1-preview, and we’ll probably keep replicating it because it keeps on winning. We are always the first to ship the new models, speed is the moat.",
           "tag": "p"
-        },
-        {
-          "type": "link",
-          "url": "https://www.gonzalobuilds.com/projects/build-a-dog",
-          "text": "Previous Previous Antarctic (2024-2025)"
-        },
-        {
-          "type": "text",
-          "text": "Antarctic (2024-2025)",
-          "tag": "h2"
-        },
-        {
-          "type": "link",
-          "url": "https://www.gonzalobuilds.com/projects/red-bull-flugtag-2022",
-          "text": "Next Next Red Bull Flugtag (2022)"
-        },
-        {
-          "type": "text",
-          "text": "Red Bull Flugtag (2022)",
-          "tag": "h2"
         }
       ]
     },
@@ -3547,7 +3447,7 @@
         },
         {
           "type": "text",
-          "text": "After coming back from our first race in the UK, we had a lot of learnings to unpack. Without going into details, the faculty of engineering wrote a piece on our experiences titled \u201cWatSub: When everything that could fall apart ... does fall apart\u201d which sums it up pretty well.",
+          "text": "After coming back from our first race in the UK, we had a lot of learnings to unpack. Without going into details, the faculty of engineering wrote a piece on our experiences titled “WatSub: When everything that could fall apart ... does fall apart” which sums it up pretty well.",
           "tag": "p"
         },
         {
@@ -3592,12 +3492,12 @@
         },
         {
           "type": "text",
-          "text": "My primary focus for designing Bolt\u2019s hull was minimizing its volume, wet surface, and drag coefficient, in that order. Unlike most submarines, the human powered submarines that we race are flooded (You could argue that its not a submarine but rather an underwater bicycle, well perhaps. I hear back in the day the submarines were pressurized but there were some accidents that led to the change). This means that every unit of volume inside of the submarine translates to mass as per water\u2019s density, increasing your overall inertia.",
+          "text": "My primary focus for designing Bolt’s hull was minimizing its volume, wet surface, and drag coefficient, in that order. Unlike most submarines, the human powered submarines that we race are flooded (You could argue that its not a submarine but rather an underwater bicycle, well perhaps. I hear back in the day the submarines were pressurized but there were some accidents that led to the change). This means that every unit of volume inside of the submarine translates to mass as per water’s density, increasing your overall inertia.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Making a small submarine is particularly difficult because of the person who must fit inside. The pilot is not just sitting there but also pedalling, so the clearances will vary around your pilot\u2019s measurements and posture, not to mention a wide tolerance stack that includes composite laminates, machined components, and even the thickness of the wetsuit your pilot chose to wear that day. Once the hull is fabricated, the room for adjustments is basically null, so you want to get this right. In order to minimize risk we measured our pilots, generated high fidelity 3D models, built mock-ups of the hull using laser cut plywood cross sections, and did a tolerance study of our last year\u2019s submarine to characterize our achievable in-house fabrication tolerances. And even then we still decided to take a risk and cut it very close.",
+          "text": "Making a small submarine is particularly difficult because of the person who must fit inside. The pilot is not just sitting there but also pedalling, so the clearances will vary around your pilot’s measurements and posture, not to mention a wide tolerance stack that includes composite laminates, machined components, and even the thickness of the wetsuit your pilot chose to wear that day. Once the hull is fabricated, the room for adjustments is basically null, so you want to get this right. In order to minimize risk we measured our pilots, generated high fidelity 3D models, built mock-ups of the hull using laser cut plywood cross sections, and did a tolerance study of our last year’s submarine to characterize our achievable in-house fabrication tolerances. And even then we still decided to take a risk and cut it very close.",
           "tag": "p"
         },
         {
@@ -3607,7 +3507,7 @@
         },
         {
           "type": "text",
-          "text": "Although Bolt\u2019s hull did not include a deep dive into hydrodynamics, we did a first pass study of 2D profiles using Xplane. This simple study led to the selection of NACA 66-021 for the vertical plane profile and S1016 for the horizontal plane profile, these two database hydrofoils were merged through splines optimizing for packaging rather than hydrodynamics. The merging occurred at 4 critical points: the pilot\u2019s head, the pilot\u2019s shoulders (or max. width), and the start and end of the pedals.",
+          "text": "Although Bolt’s hull did not include a deep dive into hydrodynamics, we did a first pass study of 2D profiles using Xplane. This simple study led to the selection of NACA 66-021 for the vertical plane profile and S1016 for the horizontal plane profile, these two database hydrofoils were merged through splines optimizing for packaging rather than hydrodynamics. The merging occurred at 4 critical points: the pilot’s head, the pilot’s shoulders (or max. width), and the start and end of the pedals.",
           "tag": "p"
         },
         {
@@ -3627,7 +3527,7 @@
         },
         {
           "type": "text",
-          "text": "Amy\u2019s mould, Bolt\u2019s mould, and Amy\u2019s hull.",
+          "text": "Amy’s mould, Bolt’s mould, and Amy’s hull.",
           "tag": "figcaption"
         },
         {
@@ -3637,17 +3537,17 @@
         },
         {
           "type": "text",
-          "text": "The overall smaller hull size of Bolt can be appreciated in the picture above, where a rough Bolt mould sits next to Amy\u2019s hull and Amy\u2019s mould.",
+          "text": "The overall smaller hull size of Bolt can be appreciated in the picture above, where a rough Bolt mould sits next to Amy’s hull and Amy’s mould.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Having used most of the team\u2019s budget last year on Amy and taking the team all the way to Europe, Bolt\u2019s budget was limited. We knew from last year\u2019s submarine that most of the hull\u2019s cost comes from the tooling (moulds) and not so much from the composites material, with this in mind I designed the tooling in a way that it would be 100% done in-house and out of cheap materials. We generated 46 cross sections of the hull, made paper templates, and cut them out of insulating polyurethane foam. The cross sections were stacked on top of an MDF board, using a triangle datum feature and a dowel running across to position the cross sections accurately. The board would act as the structure of the mould, plus be sealed to hold vacuum.",
+          "text": "Having used most of the team’s budget last year on Amy and taking the team all the way to Europe, Bolt’s budget was limited. We knew from last year’s submarine that most of the hull’s cost comes from the tooling (moulds) and not so much from the composites material, with this in mind I designed the tooling in a way that it would be 100% done in-house and out of cheap materials. We generated 46 cross sections of the hull, made paper templates, and cut them out of insulating polyurethane foam. The cross sections were stacked on top of an MDF board, using a triangle datum feature and a dowel running across to position the cross sections accurately. The board would act as the structure of the mould, plus be sealed to hold vacuum.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "We spent a total of $300 making the mould, down from last year\u2019s $2000.",
+          "text": "We spent a total of $300 making the mould, down from last year’s $2000.",
           "tag": "p"
         },
         {
@@ -3692,7 +3592,7 @@
         },
         {
           "type": "text",
-          "text": "You may have noticed I refer to this as a mould and not a plug, and that\u2019s correct. The plan was to use a male mould to lay up our hull. This is less than ideal in terms of surface finish, core reinforcements, part quality, and demoulding, but at the time it appeared like the best alternative. Remember the constrains: competition only months away, not a lot of money in the bank, and not a lot of expertise in composite manufacturing (this was only our 2nd submarine).",
+          "text": "You may have noticed I refer to this as a mould and not a plug, and that’s correct. The plan was to use a male mould to lay up our hull. This is less than ideal in terms of surface finish, core reinforcements, part quality, and demoulding, but at the time it appeared like the best alternative. Remember the constrains: competition only months away, not a lot of money in the bank, and not a lot of expertise in composite manufacturing (this was only our 2nd submarine).",
           "tag": "p"
         },
         {
@@ -3732,7 +3632,7 @@
         },
         {
           "type": "text",
-          "text": "In contrast with Amy\u2019s hull fabrication, we used a vacuum assisted wet layup process rather than an infusion, particularly to reduce consumables and also because of the geometry of the mould. We also used a waxed peel-ply to prime the final part for the painting process.",
+          "text": "In contrast with Amy’s hull fabrication, we used a vacuum assisted wet layup process rather than an infusion, particularly to reduce consumables and also because of the geometry of the mould. We also used a waxed peel-ply to prime the final part for the painting process.",
           "tag": "p"
         },
         {
@@ -3767,7 +3667,7 @@
         },
         {
           "type": "text",
-          "text": "I believe in small incremental improvements that compound over time, and as I complaint about Amy\u2019s poorly trimmed hatches, we trimmed Bolt\u2019s hatches using datum points and even rounded the corners. All around better craftsmanship, it improved the finish of the submarine.",
+          "text": "I believe in small incremental improvements that compound over time, and as I complaint about Amy’s poorly trimmed hatches, we trimmed Bolt’s hatches using datum points and even rounded the corners. All around better craftsmanship, it improved the finish of the submarine.",
           "tag": "p"
         },
         {
@@ -3797,12 +3697,12 @@
         },
         {
           "type": "text",
-          "text": "The marriage of the two hull halves was also done through a wet layup without vacuum. Unlike Amy, Bolt\u2019s hull had no interior flanges that could be used for bonding (another setback of the male mould) so we just put carbon on top and got as good of a surface as we could get by curing it with peel ply over it (this worked surprisingly well).",
+          "text": "The marriage of the two hull halves was also done through a wet layup without vacuum. Unlike Amy, Bolt’s hull had no interior flanges that could be used for bonding (another setback of the male mould) so we just put carbon on top and got as good of a surface as we could get by curing it with peel ply over it (this worked surprisingly well).",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Another small incremental improvement that year was the paint job, you would not believe how many times I had to tape that curve to get it just right. We also invested on a spray air gun so we could use higher quality paints compared to Amy\u2019s spray can paints off Home Depot.",
+          "text": "Another small incremental improvement that year was the paint job, you would not believe how many times I had to tape that curve to get it just right. We also invested on a spray air gun so we could use higher quality paints compared to Amy’s spray can paints off Home Depot.",
           "tag": "p"
         },
         {
@@ -3837,12 +3737,12 @@
         },
         {
           "type": "text",
-          "text": "While talking about Amy\u2019s development I said that part of going to an engineering competition is showing off, here\u2019s an example of this. I was just coming back from an internship at a car company where I got to design sand casted parts and thought we should attempt to do the same. The idea fit well within the project\u2019s context: we had no money for CNC\u2019d parts so if we wanted geometric freedom beyond what we could mill ourselves, we would have to be creative.",
+          "text": "While talking about Amy’s development I said that part of going to an engineering competition is showing off, here’s an example of this. I was just coming back from an internship at a car company where I got to design sand casted parts and thought we should attempt to do the same. The idea fit well within the project’s context: we had no money for CNC’d parts so if we wanted geometric freedom beyond what we could mill ourselves, we would have to be creative.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "I designed a bracket that would connect the propulsion system onto the hull, and we recreated it using foam. We then used the foam as a negative and put \u2018green\u2019 sand around it and packed it tight (in reality we used a combination of cat litter and playground sand). We then got all of our scrap aluminum together, and the engineering department was kind enough to entertain our project and let us use their oven. The above is the part off the mould, it was surprisingly good / low porosity, and was usable after machining the open boundary surfaces.",
+          "text": "I designed a bracket that would connect the propulsion system onto the hull, and we recreated it using foam. We then used the foam as a negative and put ‘green’ sand around it and packed it tight (in reality we used a combination of cat litter and playground sand). We then got all of our scrap aluminum together, and the engineering department was kind enough to entertain our project and let us use their oven. The above is the part off the mould, it was surprisingly good / low porosity, and was usable after machining the open boundary surfaces.",
           "tag": "p"
         },
         {
@@ -3867,12 +3767,12 @@
         },
         {
           "type": "text",
-          "text": "Another area for improvement coming from Amy was the control surface fins. During competition we would break a lot of fins. Think about it: the fins are slender structures that protrude well beyond the hull in search of a clean stream of water flow. They are also the impact point when you crash onto the pool\u2019s floor or walls.",
+          "text": "Another area for improvement coming from Amy was the control surface fins. During competition we would break a lot of fins. Think about it: the fins are slender structures that protrude well beyond the hull in search of a clean stream of water flow. They are also the impact point when you crash onto the pool’s floor or walls.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Amy\u2019s fins were complicated carbon fibre surfaces with a sheet metal bracket and a shaft, too many parts to break, too hard to repair during competition. So we embarked on a brainstorming phase to find a better design. We tried 3D printing moulds that we could use for quick fibre glass layups (3D printed moulds meant cheap tools, such that we could have a lot of them and increase our production capabilities), and also tried urethane casting them. The first iteration of both ideas was poor.",
+          "text": "Amy’s fins were complicated carbon fibre surfaces with a sheet metal bracket and a shaft, too many parts to break, too hard to repair during competition. So we embarked on a brainstorming phase to find a better design. We tried 3D printing moulds that we could use for quick fibre glass layups (3D printed moulds meant cheap tools, such that we could have a lot of them and increase our production capabilities), and also tried urethane casting them. The first iteration of both ideas was poor.",
           "tag": "p"
         },
         {
@@ -3972,7 +3872,7 @@
         },
         {
           "type": "text",
-          "text": "Yet another improvement was the fabrication of a window mould to thermoform a window out of 0.10\u201d PETG sheets. For Amy we used the mould and heat guns to try to thermoform a plastic sheet, but with a dedicated window mould meant that we could use proper thermoforming equipment, leading to much better results (a more structural window, with less optical distortion).",
+          "text": "Yet another improvement was the fabrication of a window mould to thermoform a window out of 0.10” PETG sheets. For Amy we used the mould and heat guns to try to thermoform a plastic sheet, but with a dedicated window mould meant that we could use proper thermoforming equipment, leading to much better results (a more structural window, with less optical distortion).",
           "tag": "p"
         },
         {
@@ -3997,7 +3897,7 @@
         },
         {
           "type": "text",
-          "text": "CNC\u2019d propeller blades.",
+          "text": "CNC’d propeller blades.",
           "tag": "figcaption"
         },
         {
@@ -4012,12 +3912,12 @@
         },
         {
           "type": "text",
-          "text": "Bolt\u2019s control system was an upgrade from Amy\u2019s fully mechanical system (it used wires, similar to that of a cheap bicycle), with the team coming up with a hydraulics design which made use of the limited space more efficiently.",
+          "text": "Bolt’s control system was an upgrade from Amy’s fully mechanical system (it used wires, similar to that of a cheap bicycle), with the team coming up with a hydraulics design which made use of the limited space more efficiently.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "That summer we road-tripped to to Naval Surface Warfare Centre in Maryland, US to race. We brought a bigger diving team and a better submarine, but still performed relatively bad. Rather than blaming the team\u2019s lack of experience, this was a management issue: a diminishing budget and tight timeline let to too many corners being cut. But overall the team was improving and we had a clear grasp of the areas we wanted to improve in, so we adjusted accordingly and got to work on our 3rd generation submarine.",
+          "text": "That summer we road-tripped to to Naval Surface Warfare Centre in Maryland, US to race. We brought a bigger diving team and a better submarine, but still performed relatively bad. Rather than blaming the team’s lack of experience, this was a management issue: a diminishing budget and tight timeline let to too many corners being cut. But overall the team was improving and we had a clear grasp of the areas we wanted to improve in, so we adjusted accordingly and got to work on our 3rd generation submarine.",
           "tag": "p"
         },
         {
@@ -4051,19 +3951,9 @@
           "text": "Previous Previous Claire (2017-2019)"
         },
         {
-          "type": "text",
-          "text": "Claire (2017-2019)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/amy-20152016",
           "text": "Next Next Amy (2015-2016)"
-        },
-        {
-          "type": "text",
-          "text": "Amy (2015-2016)",
-          "tag": "h2"
         }
       ]
     },
@@ -4098,7 +3988,7 @@
         },
         {
           "type": "text",
-          "text": "I am currently building a self-balancing dog, this is my next project after Antarctic. Coming out of the quadruped project, the idea was to reduce the scope to a \u2018simpler\u2019 system in order to gain deeper understanding of robotics fundamentals, and produce a more polished build in a shorter amount of time. A self-balancing robot fit the bill as you can get going with a simple PID, but can continue to refine the controls algorithms all the way to a neural network if you will. This project was also an opportunity for me to experiment with new hardware, including a Raspberry Pi 5.",
+          "text": "I am currently building a self-balancing dog, this is my next project after Antarctic. Coming out of the quadruped project, the idea was to reduce the scope to a ‘simpler’ system in order to gain deeper understanding of robotics fundamentals, and produce a more polished build in a shorter amount of time. A self-balancing robot fit the bill as you can get going with a simple PID, but can continue to refine the controls algorithms all the way to a neural network if you will. This project was also an opportunity for me to experiment with new hardware, including a Raspberry Pi 5.",
           "tag": "p"
         },
         {
@@ -4130,11 +4020,6 @@
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/build-a-dog",
           "text": "Next Next Antarctic (2024-2025)"
-        },
-        {
-          "type": "text",
-          "text": "Antarctic (2024-2025)",
-          "tag": "h2"
         }
       ]
     },
@@ -4164,7 +4049,7 @@
         },
         {
           "type": "text",
-          "text": "What\u2019s up? This is where I put everything else: small projects that I\u2019ve built or been part of but that don\u2019t warrant individual posts just yet.",
+          "text": "What’s up? This is where I put everything else: small projects that I’ve built or been part of but that don’t warrant individual posts just yet.",
           "tag": "p"
         },
         {
@@ -4174,17 +4059,17 @@
         },
         {
           "type": "text",
-          "text": "Have you ever jumped out of an airplane? It goes something like this\u2026 You climb on a small plane and go all the way up to 10,000 feet. They open the door and you jump out. For about 30 seconds you are on free fall, questioning your life\u2019s decisions and living life to the maximum. After that your parachute opens and you slowly fall to the ground.",
+          "text": "Have you ever jumped out of an airplane? It goes something like this… You climb on a small plane and go all the way up to 10,000 feet. They open the door and you jump out. For about 30 seconds you are on free fall, questioning your life’s decisions and living life to the maximum. After that your parachute opens and you slowly fall to the ground.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Yup, that\u2019s it, only 30 seconds. Well, what if you want to fall for longer? Jumping from higher altitudes is an option, but it\u2019s more expensive and requieres specialized equipment like an oxygen tank.",
+          "text": "Yup, that’s it, only 30 seconds. Well, what if you want to fall for longer? Jumping from higher altitudes is an option, but it’s more expensive and requieres specialized equipment like an oxygen tank.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "What if you could strap two EDFs onto your jump gear and use it to increase your horizontal speed, gliding or even gaining altitude as you fly through the skies? We are building just that. Two brilliant engineers and I started the project mid 2020, so far we\u2019ve sourced components, built dynamic models, and are now in the process of validating our propulsion model with this jig we built that can be mounted on top of my car.",
+          "text": "What if you could strap two EDFs onto your jump gear and use it to increase your horizontal speed, gliding or even gaining altitude as you fly through the skies? We are building just that. Two brilliant engineers and I started the project mid 2020, so far we’ve sourced components, built dynamic models, and are now in the process of validating our propulsion model with this jig we built that can be mounted on top of my car.",
           "tag": "p"
         },
         {
@@ -4229,12 +4114,12 @@
         },
         {
           "type": "text",
-          "text": "During one of these internships, I got to work on an electromagnetic windshield wiper system for an unreleased program. Such a system has many advantages but the main one being maximizing the swept area without the need of complex mechanical linkages. Without saying too much, you might be able to imagine why you\u2019d want to sweep a large area in an autonomous vehicle: there are areas that must be swept by law in the field of view of the human passenger/driver, and then there are areas where the cameras are located that you don\u2019t have to sweep by law but want to do so to maintain proper system operation.",
+          "text": "During one of these internships, I got to work on an electromagnetic windshield wiper system for an unreleased program. Such a system has many advantages but the main one being maximizing the swept area without the need of complex mechanical linkages. Without saying too much, you might be able to imagine why you’d want to sweep a large area in an autonomous vehicle: there are areas that must be swept by law in the field of view of the human passenger/driver, and then there are areas where the cameras are located that you don’t have to sweep by law but want to do so to maintain proper system operation.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "We got a US patent granted for this work, US10889267B2. The patent has also been widely covered by the media and there\u2019s a lot of speculation around it. My leaps are sealed. See some of the articles: here, here, here, here, here.",
+          "text": "We got a US patent granted for this work, US10889267B2. The patent has also been widely covered by the media and there’s a lot of speculation around it. My leaps are sealed. See some of the articles: here, here, here, here, here.",
           "tag": "p"
         },
         {
@@ -4274,7 +4159,7 @@
         },
         {
           "type": "text",
-          "text": "Senior engineering students at the University of Waterloo are required to submit a capstone project in order to graduate. In your capstone you must demonstrate the ability to work in a team, adhere to a budget, identify a need and develop a product to address it (while applying an engineering process that goes from concept creation, analysis, validation, prototyping, and fabrication). It all culminates with a giant report and a \u201cdemo\u201d day, with prizes and the perpetual respect of your classmates in the line.",
+          "text": "Senior engineering students at the University of Waterloo are required to submit a capstone project in order to graduate. In your capstone you must demonstrate the ability to work in a team, adhere to a budget, identify a need and develop a product to address it (while applying an engineering process that goes from concept creation, analysis, validation, prototyping, and fabrication). It all culminates with a giant report and a “demo” day, with prizes and the perpetual respect of your classmates in the line.",
           "tag": "p"
         },
         {
@@ -4284,7 +4169,7 @@
         },
         {
           "type": "text",
-          "text": "Without going into boring details, the pictures below sum it up pretty well. We won the ANSYS engineering analysis award and got 2nd place in the people\u2019s choice award, not a bad way of ending my undergrad.",
+          "text": "Without going into boring details, the pictures below sum it up pretty well. We won the ANSYS engineering analysis award and got 2nd place in the people’s choice award, not a bad way of ending my undergrad.",
           "tag": "p"
         },
         {
@@ -4344,7 +4229,7 @@
         },
         {
           "type": "text",
-          "text": "During an internship at Clearpath Robotics, me and some of the other interns got together to work on an autonomous snow plower after work. We convinced Clearpath\u2019s CTO to give us some funding for the project, plus a Husky robot to use as platform. I designed and fabricated the mechanical systems, including sizing two actuators, the arm and plow mechanism, packaging the LiDAR and battery, and the traction calculations.",
+          "text": "During an internship at Clearpath Robotics, me and some of the other interns got together to work on an autonomous snow plower after work. We convinced Clearpath’s CTO to give us some funding for the project, plus a Husky robot to use as platform. I designed and fabricated the mechanical systems, including sizing two actuators, the arm and plow mechanism, packaging the LiDAR and battery, and the traction calculations.",
           "tag": "p"
         },
         {
@@ -4364,7 +4249,7 @@
         },
         {
           "type": "text",
-          "text": "I helped design the system operations schematics, alternative propulsion systems, and the exterior aerodynamic surfaces (if you think aerodynamics don\u2019t come into play because the hyperloop operates in near vacuum, you are wrong, you can still choke the tube). In 2016 we were the only team to compete with a pressurized interior, and in 2017 we won SpaceX\u2019s innovation award. On top of that, I also helped with the fabrication of my school\u2019s exterior shell, a similar construction to that of my submarines.",
+          "text": "I helped design the system operations schematics, alternative propulsion systems, and the exterior aerodynamic surfaces (if you think aerodynamics don’t come into play because the hyperloop operates in near vacuum, you are wrong, you can still choke the tube). In 2016 we were the only team to compete with a pressurized interior, and in 2017 we won SpaceX’s innovation award. On top of that, I also helped with the fabrication of my school’s exterior shell, a similar construction to that of my submarines.",
           "tag": "p"
         },
         {
@@ -4394,12 +4279,12 @@
         },
         {
           "type": "text",
-          "text": "My then roommate and I started experimenting with indoor agriculture. We put together these \u201cpods\" to grow romaine lettuce in our basement (romaine lettuce has one of the shortest growth cycles out of all crops). This included an automated water recirculating system, pH and temperature sensing and control, UV light intensity optimization, and up to 12 lettuce heads for pod.",
+          "text": "My then roommate and I started experimenting with indoor agriculture. We put together these “pods\" to grow romaine lettuce in our basement (romaine lettuce has one of the shortest growth cycles out of all crops). This included an automated water recirculating system, pH and temperature sensing and control, UV light intensity optimization, and up to 12 lettuce heads for pod.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "I see the opportunity here but it didn\u2019t make economical sense at the time. It came down to robots competing against the cheapest human labour rates on Earth. Plus customers did not seem to care where their crops came from. One day I do foresee indoor agriculture will be a critical part of the food supply chain.",
+          "text": "I see the opportunity here but it didn’t make economical sense at the time. It came down to robots competing against the cheapest human labour rates on Earth. Plus customers did not seem to care where their crops came from. One day I do foresee indoor agriculture will be a critical part of the food supply chain.",
           "tag": "p"
         },
         {
@@ -4461,11 +4346,6 @@
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/amy-20152016",
           "text": "Previous Previous Amy (2015-2016)"
-        },
-        {
-          "type": "text",
-          "text": "Amy (2015-2016)",
-          "tag": "h2"
         }
       ]
     },
@@ -4495,7 +4375,7 @@
         },
         {
           "type": "text",
-          "text": "We\u2019ve all seen the Red Bull events where they get people to build ridiculous vehicles and race each other, the Flugtag (German for '\u201cflight day\u201d) is really cool and also the Soapbox race. I was super excited to learn that Red Bull was hosting a Flugtag in Toronto in 2022, and my friends and I couldn\u2019t pass on the amazing opportunity to participate :)",
+          "text": "We’ve all seen the Red Bull events where they get people to build ridiculous vehicles and race each other, the Flugtag (German for '“flight day”) is really cool and also the Soapbox race. I was super excited to learn that Red Bull was hosting a Flugtag in Toronto in 2022, and my friends and I couldn’t pass on the amazing opportunity to participate :)",
           "tag": "p"
         },
         {
@@ -4510,12 +4390,12 @@
         },
         {
           "type": "text",
-          "text": "I\u2019ll start from the end, we did participate, we built the wing and the cart, we put together the costumes, we did the dance in front of the whole crowd, but things didn\u2019t go as expected (in a way, they went better than expected, maybe). See it for yourself:",
+          "text": "I’ll start from the end, we did participate, we built the wing and the cart, we put together the costumes, we did the dance in front of the whole crowd, but things didn’t go as expected (in a way, they went better than expected, maybe). See it for yourself:",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "On the final run down the launch pad, we accidentally dropped our wing, somehow we never thought to rehearse making sure our pilot was well strapped before pushing the cart with all of our might. It was \u201cas bad as it can get\u201d, we lost \u201cthe one thing we needed to remember\u201d, but even though we lost our instruments we kept playing music, \u201cthe show must go on\u201d (10/10 live commentary from Red Bull). At the end we scored an 8/10 from Commander Chris Hadfield. Funny story, I had previously met Chris to pitch him Watfly and he didn\u2019t like it one bit, so this felt like a win to me.",
+          "text": "On the final run down the launch pad, we accidentally dropped our wing, somehow we never thought to rehearse making sure our pilot was well strapped before pushing the cart with all of our might. It was “as bad as it can get”, we lost “the one thing we needed to remember”, but even though we lost our instruments we kept playing music, “the show must go on” (10/10 live commentary from Red Bull). At the end we scored an 8/10 from Commander Chris Hadfield. Funny story, I had previously met Chris to pitch him Watfly and he didn’t like it one bit, so this felt like a win to me.",
           "tag": "p"
         },
         {
@@ -4540,13 +4420,13 @@
         },
         {
           "type": "text",
-          "text": "The team (shown above) was my friend Manit aka \u2018Pine\u2019 (met at Tesla, went to JPL, now running his own startup, has built a bunch of crazy things), Ignacio (insane guy, runs Tiny Mile, has jumped out of an airplane more times than everyone I know combined), Bryan (met on freshman year at Waterloo, was there for the construction of all of the submarines), and my gf Marisa (whom I had just started dating a couple of months prior yet bravely agreed to be part of all of this). In my mind, this group might as well be called the Guardians of the Galaxy, pretty sure they could get anything done while having fun doing it.",
+          "text": "The team (shown above) was my friend Manit aka ‘Pine’ (met at Tesla, went to JPL, now running his own startup, has built a bunch of crazy things), Ignacio (insane guy, runs Tiny Mile, has jumped out of an airplane more times than everyone I know combined), Bryan (met on freshman year at Waterloo, was there for the construction of all of the submarines), and my gf Marisa (whom I had just started dating a couple of months prior yet bravely agreed to be part of all of this). In my mind, this group might as well be called the Guardians of the Galaxy, pretty sure they could get anything done while having fun doing it.",
           "tag": "p"
         },
         {
           "type": "link",
           "url": "https://www.linkedin.com/in/manitginoya/",
-          "text": "Manit aka \u2018Pine\u2019"
+          "text": "Manit aka ‘Pine’"
         },
         {
           "type": "link",
@@ -4560,7 +4440,7 @@
         },
         {
           "type": "text",
-          "text": "So that was cool, probably the highlight of my summer. I could write about a bunch of things I learnt throughout this build, I think there\u2019s a lot to be said about gathering a group of people and convincing them to work towards a particular goal, specially when there\u2019s no reward other than \u201cit\u2019ll be cool\u201d (and you have to spend all your weekends + pay for the materials). But keeping on trend with this blog, I\u2019m going to talk a bit about how we actually built the thing and if anyone cares about the other stuff, you can ask.",
+          "text": "So that was cool, probably the highlight of my summer. I could write about a bunch of things I learnt throughout this build, I think there’s a lot to be said about gathering a group of people and convincing them to work towards a particular goal, specially when there’s no reward other than “it’ll be cool” (and you have to spend all your weekends + pay for the materials). But keeping on trend with this blog, I’m going to talk a bit about how we actually built the thing and if anyone cares about the other stuff, you can ask.",
           "tag": "p"
         },
         {
@@ -4580,7 +4460,7 @@
         },
         {
           "type": "text",
-          "text": "It all started with a sketch, this was part of the Red Bull application that got us accepted into the event (it isn\u2019t Harvard but you do need to prove you are motivated and competent enough). We spent only a couple of nights planning and got some CAD going, mostly just to make sure we were rule compliant in the overall dimensions. A lot of the \u201csmaller\u201d details (like, how to attach the wing, or how will the pilot will hold onto the wing) were left for later to be figured out during the build.",
+          "text": "It all started with a sketch, this was part of the Red Bull application that got us accepted into the event (it isn’t Harvard but you do need to prove you are motivated and competent enough). We spent only a couple of nights planning and got some CAD going, mostly just to make sure we were rule compliant in the overall dimensions. A lot of the “smaller” details (like, how to attach the wing, or how will the pilot will hold onto the wing) were left for later to be figured out during the build.",
           "tag": "p"
         },
         {
@@ -4610,7 +4490,7 @@
         },
         {
           "type": "text",
-          "text": "We got some early wins super quick by building the cart, and left the more complicated wing for later. In general I usually try securing the easy wins first, this is the opposite of the \u201cMonkey first\u201d approach preached by Google but creates momentum and gets the team motivated to keep going (smarter people than me say this is the wrong approach, so maybe listen to them). These simpler parts were also much more flushed out in CAD and requires much less thinking and problem solving when actually building them.",
+          "text": "We got some early wins super quick by building the cart, and left the more complicated wing for later. In general I usually try securing the easy wins first, this is the opposite of the “Monkey first” approach preached by Google but creates momentum and gets the team motivated to keep going (smarter people than me say this is the wrong approach, so maybe listen to them). These simpler parts were also much more flushed out in CAD and requires much less thinking and problem solving when actually building them.",
           "tag": "p"
         },
         {
@@ -4635,7 +4515,7 @@
         },
         {
           "type": "text",
-          "text": "The idea for the wing was simple, 2D NACA airfoil cutouts from Home Depot\u2019s finest insulation foam, and two hollow aluminum shafts running across acting as spar elements. Rules constrained the total wingspan and then we made some design choices to complicate our life, including a wing sweep and winglets at the tips. The swept wing meant at least one of the spars had to run diagonally, which complicated the joint of the spars at the wingtip, and also at the middle of the wing (we anticipated that the wing would be too big to fit thru a door, or in a truck, so it needed to be separated in the middle by design). The swept also meant that the overall surface area of the wing could be slightly greater, drag (theoretically) slightly lower, and it\u2019d push the center of pressure backwards (the wing profile we were using had an upward aft tip which needed to be counteracted). Same idea with the winglets. Plus a healthy amount of engineers flexing their aerodynamic knowledge.",
+          "text": "The idea for the wing was simple, 2D NACA airfoil cutouts from Home Depot’s finest insulation foam, and two hollow aluminum shafts running across acting as spar elements. Rules constrained the total wingspan and then we made some design choices to complicate our life, including a wing sweep and winglets at the tips. The swept wing meant at least one of the spars had to run diagonally, which complicated the joint of the spars at the wingtip, and also at the middle of the wing (we anticipated that the wing would be too big to fit thru a door, or in a truck, so it needed to be separated in the middle by design). The swept also meant that the overall surface area of the wing could be slightly greater, drag (theoretically) slightly lower, and it’d push the center of pressure backwards (the wing profile we were using had an upward aft tip which needed to be counteracted). Same idea with the winglets. Plus a healthy amount of engineers flexing their aerodynamic knowledge.",
           "tag": "p"
         },
         {
@@ -4655,7 +4535,7 @@
         },
         {
           "type": "text",
-          "text": "Pretty soon the wing was too big to fit in the room and in my iPhone camera frame. There is something special about building things that are larger than yourself, bigger is just better. In the pics above you can also see that we started building the winglets, these were attached at an angle to the main wing so couldn\u2019t use the aluminum spars. We also started adding wood elements in the leading and trailing edges, plus top and bottom of the wing, these would help secure and shape the outer skin of the wing later.",
+          "text": "Pretty soon the wing was too big to fit in the room and in my iPhone camera frame. There is something special about building things that are larger than yourself, bigger is just better. In the pics above you can also see that we started building the winglets, these were attached at an angle to the main wing so couldn’t use the aluminum spars. We also started adding wood elements in the leading and trailing edges, plus top and bottom of the wing, these would help secure and shape the outer skin of the wing later.",
           "tag": "p"
         },
         {
@@ -4675,7 +4555,7 @@
         },
         {
           "type": "text",
-          "text": "Soon it was time to start tackling the details that we didn\u2019t flush out in CAD. The main concern was how would the pilot hold onto the wing, this was the most structural component of our vehicle: wing needed to be able to support the whole weight of the pilot without snapping (assuming we generated enough lift to achieve flight in the first place). This involved mainly looking around for scraps, bolting it together, and agreeing that it was \u201cgood enough\u201d (don\u2019t worry, we did do full load tests later, no chance we were going to fool ourselves in the event, keep reading).",
+          "text": "Soon it was time to start tackling the details that we didn’t flush out in CAD. The main concern was how would the pilot hold onto the wing, this was the most structural component of our vehicle: wing needed to be able to support the whole weight of the pilot without snapping (assuming we generated enough lift to achieve flight in the first place). This involved mainly looking around for scraps, bolting it together, and agreeing that it was “good enough” (don’t worry, we did do full load tests later, no chance we were going to fool ourselves in the event, keep reading).",
           "tag": "p"
         },
         {
@@ -4715,12 +4595,12 @@
         },
         {
           "type": "text",
-          "text": "Here are those extra supports we were talking about, the wing could now rest on its own without the pilot needing to hold it. In hindsight, maybe this wasn\u2019t the best idea? Maybe it was part of the reason why we started running without realizing the pilot wasn\u2019t holding the wing, and we dropped it in the main event. Just maybe, at the moment it felt right. The wing was huge, and although it looked light, holding such a big thing while you are getting pushed on a cart that\u2019s not the smoothest ride ever, is hard.",
+          "text": "Here are those extra supports we were talking about, the wing could now rest on its own without the pilot needing to hold it. In hindsight, maybe this wasn’t the best idea? Maybe it was part of the reason why we started running without realizing the pilot wasn’t holding the wing, and we dropped it in the main event. Just maybe, at the moment it felt right. The wing was huge, and although it looked light, holding such a big thing while you are getting pushed on a cart that’s not the smoothest ride ever, is hard.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Here we tested the wing structurally with full load, first attempt had a bit of a snap, second attempt was solid. Jokes aside, this was a full aluminum tube structure, it was not hard to make it strong enough to hold a person. The main concern was around the joint between the two sections of the wing, particularly the front one where the spars met at an angle and were joint by flanges screwed into a block of wood (totally fine in ideal compression, but needed to ensure that under full load, compliance wouldn\u2019t cause a weird load case).",
+          "text": "Here we tested the wing structurally with full load, first attempt had a bit of a snap, second attempt was solid. Jokes aside, this was a full aluminum tube structure, it was not hard to make it strong enough to hold a person. The main concern was around the joint between the two sections of the wing, particularly the front one where the spars met at an angle and were joint by flanges screwed into a block of wood (totally fine in ideal compression, but needed to ensure that under full load, compliance wouldn’t cause a weird load case).",
           "tag": "p"
         },
         {
@@ -4740,17 +4620,17 @@
         },
         {
           "type": "text",
-          "text": "Here\u2019s me admiring the wing as we approach the finish line. The next step was a first for the team, we were going to wrap the wing in 2.97oz Dacron, which is basically a special polyester fiber by DuPont. This material is commonly used in para-gliders as it\u2019s airtight and durable, but also shrinks when you apply heat to it so it makes it easy to achieve an ideal, tight fit around your wing (for optimal aerodynamics).",
+          "text": "Here’s me admiring the wing as we approach the finish line. The next step was a first for the team, we were going to wrap the wing in 2.97oz Dacron, which is basically a special polyester fiber by DuPont. This material is commonly used in para-gliders as it’s airtight and durable, but also shrinks when you apply heat to it so it makes it easy to achieve an ideal, tight fit around your wing (for optimal aerodynamics).",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Few things we struggled with when applying the Dacron and compressing it: First of all, when it starts to compress it puts stress on the wing structure in ways that we did not anticipate, you can see in the middle picture above how the wing cross section is curling, and the trailing edge appears to curve, this was not intended and in certain areas we feared it\u2019d break the foam. Another complication was around attaching the Dacron to the wing itself. In the middle sections where the fabric could rest on cross sections and orthogonal members, this was fine and the aerodynamic loads would probably transfer adequately. But near the open edges (winglet and middle section) we didn\u2019t have anything to attach to and end up improvising with hot glue (in general, we steered clear of things like staples and nails, since we had to design for a scenario where the wing crashes violently on top of the pilot). The last complication was around poking parts of the structure through the Dacron, I suspect with careful planning this would not be too problematic but when improvising with scissors, the results are not super clean.",
+          "text": "Few things we struggled with when applying the Dacron and compressing it: First of all, when it starts to compress it puts stress on the wing structure in ways that we did not anticipate, you can see in the middle picture above how the wing cross section is curling, and the trailing edge appears to curve, this was not intended and in certain areas we feared it’d break the foam. Another complication was around attaching the Dacron to the wing itself. In the middle sections where the fabric could rest on cross sections and orthogonal members, this was fine and the aerodynamic loads would probably transfer adequately. But near the open edges (winglet and middle section) we didn’t have anything to attach to and end up improvising with hot glue (in general, we steered clear of things like staples and nails, since we had to design for a scenario where the wing crashes violently on top of the pilot). The last complication was around poking parts of the structure through the Dacron, I suspect with careful planning this would not be too problematic but when improvising with scissors, the results are not super clean.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Also, if you are thinking DuPont is just selling you polyester under the Dacron brand to charge you more, that\u2019s not exactly true. At some point we ran out of Dacron and we had to run down the street to a tailor to buy polyester fabric from them, it didn\u2019t behave anywhere close to Dacron (although it was much cheaper).",
+          "text": "Also, if you are thinking DuPont is just selling you polyester under the Dacron brand to charge you more, that’s not exactly true. At some point we ran out of Dacron and we had to run down the street to a tailor to buy polyester fabric from them, it didn’t behave anywhere close to Dacron (although it was much cheaper).",
           "tag": "p"
         },
         {
@@ -4770,7 +4650,7 @@
         },
         {
           "type": "text",
-          "text": "After we finished wrapping the wings (not a perfect job but learnt a lot from it), the next step was decoration, costume building, and coming up with a dance. After all, a big part of the Flugtag is showmanship and winning the crowd. Not going to include the dance rehearsals in this post, this isn\u2019t that type of blog.",
+          "text": "After we finished wrapping the wings (not a perfect job but learnt a lot from it), the next step was decoration, costume building, and coming up with a dance. After all, a big part of the Flugtag is showmanship and winning the crowd. Not going to include the dance rehearsals in this post, this isn’t that type of blog.",
           "tag": "p"
         },
         {
@@ -4795,12 +4675,12 @@
         },
         {
           "type": "text",
-          "text": "Once everything was done and the team was prepared, the last step was to get it out of the door and drive it into the event side. Unfortunately, none of it fit thru the door so it had to be disassembled and reassembled in site. This wasn\u2019t the fun part of the project, just the tedious last push to get it done (every project has this part). We got everything disassembled and into a UHaul, and then drove it to site the next morning, and reassembled it. Eventually the entire team + backup came and we put the final finishing touches. We were stationed in a parking lot along with all of the other teams, pretty much everyone was working on assembling their vehicle and putting up the final touches, the energy was great, Red Bull really knows how to throw a good party.",
+          "text": "Once everything was done and the team was prepared, the last step was to get it out of the door and drive it into the event side. Unfortunately, none of it fit thru the door so it had to be disassembled and reassembled in site. This wasn’t the fun part of the project, just the tedious last push to get it done (every project has this part). We got everything disassembled and into a UHaul, and then drove it to site the next morning, and reassembled it. Eventually the entire team + backup came and we put the final finishing touches. We were stationed in a parking lot along with all of the other teams, pretty much everyone was working on assembling their vehicle and putting up the final touches, the energy was great, Red Bull really knows how to throw a good party.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "And of course, the rest is history, you know what happened next :) The last thing I\u2019ll add is that jumping from the launchpad, which is like 30 feet, into cold water, felt like being reborn. First the water slaps you hard, it\u2019s cold, it\u2019s dark, you don\u2019t know what\u2019s going on. You come out of the water and everyone\u2019s looking at you. That\u2019s gotta be what birth feels like, right? I don\u2019t remember.",
+          "text": "And of course, the rest is history, you know what happened next :) The last thing I’ll add is that jumping from the launchpad, which is like 30 feet, into cold water, felt like being reborn. First the water slaps you hard, it’s cold, it’s dark, you don’t know what’s going on. You come out of the water and everyone’s looking at you. That’s gotta be what birth feels like, right? I don’t remember.",
           "tag": "p"
         },
         {
@@ -4817,31 +4697,6 @@
           "type": "media",
           "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/b3f6dc35-7a5e-4ad3-bd67-629e07fad183/IMG_0042.png?format=5000w",
           "local_path": "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_38.webp"
-        },
-        {
-          "type": "link",
-          "url": "https://www.gonzalobuilds.com/cart",
-          "text": "0"
-        },
-        {
-          "type": "link",
-          "url": "https://www.gonzalobuilds.com/projects/double-yc",
-          "text": "Previous Previous Double (2023-2025)"
-        },
-        {
-          "type": "text",
-          "text": "Double (2023-2025)",
-          "tag": "h2"
-        },
-        {
-          "type": "link",
-          "url": "https://www.gonzalobuilds.com/projects/wingsuit-propulsion-2022",
-          "text": "Next Next Wingsuit Propulsion (2022)"
-        },
-        {
-          "type": "text",
-          "text": "Wingsuit Propulsion (2022)",
-          "tag": "h2"
         }
       ]
     },
@@ -4871,7 +4726,7 @@
         },
         {
           "type": "text",
-          "text": "After spending the last 3 years building small, medium, and large drones, I now found myself in a transition phase plus locked down during the COVID-19 pandemic. I spent a lot more time with friends asking \u201cwhat if\u201d type of questions. Somewhat on theme, we landed on a random idea: when you go sky diving, what if you could extend the time you are on the sky by generating lift?",
+          "text": "After spending the last 3 years building small, medium, and large drones, I now found myself in a transition phase plus locked down during the COVID-19 pandemic. I spent a lot more time with friends asking “what if” type of questions. Somewhat on theme, we landed on a random idea: when you go sky diving, what if you could extend the time you are on the sky by generating lift?",
           "tag": "p"
         },
         {
@@ -4891,7 +4746,7 @@
         },
         {
           "type": "text",
-          "text": "If you\u2019ve never been sky diving, here\u2019s roughly how it goes. You get ready on the ground, with all of your equipment and checks (30-60 minutes), you hop on an airplane and ascent to the drop zone (15-20 minutes), you jump out of the airplane in free fall (1 minute), you open your parachute and descent (5 minutes). That is to say, the bulk of the time is spend not falling out of the sky, and you have to go through a lot of prep for that exciting 1 minute. We wanted to extend that time (and when I say we, I mean mostly Ignacio. I personally don\u2019t like heights).",
+          "text": "If you’ve never been sky diving, here’s roughly how it goes. You get ready on the ground, with all of your equipment and checks (30-60 minutes), you hop on an airplane and ascent to the drop zone (15-20 minutes), you jump out of the airplane in free fall (1 minute), you open your parachute and descent (5 minutes). That is to say, the bulk of the time is spend not falling out of the sky, and you have to go through a lot of prep for that exciting 1 minute. We wanted to extend that time (and when I say we, I mean mostly Ignacio. I personally don’t like heights).",
           "tag": "p"
         },
         {
@@ -4916,17 +4771,17 @@
         },
         {
           "type": "text",
-          "text": "Anyhow, that\u2019s exactly what we set out to build. We had to figure out how to strap some fans and batteries onto a sky diver, in a way that doesn\u2019t get in the way, is light enough, has enough battery to at least add a couple of minutes flight time (else what\u2019s the point), and it\u2019s reasonably safe. Talking about batteries implies an electric solution, to be honest a kerosene jet turbine is also a possible option but the noise and the fuel part made it less appealing to us.",
+          "text": "Anyhow, that’s exactly what we set out to build. We had to figure out how to strap some fans and batteries onto a sky diver, in a way that doesn’t get in the way, is light enough, has enough battery to at least add a couple of minutes flight time (else what’s the point), and it’s reasonably safe. Talking about batteries implies an electric solution, to be honest a kerosene jet turbine is also a possible option but the noise and the fuel part made it less appealing to us.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Here\u2019s a video of the recap of this project. Unfortunately (and fortunately) I moved away from Toronto down to San Francisco to participate in the Y Combinator Winter 2023 batch, so I\u2019ll likely won\u2019t see this one through.",
+          "text": "Here’s a video of the recap of this project. Unfortunately (and fortunately) I moved away from Toronto down to San Francisco to participate in the Y Combinator Winter 2023 batch, so I’ll likely won’t see this one through.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "So the project started with the idea of extending time spent on the sky when sky diving, and as shown in the video above, ended (at least for me) with the EDF unit strapped on top of a car plus a simulation techniques paper and presentation written by my friend Manit. This is something that we did on the side a couple of weekends through the year and it's not as intensive as some of the other projects on this website, but I think it\u2019s cool regardless (watch the videos above and below and you\u2019ll see what I mean).",
+          "text": "So the project started with the idea of extending time spent on the sky when sky diving, and as shown in the video above, ended (at least for me) with the EDF unit strapped on top of a car plus a simulation techniques paper and presentation written by my friend Manit. This is something that we did on the side a couple of weekends through the year and it's not as intensive as some of the other projects on this website, but I think it’s cool regardless (watch the videos above and below and you’ll see what I mean).",
           "tag": "p"
         },
         {
@@ -4936,7 +4791,7 @@
         },
         {
           "type": "text",
-          "text": "I\u2019ll skip the part where we did a bunch of math to check if this even made sense pursuing, all of that did happen and by our calculations this was entirely possible. When going from theory to reality, you quickly realize the limitations of the tools available to build something like this. There simply aren\u2019t that many ways of generating enough thrust through commercially available products. I\u2019ve also mentioned above why we opted out of kerosene jet turbines, and for packaging and safety reasons any open propellers would also be a bad reason, quickly we were left with EDFs (electric ducted fans) as the best option. And within the realm of EDFs available (at least back in 2020), it\u2019s not like there\u2019s a wide selection to pick from in the thrust range that we were shopping for, in fact we ended up going with VasyFan mostly because it was the only option. Also, VasyFan has come up a long way and is super legit now, but back then it was pretty much a dude in Italy posting videos of what appeared to be home-made EDFs on his Instagram account and us on the other side of the world wiring him thousands of dollars to see if he sends us one.",
+          "text": "I’ll skip the part where we did a bunch of math to check if this even made sense pursuing, all of that did happen and by our calculations this was entirely possible. When going from theory to reality, you quickly realize the limitations of the tools available to build something like this. There simply aren’t that many ways of generating enough thrust through commercially available products. I’ve also mentioned above why we opted out of kerosene jet turbines, and for packaging and safety reasons any open propellers would also be a bad reason, quickly we were left with EDFs (electric ducted fans) as the best option. And within the realm of EDFs available (at least back in 2020), it’s not like there’s a wide selection to pick from in the thrust range that we were shopping for, in fact we ended up going with VasyFan mostly because it was the only option. Also, VasyFan has come up a long way and is super legit now, but back then it was pretty much a dude in Italy posting videos of what appeared to be home-made EDFs on his Instagram account and us on the other side of the world wiring him thousands of dollars to see if he sends us one.",
           "tag": "p"
         },
         {
@@ -4951,17 +4806,17 @@
         },
         {
           "type": "text",
-          "text": "When buying EDFs and propellers in general (and this is also somewhat true for other components in general), the promised performance characteristics often don\u2019t match what you actually encounter in the field (ideal conditions and all). And further, for things like an EDF, a turbine, or propellers, usually all of the thrust figures are static thrust (that is to say, thrust when the fan is fixed and not moving, or the speed of the air intake is 0), but since in our case we\u2019d be falling from the sky, the intake air was coming at somewhat of a high speed and we needed to gather experimental data on how much thrust the EDF would produce at similar speeds.",
+          "text": "When buying EDFs and propellers in general (and this is also somewhat true for other components in general), the promised performance characteristics often don’t match what you actually encounter in the field (ideal conditions and all). And further, for things like an EDF, a turbine, or propellers, usually all of the thrust figures are static thrust (that is to say, thrust when the fan is fixed and not moving, or the speed of the air intake is 0), but since in our case we’d be falling from the sky, the intake air was coming at somewhat of a high speed and we needed to gather experimental data on how much thrust the EDF would produce at similar speeds.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "The other part to de-risk was the battery component. Usually battery cells have suggested limits on how fast you can discharge them, and what the peak continuous current is (if you think of the discharge profile for this system, we\u2019d be running the EDF at maximum throttle for as long as possible, so it\u2019s be steep and continuous) without hurting the batteries.",
+          "text": "The other part to de-risk was the battery component. Usually battery cells have suggested limits on how fast you can discharge them, and what the peak continuous current is (if you think of the discharge profile for this system, we’d be running the EDF at maximum throttle for as long as possible, so it’s be steep and continuous) without hurting the batteries.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "For measuring static thrust and battery pack performance, we built some static rigs shown above. To measure things like specific thrust, we built a rig and strapped it on top of a car and drove as fast as we could on a straight, as shown below. Steady state 140km/h was about as high as we could go. Each rig involved a bit of effort, you have to setup the right sensors, wiring, and write some software to be able to read the data and store it, but I won\u2019t bore you with the details.",
+          "text": "For measuring static thrust and battery pack performance, we built some static rigs shown above. To measure things like specific thrust, we built a rig and strapped it on top of a car and drove as fast as we could on a straight, as shown below. Steady state 140km/h was about as high as we could go. Each rig involved a bit of effort, you have to setup the right sensors, wiring, and write some software to be able to read the data and store it, but I won’t bore you with the details.",
           "tag": "p"
         },
         {
@@ -4981,7 +4836,7 @@
         },
         {
           "type": "text",
-          "text": "That\u2019s all I have to share for now on this. If this or any of the other projects in this site inspire you in any way, or you are building something similar, hit me up :)",
+          "text": "That’s all I have to share for now on this. If this or any of the other projects in this site inspire you in any way, or you are building something similar, hit me up :)",
           "tag": "p"
         },
         {
@@ -4990,19 +4845,9 @@
           "text": "Previous Previous Red Bull Flugtag (2022)"
         },
         {
-          "type": "text",
-          "text": "Red Bull Flugtag (2022)",
-          "tag": "h2"
-        },
-        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/ninja-delivery-20212022",
           "text": "Next Next Ninja Delivery (2021-2022)"
-        },
-        {
-          "type": "text",
-          "text": "Ninja Delivery (2021-2022)",
-          "tag": "h2"
         }
       ]
     }

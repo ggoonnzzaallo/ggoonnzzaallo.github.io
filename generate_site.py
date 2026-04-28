@@ -113,20 +113,14 @@ def index_card_hero_src(section_slug: str) -> str | None:
     return src
 
 
-_MEDIA_PLACEHOLDER_CAPTION = "placeholder title"
-
-
-def media_markup(media_rel_path: str, media_name: str, *, with_placeholder_caption: bool = False) -> str:
+def media_markup(media_rel_path: str, media_name: str, *, wrap_in_figure: bool = True) -> str:
     ext = Path(media_name).suffix.lower()
     escaped_alt = html.escape(media_name)
-    caption_html = (
-        f'<figcaption class="media-caption">{html.escape(_MEDIA_PLACEHOLDER_CAPTION)}</figcaption>'
-    )
 
     def wrap_media(inner: str) -> str:
-        if not with_placeholder_caption:
+        if not wrap_in_figure:
             return inner
-        return f'<figure class="media-figure">{inner}{caption_html}</figure>'
+        return f'<figure class="media-figure">{inner}</figure>'
 
     if ext in VIDEO_EXTENSIONS:
         inner = (
@@ -219,7 +213,7 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
         blocks.append(
             "<article class=\"media-item\">"
             f"<h3>{html.escape(label)}</h3>"
-            f"{media_markup(media_rel, media.name, with_placeholder_caption=False)}"
+            f"{media_markup(media_rel, media.name, wrap_in_figure=False)}"
             "</article>"
         )
 
@@ -256,6 +250,10 @@ def block_to_markup(output_file: Path, block: dict) -> str:
         tag = block.get("tag", "p").lower()
         if tag not in {"h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "blockquote", "figcaption"}:
             tag = "p"
+        # The source manifest contains trailing prev/next navigation labels as h2.
+        # We intentionally drop h2 text blocks to avoid rendering duplicate section titles.
+        if tag == "h2":
+            return ""
         if tag == "li":
             tag = "p"
         return f"<article class=\"content-item\"><{tag}>{text}</{tag}></article>"
@@ -294,7 +292,7 @@ def block_to_markup(output_file: Path, block: dict) -> str:
         media_name = Path(source).name
         return (
             "<article class=\"content-item\">"
-            f"{media_markup(media_rel, media_name, with_placeholder_caption=True)}"
+            f"{media_markup(media_rel, media_name)}"
             "</article>"
         )
     return ""
@@ -341,6 +339,12 @@ def postprocess_markdown_html(html: str) -> str:
     html = html.replace(
         '<a href="http://',
         '<a class="file-link" target="_blank" rel="noopener noreferrer" href="http://',
+    )
+    # Same-site section pages (sibling `pages/*.html` links from markdown)
+    html = re.sub(
+        r'<a href="([A-Za-z0-9_][A-Za-z0-9_.-]*\.html)"',
+        r'<a class="file-link" href="\1"',
+        html,
     )
     return html
 

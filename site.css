@@ -268,7 +268,9 @@ body {
 .media-list {
   margin-top: 28px;
   display: grid;
-  gap: 24px;
+  /* ~one blank line between serial blocks (paragraphs read as one column of text) */
+  gap: 1.65rem;
+  gap: 1lh;
 }
 .media-list--tight {
   gap: 0;
@@ -294,6 +296,10 @@ body {
 .content-item {
   padding: clamp(12px, 2.5vw, 22px) clamp(16px, 4vw, 36px);
 }
+/* Text-only blocks: horizontal padding only; vertical rhythm comes from .media-list gap */
+.content-item:has(> p) {
+  padding-block: 0;
+}
 .media-item {
   background: #ffffff;
   border: 1px solid #dddddd;
@@ -307,6 +313,39 @@ body {
 }
 .media-figure {
   margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.content-item .media-figure .media {
+  border-radius: 0;
+}
+/* Side-by-side image groups (stack on narrow viewports) */
+.media-row--3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2.2vw, 22px);
+  width: 100%;
+}
+.media-row--3 .media-row__cell {
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+.media-row--3 .media-row__cell .media {
+  width: 100%;
+  max-height: min(48vh, 480px);
+  object-fit: contain;
+}
+.media-row--3 .media-row__cell .media-caption {
+  margin-top: 0;
+}
+@media (max-width: 720px) {
+  .media-row--3 {
+    grid-template-columns: 1fr;
+  }
 }
 .content-item .media-caption {
   margin: 10px 0 0;
@@ -384,7 +423,8 @@ body {
   margin-top: 1lh;
 }
 .markdown-body .media-figure {
-  margin: 0;
+  /* Do not use margin shorthand here — it runs after `> * + *` and was overriding that rule’s margin-top on figures. */
+  margin-inline: 0;
 }
 .markdown-body ul,
 .markdown-body ol {
@@ -417,6 +457,9 @@ body {
   .content-item {
     padding: 10px 6px;
   }
+  .content-item:has(> p) {
+    padding-block: 0;
+  }
   .content-item:has(> .embed-wrap) {
     padding-inline: 6px;
     padding-block: 12px;
@@ -438,4 +481,9 @@ body {
   height: 100%;
   border: 0;
   border-radius: 0;
+}
+/* Keep X/Twitter embeds centered inside content blocks */
+.content-item blockquote.twitter-tweet,
+.content-item .twitter-tweet.twitter-tweet-rendered {
+  margin-inline: auto !important;
 }
