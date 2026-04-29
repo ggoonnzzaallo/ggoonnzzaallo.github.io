@@ -787,11 +787,11 @@ body.lightbox-open {
 }
 .content-item .media-dual-stack--bigdrones-g {
   /* Tune left row vs right stack to keep overall vertical extent consistent. */
-  grid-template-columns: minmax(0, 2.2fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 2.23fr) minmax(0, 1fr);
 }
 .content-item .media-dual-stack--bigdrones-g .media-dual-stack__left {
   /* Make left image narrower and middle image wider. */
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 0.88fr);
 }
 .content-item .media-dual-stack .media-figure {
   margin: 0;
