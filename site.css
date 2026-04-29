@@ -615,9 +615,125 @@ body.lightbox-open {
   /* Ratios from native dimensions of Clare_35/Clare_36/Clare_37 for equal visual height. */
   grid-template-columns: 0.75fr 1.33fr 0.75fr;
 }
+.content-item .media-triplet--drones-a {
+  /* Ratios from native dimensions of Drones_13/14/15 for equal visual height. */
+  grid-template-columns: 0.71fr 1.66fr 2.13fr;
+}
 .content-item .media-pair--clare-n {
   /* Ratios from native dimensions of Clare_38/Clare_39 for equal visual height. */
   grid-template-columns: 1.33fr 0.75fr;
+}
+.content-item .media-pair.media-pair--drones-b {
+  /* Ratios from native dimensions of Drones_25/26 for equal visual height. */
+  grid-template-columns: 1.85fr 1fr !important;
+}
+.content-item .media-triplet--drones-c {
+  /* Ratios from native dimensions of Drones_22/23/24 for equal visual height. */
+  grid-template-columns: 1.34fr 1.33fr 1.33fr;
+}
+.content-item .media-triplet--drones-d {
+  /* Ratios from native dimensions of Drones_19/20/21 for equal visual height. */
+  grid-template-columns: 1.3844fr 1.1938fr 1.2027fr;
+}
+.content-item .media-triplet--drones-e {
+  /* Ratios from native dimensions of Drones_16/17/18 for equal visual height. */
+  grid-template-columns: 0.75fr 1.33fr 0.9fr;
+}
+.content-item .media-pair.media-pair--drones-f {
+  /* Ratios from native dimensions of Drones_10/11 for equal visual height. */
+  grid-template-columns: 1.3333fr 1.4820fr !important;
+}
+.content-item .media-triplet.media-triplet--drones-g {
+  /* Ratios from native dimensions of Drones_7/8/9 for equal visual height. */
+  grid-template-columns: 0.7501fr 0.7591fr 0.5657fr !important;
+}
+.content-item .media-triplet--bigdrones-b {
+  /* Ratios from native dimensions of Bigdrones_8/9/10 for equal visual height. */
+  grid-template-columns: 0.8027fr 0.8fr 0.9084fr;
+}
+.content-item .media-pair--bigdrones-c {
+  /* Ratios from native dimensions of Bigdrones_11/12 for equal visual height. */
+  grid-template-columns: 0.7501fr 1.1579fr;
+}
+.content-item .media-triplet--bigdrones-d {
+  /* Ratios from native dimensions of Bigdrones_17/18/19 for equal visual height. */
+  grid-template-columns: 1.0557fr 1.7672fr 1.0027fr;
+}
+.content-item .media-triplet--bigdrones-e {
+  /* Ratios from native dimensions of Bigdrones_20/21/22 for equal visual height. */
+  grid-template-columns: 1fr 1fr 0.7501fr;
+}
+.content-item .media-triplet--bigdrones-f {
+  /* Ratios from native dimensions of Home_9/Bigdrones_24/Bigdrones_25 for equal visual height. */
+  grid-template-columns: 1.3333fr 1.0407fr 1.2079fr;
+}
+.content-item .media-triplet--atlas-a {
+  /* Ratios from native dimensions of Atlas_3/4/5 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-b {
+  /* Ratios from native dimensions of Atlas_6/7/8 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-c {
+  /* Ratios from native dimensions of Atlas_9/10/11 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-d {
+  /* Ratios from native dimensions of Atlas_12/13/14 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-e {
+  /* Ratios from native dimensions of Atlas_15/16/17 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-f {
+  /* Ratios from native dimensions of Atlas_18/19/20 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-g {
+  /* Ratios from native dimensions of Atlas_21/22/23 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-h {
+  /* Ratios from native dimensions of Atlas_24/25/26 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-i {
+  /* Ratios from native dimensions of Atlas_27/28/29 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-j {
+  /* Ratios from native dimensions of Atlas_30/31/32 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-triplet--atlas-k {
+  /* Ratios from native dimensions of Atlas_33/34/35 for equal visual height. */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.content-item .media-pair.media-pair--atlas-l {
+  /* Ratios from native dimensions of Atlas_38/39 for equal visual height. */
+  grid-template-columns: 2.1815fr 1.3333fr;
+}
+.content-item .media-pair.media-pair--atlas-m {
+  /* Ratios from native dimensions of Atlas_36/37 for equal visual height. */
+  grid-template-columns: 1fr 1fr;
+}
+.content-item .media-pair.media-pair--caravel-a {
+  /* Ratios from native dimensions of Caravel_8/9 for equal visual height. */
+  grid-template-columns: 569fr 601fr;
+}
+.content-item .media-pair.media-pair--caravel-b {
+  /* Ratios from native dimensions of Caravel_12/13 for equal visual height. */
+  grid-template-columns: 601fr 170fr;
+}
+.content-item .media-pair--drones-h {
+  /* Ratios from native dimensions of Drones_5/6 for equal visual height. */
+  grid-template-columns: 2500fr 2500fr;
+}
+.content-item .media-pair.media-pair--drones-i {
+  /* Ratios from native dimensions of Drones_3/4 for equal visual height. */
+  grid-template-columns: 1.3333fr 0.7501fr !important;
 }
 .markdown-body .media-triplet .media-figure {
   margin: 0;
@@ -630,6 +746,70 @@ body.lightbox-open {
 }
 .content-item .media-pair .media-figure {
   margin: 0;
+}
+.content-item .media-split-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: stretch;
+}
+.content-item .media-split-stack .media-figure {
+  margin: 0;
+}
+.content-item .media-split-stack__right {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-split-stack .media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.content-item .media-split-stack--bigdrones-a {
+  /* Slightly wider left column so left image height matches stacked right side. */
+  grid-template-columns: 1.14fr 1fr;
+}
+.content-item .media-split-stack--bigdrones-h {
+  /* Tune left-stack vs right-single widths for more consistent overall vertical extent. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+}
+.content-item .media-split-stack--bigdrones-h .media-split-stack__left {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-dual-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: stretch;
+}
+.content-item .media-dual-stack--bigdrones-g {
+  /* Tune left row vs right stack to keep overall vertical extent consistent. */
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 0.9fr);
+}
+.content-item .media-dual-stack--bigdrones-g .media-dual-stack__left {
+  /* Make left image narrower and middle image wider. */
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+}
+.content-item .media-dual-stack .media-figure {
+  margin: 0;
+}
+.content-item .media-dual-stack__left {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-dual-stack__right {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.content-item .media-dual-stack .media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .markdown-body .media-pair {
   display: grid;
@@ -644,8 +824,22 @@ body.lightbox-open {
   .markdown-body .media-pair,
   .content-item .media-triplet,
   .content-item .media-quad,
-  .content-item .media-pair {
+  .content-item .media-pair,
+  .content-item .media-split-stack,
+  .content-item .media-dual-stack {
     grid-template-columns: 1fr;
+  }
+  .content-item .media-split-stack__right {
+    grid-template-rows: auto;
+  }
+  .content-item .media-split-stack--bigdrones-h .media-split-stack__left {
+    grid-template-rows: auto;
+  }
+  .content-item .media-dual-stack__left {
+    grid-template-columns: 1fr;
+  }
+  .content-item .media-dual-stack__right {
+    grid-template-rows: auto;
   }
 }
 /* Ensure a clear one-line gap between top hero image and first paragraph in markdown pages. */
