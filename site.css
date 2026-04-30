@@ -299,6 +299,29 @@ body.lightbox-open {
 .content-item {
   padding: clamp(12px, 2.5vw, 22px) clamp(16px, 4vw, 36px);
 }
+/* Caption rows that should sit close under image groups */
+.content-item--caption-tight {
+  margin-top: -1.05lh;
+  margin-bottom: -0.2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.content-item--caption-tight figcaption {
+  margin-top: 0;
+  line-height: 1.3;
+}
+.content-item--caption-tight .media-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* Remove the default bottom padding on image rows right before tight captions. */
+.content-item:has(+ .content-item--caption-tight) {
+  padding-bottom: 0;
+}
+/* Also collapse the inter-row grid gap when a caption-tight item follows media content. */
+.media-list > .content-item:has(+ .content-item--caption-tight) + .content-item--caption-tight {
+  margin-top: calc(-1lh - 0.2rem);
+}
 /* Text-only blocks: horizontal padding only; vertical rhythm comes from .media-list gap */
 .content-item:has(> p) {
   padding-block: 0;
@@ -355,8 +378,28 @@ body.lightbox-open {
   font-size: 1em;
   line-height: 1.6;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   color: #111111;
+}
+.content-item .media-caption--tight {
+  margin-top: 0;
+  text-decoration: none;
+}
+.content-item .media-caption--single,
+.content-item .media-caption--single u {
+  text-decoration: underline;
+}
+.content-item figcaption.media-caption.media-caption--tight {
+  text-decoration: none !important;
+}
+.content-item figcaption.media-caption.media-caption--tight u {
+  text-decoration: none;
+}
+.content-item figcaption u {
+  text-decoration: none;
+}
+.content-item .media-caption .caption-label {
+  text-decoration: underline;
 }
 .media {
   width: 100%;
@@ -424,6 +467,9 @@ body.lightbox-open {
 }
 .markdown-body > * + * {
   margin-top: 1lh;
+}
+.content-item--markdown .markdown-body figcaption.media-caption + p {
+  margin-top: 1.65rem !important;
 }
 .markdown-body .media-figure {
   /* Do not use margin shorthand here — it runs after `> * + *` and was overriding that rule’s margin-top on figures. */
