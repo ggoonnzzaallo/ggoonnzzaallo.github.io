@@ -441,6 +441,17 @@ body.lightbox-open {
 .content-item p + p {
   margin-top: 1.65rem !important;
 }
+.content-item p + .press-list {
+  margin-top: 0.65rem;
+}
+.content-item .press-list {
+  margin: 0;
+  padding-left: 1.35rem;
+  line-height: 1.6;
+}
+.content-item .press-list li + li {
+  margin-top: 0.35rem;
+}
 /* Intro copy blocks: block flow + explicit margin (flex `gap` is unsupported in older Safari) */
 .content-item--prose > p + p {
   margin-top: 1.65rem !important;
