@@ -15,9 +15,59 @@
     <section class="media-list">
       <article class="content-item"><figure class="media-figure"><img src="../assets/Home/llm_hero.jpg" alt="" loading="lazy" class="media"></figure></article>
       <article class="content-item">
-        <div class="embed-wrap"><iframe src="https://www.youtube.com/embed/cK_sU8P2m_E?si=ZqprKNJyEg3f2jdz" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-      </article><article class="content-item">
-        <div class="embed-wrap"><iframe src="https://www.youtube.com/embed/SG2gbXv918U?si=VJoBgxBG-cPTgAf6" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p>In late 2023 I put together a small public repo of scripts playing with OpenAI&rsquo;s APIs when streaming for text and audio was still poorly documented. The code lives at <a class="file-link" href="https://github.com/ggoonnzzaallo/llm_experiments" target="_blank" rel="noopener noreferrer">github.com/ggoonnzzaallo/llm_experiments</a>: three demos covering TTS streaming, vision-plus-narration on video, and chaining streamed chat output into streamed speech.</p>
+      </article>
+      <article class="content-item">
+        <p><strong>button.py</strong>: A minimal UI with a text box and a button. Whatever you type is sent to OpenAI&rsquo;s text-to-speech endpoint. You can toggle streamed playback (audio starts before the full clip is generated) versus waiting for a complete file. I wrote it mainly to quantify how much latency streaming saves; the docs mentioned streaming but did not ship a working example, so this was my reference implementation.</p>
+      </article>
+      <article class="content-item">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            OpenAI TTS + Real Time Streaming = Audio in 0.6secs 🪄🔊<br><br>
+            Instead of waiting for the voice MP3s to generate, I tried the new real time streaming feature<br><br>
+            1.5 second of waiting for first audio, down to 0.6 seconds 👀 Excuse my heavy breathing, got excited<br><br>
+            Data in thread!
+            <a href="https://t.co/Zz55GhaADG">pic.twitter.com/Zz55GhaADG</a>
+          </p>
+          &mdash; Gonzalo (@geepytee)
+          <a href="https://twitter.com/geepytee/status/1723799639000834174?ref_src=twsrc%5Etfw">November 12, 2023</a>
+        </blockquote>
+      </article>
+      <article class="content-item">
+        <p><strong>narrator.ipynb</strong>: A notebook that takes an MP4 from disk and asks an OpenAI vision model to narrate what it sees, frame by frame. With a tuned system prompt it behaves like a rough sports-style commentator; the demo below is straight model output with no manual edits. <a class="file-link" href="https://x.com/gdb/status/1721745643578818560" target="_blank" rel="noopener noreferrer">Greg Brockman</a>, OpenAI co-founder, retweeted it.</p>
+      </article>
+      <article class="content-item">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            GPT-4V + TTS = AI Sports narrator 🪄⚽️<br><br>
+            Passed every frame of a football video to gpt-4-vision-preview, and with some simple prompting asked to generate a narration<br><br>
+            No edits, this is as it came out from the model (aka can be SO MUCH BETTER)
+            <a href="https://t.co/KfC2pGt02X">pic.twitter.com/KfC2pGt02X</a>
+          </p>
+          &mdash; Gonzalo (@geepytee)
+          <a href="https://twitter.com/geepytee/status/1721705524176257296?ref_src=twsrc%5Etfw">November 7, 2023</a>
+        </blockquote>
+      </article>
+      <article class="content-item">
+        <p><strong>streamed_text_plus_streamed_audio.py</strong>: End-to-end low-latency speech from chat. The reply from GPT-3.5-Turbo is streamed live; I chunk the partial text on sentence boundaries and pipe each chunk to TTS, which is also streamed back so playback starts before the full utterance exists. That keeps time-to-first-audio roughly around a second even when the reply is long.</p>
+      </article>
+      <article class="content-item">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Kept tinkering with OpenAI&#39;s TTS and ways to reduce first-audio latency:<br><br>
+            GPT-3.5-Turbo responses streamed back<br>
+            +<br>
+            Chunk streamed responses into sentences and send to TTS<br>
+            +<br>
+            TTS streaming to play before file is fully gen<br>
+            =<br>
+            Consistent first audio in ~1sec regardless of length of msg
+            <a href="https://t.co/fjLu7ENJct">https://t.co/fjLu7ENJct</a>
+            <a href="https://t.co/IZDORRocvi">pic.twitter.com/IZDORRocvi</a>
+          </p>
+          &mdash; Gonzalo (@geepytee)
+          <a href="https://twitter.com/geepytee/status/1726884940288229378?ref_src=twsrc%5Etfw">November 21, 2023</a>
+        </blockquote>
       </article>
     </section>
     <footer class="site-footer">
@@ -37,5 +87,6 @@
       </nav>
     </footer>
   </main>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
