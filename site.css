@@ -491,21 +491,25 @@ body.lightbox-open {
   /* Match each column to image aspect ratio so displayed heights align without cropping. */
   grid-template-columns: 1.03fr 0.57fr 1.48fr;
   gap: 0.9rem;
+  align-items: stretch;
 }
 .content-item .media-triplet {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
+  align-items: stretch;
 }
 .content-item .media-quad {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.9rem;
+  align-items: stretch;
 }
 .content-item .media-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
+  align-items: stretch;
 }
 .content-item .media-triplet--flugtag-b {
   /* Ratios from native dimensions of 8/9/10 to equalize displayed heights. */
@@ -792,17 +796,28 @@ body.lightbox-open {
   /* Ratios from native dimensions of Drones_3/4 for equal visual height. */
   grid-template-columns: 1.3333fr 0.7501fr !important;
 }
+/* Pair/triplet/quad rows: equal band height; img fills cell, object-fit contain (no crop, aspect preserved). */
+.content-item .media-pair .media-figure,
+.content-item .media-triplet .media-figure,
+.content-item .media-quad .media-figure,
+.markdown-body .media-pair .media-figure,
 .markdown-body .media-triplet .media-figure {
   margin: 0;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  height: clamp(140px, 30vmin, 520px);
 }
-.content-item .media-triplet .media-figure {
-  margin: 0;
-}
-.content-item .media-quad .media-figure {
-  margin: 0;
-}
-.content-item .media-pair .media-figure {
-  margin: 0;
+.content-item .media-pair .media,
+.content-item .media-triplet .media,
+.content-item .media-quad .media,
+.markdown-body .media-pair .media,
+.markdown-body .media-triplet .media {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
 }
 .content-item .media-split-stack {
   display: grid;
@@ -872,9 +887,7 @@ body.lightbox-open {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
-}
-.markdown-body .media-pair .media-figure {
-  margin: 0;
+  align-items: stretch;
 }
 @media (max-width: 900px) {
   .markdown-body .media-triplet,
@@ -897,6 +910,25 @@ body.lightbox-open {
   }
   .content-item .media-dual-stack__right {
     grid-template-rows: auto;
+  }
+  /* Stacked pair/triplet/quad: drop fixed band height so each image uses natural aspect ratio. */
+  .content-item .media-pair .media-figure,
+  .content-item .media-triplet .media-figure,
+  .content-item .media-quad .media-figure,
+  .markdown-body .media-pair .media-figure,
+  .markdown-body .media-triplet .media-figure {
+    height: auto;
+    display: block;
+  }
+  .content-item .media-pair .media,
+  .content-item .media-triplet .media,
+  .content-item .media-quad .media,
+  .markdown-body .media-pair .media,
+  .markdown-body .media-triplet .media {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
   }
 }
 /* Ensure a clear one-line gap between top hero image and first paragraph in markdown pages. */

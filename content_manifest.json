@@ -4164,12 +4164,12 @@
         },
         {
           "type": "text",
-          "text": "My capstone project was on the development of the powertrain for an electric vertical take-off and landing aircraft. It involved the design, optimization and prototyping of an electric ducted fan (which we actually built and tested), a wing integrated battery pack (which we actually patented), and wings to demonstrated the principle of blown lift in a wind tunnel.",
+          "text": "My capstone project was on the development of the powertrain for an electric vertical take-off and landing (EVTOL) aircraft. It involved the design, optimization and prototyping of an electric ducted fan (which we actually built and tested), a wing integrated battery pack (which we filed for preliminary US patents), and wings to demonstrated the principle of blown lift in a wind tunnel.",
           "tag": "p"
         },
         {
           "type": "text",
-          "text": "Without going into boring details, the pictures below sum it up pretty well. We won the ANSYS engineering analysis award and got 2nd place in the people’s choice award, not a bad way of ending my undergrad.",
+          "text": "Without going into boring details, the pictures below sum it up pretty well. The 'thing' we built as part of this was the vehicle shown in the poster above under 'Testing and Validation', which is half of a full-scale aircraft, with a fixture to mount it to a pick up truck in order to gather data of how it performs at higher cruise speeds. Along with it, the analytical work to design the aerodynamic surfaces, rotor, and make sure the system worked. We won the ANSYS engineering analysis award and got 2nd place in the people’s choice award, not a bad way of ending my undergrad.",
           "tag": "p"
         },
         {
@@ -4196,11 +4196,6 @@
           "type": "media",
           "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635645023-VFR23UOO4Y86GDBWTNJH/Thispictoo.jpeg?format=5000w",
           "local_path": "assets/Capstone/aero_3.jpg"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635239795-XZ28NPBQJTC9RMLO29DA/Pic3.jpeg?format=5000w",
-          "local_path": "assets/Capstone/final_2.jpg"
         },
         {
           "type": "media",
