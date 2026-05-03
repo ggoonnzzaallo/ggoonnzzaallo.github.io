@@ -4174,48 +4174,43 @@
         },
         {
           "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635176447-IEZ0XBCT2C2PM10W7DOD/Pic1.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_4.webp"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635196018-BT2QRQ28ZFE9P9XMLJCK/Pic2.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_5.webp"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635609633-50TD8B8I1L4YJ8UGHBHB/THISPIC.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_6.webp"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635239795-XZ28NPBQJTC9RMLO29DA/Pic3.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_7.webp"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635272610-0NGM0ICB2G31XYR1EF15/Pic8.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_8.webp"
-        },
-        {
-          "type": "media",
-          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635645023-VFR23UOO4Y86GDBWTNJH/Thispictoo.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_9.webp"
-        },
-        {
-          "type": "media",
           "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635310969-V43BQE9RVELDYLPQV2M4/Pic6.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_10.webp"
+          "local_path": "assets/Capstone/battery_1.jpg"
         },
         {
           "type": "media",
           "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635339407-KZK5RYHX4BI4SDLS1E3Q/Pic7.jpeg?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_11.webp"
+          "local_path": "assets/Capstone/battery_2.jpg"
+        },
+        {
+          "type": "media",
+          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635176447-IEZ0XBCT2C2PM10W7DOD/Pic1.jpeg?format=5000w",
+          "local_path": "assets/Capstone/aero_1.jpg"
+        },
+        {
+          "type": "media",
+          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635196018-BT2QRQ28ZFE9P9XMLJCK/Pic2.jpeg?format=5000w",
+          "local_path": "assets/Capstone/aero_2.jpg"
+        },
+        {
+          "type": "media",
+          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635645023-VFR23UOO4Y86GDBWTNJH/Thispictoo.jpeg?format=5000w",
+          "local_path": "assets/Capstone/aero_3.jpg"
+        },
+        {
+          "type": "media",
+          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635239795-XZ28NPBQJTC9RMLO29DA/Pic3.jpeg?format=5000w",
+          "local_path": "assets/Capstone/final_2.jpg"
+        },
+        {
+          "type": "media",
+          "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635272610-0NGM0ICB2G31XYR1EF15/Pic8.jpeg?format=5000w",
+          "local_path": "assets/Capstone/final_3.jpg"
         },
         {
           "type": "media",
           "url": "https://images.squarespace-cdn.com/content/v1/5fc039a0ff13940aa23c1b95/1607635368147-093MJTUB3AK5A4ALA635/Pic5.JPG?format=5000w",
-          "local_path": "assets/Everything_Else/Everything_Else_12.webp"
+          "local_path": "assets/Capstone/final_4.jpg"
         },
         {
           "type": "text",
