@@ -472,6 +472,33 @@ body.lightbox-open {
   padding-inline: clamp(20px, 5vw, 48px);
   padding-block: clamp(14px, 2.5vw, 28px);
 }
+/* YouTube + local video side by side (Ninja Delivery backpack row) */
+.content-item .media-pair--embed-mov {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+  width: 100%;
+}
+.content-item .media-pair--embed-mov .embed-wrap {
+  max-width: none;
+  margin-inline: 0;
+}
+.content-item .media-pair--embed-mov > .media-figure {
+  margin: 0;
+  min-width: 0;
+}
+.content-item .media-pair--embed-mov > .media-figure video.media {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  border-radius: 2px;
+}
+.content-item:has(> .media-pair--embed-mov) {
+  padding-inline: clamp(20px, 5vw, 48px);
+  padding-block: clamp(14px, 2.5vw, 28px);
+}
 /* markdowns/*.md → single article (see generate_site.py) */
 .markdown-body > * {
   margin: 0;
@@ -1013,6 +1040,13 @@ body.lightbox-open {
   .content-item:has(> .embed-wrap) {
     padding-inline: 6px;
     padding-block: 12px;
+  }
+  .content-item:has(> .media-pair--embed-mov) {
+    padding-inline: 6px;
+    padding-block: 12px;
+  }
+  .content-item .media-pair--embed-mov {
+    grid-template-columns: 1fr;
   }
   .content-item .embed-wrap {
     max-width: none;
