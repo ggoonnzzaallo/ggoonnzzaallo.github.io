@@ -475,7 +475,8 @@ body.lightbox-open {
 /* YouTube + local video side by side (Ninja Delivery backpack row) */
 .content-item .media-pair--embed-mov {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Narrower video column so a portrait .MOV ends up ~same height as the 16:9 embed beside it. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.32fr);
   gap: 0.9rem;
   align-items: start;
   width: 100%;
@@ -487,6 +488,8 @@ body.lightbox-open {
 .content-item .media-pair--embed-mov > .media-figure {
   margin: 0;
   min-width: 0;
+  display: flex;
+  justify-content: center;
 }
 .content-item .media-pair--embed-mov > .media-figure video.media {
   width: 100%;
@@ -494,6 +497,7 @@ body.lightbox-open {
   max-height: none;
   display: block;
   border-radius: 2px;
+  object-fit: contain;
 }
 .content-item:has(> .media-pair--embed-mov) {
   padding-inline: clamp(20px, 5vw, 48px);
@@ -922,6 +926,7 @@ body.lightbox-open {
   .content-item .media-triplet,
   .content-item .media-quad,
   .content-item .media-pair,
+  .content-item .media-pair--embed-mov,
   .content-item .media-split-stack,
   .content-item .media-dual-stack {
     grid-template-columns: 1fr;
