@@ -11,7 +11,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import mimetypes
+import os
 import re
+import socket
 import time
 from collections import deque
 from dataclasses import dataclass
@@ -20,8 +22,20 @@ from typing import Iterable
 from urllib.parse import parse_qs, urljoin, urlparse, urlunparse, urlencode
 
 import requests
+from dotenv import load_dotenv
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
+from posthog import Posthog
+
+load_dotenv()
+
+_posthog = Posthog(
+    os.environ.get("POSTHOG_PROJECT_TOKEN", ""),
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+) if os.environ.get("POSTHOG_PROJECT_TOKEN") else None
+
+_DISTINCT_ID = socket.gethostname()
 
 
 IMAGE_EXTENSIONS = {
@@ -558,20 +572,45 @@ def main() -> None:
     print(f"[start] Crawling {start_url}")
     print(f"[start] Saving assets into: {output_dir}")
 
-    asset_occurrences = fetch_asset_urls_with_browser(
-        start_url=start_url,
-        max_pages=args.max_pages,
-        page_timeout_ms=args.page_timeout_ms,
-        delay_seconds=args.delay,
-    )
-    print(f"[crawl] Collected {len(asset_occurrences)} ordered media occurrences")
+    if _posthog:
+        _posthog.capture(
+            distinct_id=_DISTINCT_ID,
+            event="crawl_started",
+            properties={"start_url": start_url, "max_pages": args.max_pages},
+        )
 
-    download_assets(
-        occurrences=asset_occurrences,
-        output_dir=output_dir,
-        timeout_seconds=args.request_timeout,
-        delay_seconds=args.delay,
-    )
+    try:
+        asset_occurrences = fetch_asset_urls_with_browser(
+            start_url=start_url,
+            max_pages=args.max_pages,
+            page_timeout_ms=args.page_timeout_ms,
+            delay_seconds=args.delay,
+        )
+        print(f"[crawl] Collected {len(asset_occurrences)} ordered media occurrences")
+
+        download_assets(
+            occurrences=asset_occurrences,
+            output_dir=output_dir,
+            timeout_seconds=args.request_timeout,
+            delay_seconds=args.delay,
+        )
+
+        if _posthog:
+            _posthog.capture(
+                distinct_id=_DISTINCT_ID,
+                event="crawl_completed",
+                properties={
+                    "start_url": start_url,
+                    "total_occurrences": len(asset_occurrences),
+                },
+            )
+    except Exception as exc:
+        if _posthog:
+            _posthog.capture_exception(exc, _DISTINCT_ID)
+        raise
+    finally:
+        if _posthog:
+            _posthog.shutdown()
 
 
 if __name__ == "__main__":

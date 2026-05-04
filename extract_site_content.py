@@ -10,15 +10,29 @@ import argparse
 import hashlib
 import json
 import mimetypes
+import os
 import re
+import socket
 import time
 from collections import deque
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse, urlunparse
 
 import requests
+from dotenv import load_dotenv
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
+from posthog import Posthog
+
+load_dotenv()
+
+_posthog = Posthog(
+    os.environ.get("POSTHOG_PROJECT_TOKEN", ""),
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+) if os.environ.get("POSTHOG_PROJECT_TOKEN") else None
+
+_DISTINCT_ID = socket.gethostname()
 
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif", ".bmp", ".tif", ".tiff"}
@@ -384,13 +398,43 @@ def build_args() -> argparse.Namespace:
 def main() -> None:
     args = build_args()
     start_url = args.url.rstrip("/") + "/"
-    pages = crawl_site(start_url, args.max_pages, args.page_timeout_ms, args.delay)
-    assets_dir = Path(args.output).expanduser().resolve()
-    download_media_for_manifest(pages, assets_dir, args.request_timeout, args.delay)
-    manifest = {"site_url": start_url, "pages": pages}
-    manifest_path = Path(args.manifest).expanduser().resolve()
-    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    print(f"[done] wrote manifest: {manifest_path}")
+
+    if _posthog:
+        _posthog.capture(
+            distinct_id=_DISTINCT_ID,
+            event="content_extraction_started",
+            properties={"start_url": start_url, "max_pages": args.max_pages},
+        )
+
+    try:
+        pages = crawl_site(start_url, args.max_pages, args.page_timeout_ms, args.delay)
+        assets_dir = Path(args.output).expanduser().resolve()
+        download_media_for_manifest(pages, assets_dir, args.request_timeout, args.delay)
+        manifest = {"site_url": start_url, "pages": pages}
+        manifest_path = Path(args.manifest).expanduser().resolve()
+        manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+        print(f"[done] wrote manifest: {manifest_path}")
+
+        total_media = sum(
+            1 for page in pages for block in page["blocks"] if block.get("type") == "media"
+        )
+        if _posthog:
+            _posthog.capture(
+                distinct_id=_DISTINCT_ID,
+                event="content_extraction_completed",
+                properties={
+                    "start_url": start_url,
+                    "pages_crawled": len(pages),
+                    "total_media_blocks": total_media,
+                },
+            )
+    except Exception as exc:
+        if _posthog:
+            _posthog.capture_exception(exc, _DISTINCT_ID)
+        raise
+    finally:
+        if _posthog:
+            _posthog.shutdown()
 
 
 if __name__ == "__main__":

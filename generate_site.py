@@ -9,7 +9,21 @@ import html
 import json
 import os
 import re
+import socket
 from pathlib import Path
+
+from dotenv import load_dotenv
+from posthog import Posthog
+
+load_dotenv()
+
+_posthog = Posthog(
+    os.environ.get("POSTHOG_PROJECT_TOKEN", ""),
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+) if os.environ.get("POSTHOG_PROJECT_TOKEN") else None
+
+_DISTINCT_ID = socket.gethostname()
 
 
 ROOT = Path(__file__).resolve().parent
@@ -1356,26 +1370,48 @@ def main() -> None:
     if not ASSETS_DIR.exists():
         raise SystemExit("assets folder not found. Run crawl first.")
 
-    PAGES_DIR.mkdir(parents=True, exist_ok=True)
-    write_styles()
+    if _posthog:
+        _posthog.capture(
+            distinct_id=_DISTINCT_ID,
+            event="site_generation_started",
+            properties={},
+        )
 
-    sections = []
-    if MANIFEST_FILE.exists():
-        manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
-        pages = manifest.get("pages", [])
-        for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
-            slug = page_data.get("slug", "")
-            from_md = build_section_page_from_markdown(slug) if slug else None
-            if from_md:
-                sections.append(from_md)
-            else:
-                sections.append(build_section_page_from_manifest(page_data))
-    else:
-        for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
-            sections.append(build_section_page(section_dir))
+    try:
+        PAGES_DIR.mkdir(parents=True, exist_ok=True)
+        write_styles()
 
-    build_index(sections)
-    print(f"Generated {len(sections)} section pages in {PAGES_DIR}")
+        sections = []
+        if MANIFEST_FILE.exists():
+            manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
+            pages = manifest.get("pages", [])
+            for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
+                slug = page_data.get("slug", "")
+                from_md = build_section_page_from_markdown(slug) if slug else None
+                if from_md:
+                    sections.append(from_md)
+                else:
+                    sections.append(build_section_page_from_manifest(page_data))
+        else:
+            for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
+                sections.append(build_section_page(section_dir))
+
+        build_index(sections)
+        print(f"Generated {len(sections)} section pages in {PAGES_DIR}")
+
+        if _posthog:
+            _posthog.capture(
+                distinct_id=_DISTINCT_ID,
+                event="site_generation_completed",
+                properties={"pages_generated": len(sections)},
+            )
+    except Exception as exc:
+        if _posthog:
+            _posthog.capture_exception(exc, _DISTINCT_ID)
+        raise
+    finally:
+        if _posthog:
+            _posthog.shutdown()
 
 
 if __name__ == "__main__":
