@@ -73,5 +73,72 @@
         page_title: document.title
       });
     }
+
+    // Image lightbox close (close button or backdrop click)
+    if (target.closest('.image-lightbox__close') ||
+        (target.classList && target.classList.contains('image-lightbox') && target.id === 'image-lightbox')) {
+      posthog.capture('image_lightbox_closed', {
+        page_title: document.title
+      });
+    }
   });
+
+  // Lightbox close via Escape key
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      var lightbox = document.getElementById('image-lightbox');
+      if (lightbox && lightbox.classList.contains('is-open')) {
+        posthog.capture('image_lightbox_closed', {
+          page_title: document.title,
+          close_method: 'escape_key'
+        });
+      }
+    }
+  });
+
+  // YouTube embed clicked (approximated via iframe focus steal on window blur)
+  window.addEventListener('blur', function () {
+    var active = document.activeElement;
+    if (active && active.tagName === 'IFRAME' && active.closest('.embed-wrap')) {
+      posthog.capture('youtube_embed_clicked', {
+        video_title: active.getAttribute('title') || null,
+        video_src: active.getAttribute('src') || null,
+        page_title: document.title
+      });
+    }
+  });
+
+  // Scroll depth tracking (50% and 100% milestones, project pages only)
+  (function () {
+    var milestones = [50, 100];
+    var reached = {};
+    var ticking = false;
+
+    function checkScrollDepth() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var pct = Math.round((scrollTop / docHeight) * 100);
+      for (var i = 0; i < milestones.length; i++) {
+        var m = milestones[i];
+        if (!reached[m] && pct >= m) {
+          reached[m] = true;
+          posthog.capture('scroll_depth_reached', {
+            depth_percent: m,
+            page_title: document.title
+          });
+        }
+      }
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(function () {
+          checkScrollDepth();
+          ticking = false;
+        });
+      }
+    }, { passive: true });
+  })();
 })();

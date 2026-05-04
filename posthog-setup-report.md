@@ -1,15 +1,18 @@
 <wizard-report>
 # PostHog post-wizard report
 
-The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; **gitignored**, not committed) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags.
+The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; **gitignored**, not committed) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags. A second pass added scroll depth tracking, YouTube embed interaction detection, and lightbox close tracking.
 
 | Event | Description | File(s) |
 |---|---|---|
-| `project_card_clicked` | User clicks a project card on the home page | `index.html` |
-| `social_link_clicked` | User clicks LinkedIn, X, or YouTube in the header or footer nav | All pages |
-| `external_link_clicked` | User follows an external link (GitHub, press, company sites) from a project page | All `pages/*.html` |
-| `back_link_clicked` | User clicks the ← back arrow to return to the home page | All `pages/*.html` |
-| `image_lightbox_opened` | User clicks an image to open the full-screen lightbox viewer | 14 project pages with lightbox |
+| `project_card_clicked` | User clicks a project card on the home page | `posthog-analytics.js` |
+| `social_link_clicked` | User clicks LinkedIn, X, or YouTube in the header or footer nav | `posthog-analytics.js` |
+| `external_link_clicked` | User follows an external link (GitHub, press, company sites) from a project page | `posthog-analytics.js` |
+| `back_link_clicked` | User clicks the ← back arrow to return to the home page | `posthog-analytics.js` |
+| `image_lightbox_opened` | User clicks an image to open the full-screen lightbox viewer | `posthog-analytics.js` |
+| `image_lightbox_closed` | User closes the lightbox via the close button, backdrop click, or Escape key | `posthog-analytics.js` |
+| `youtube_embed_clicked` | User clicks into a YouTube embed (approximated via iframe focus detection) | `posthog-analytics.js` |
+| `scroll_depth_reached` | User scrolls to a 50% or 100% milestone on a project page | `posthog-analytics.js` |
 
 ## Next steps
 
@@ -21,6 +24,9 @@ We've built some insights and a dashboard for you to keep an eye on user behavio
 - **External link clicks over time**: https://us.posthog.com/project/408524/insights/v2OOWy1A
 - **Top external links clicked**: https://us.posthog.com/project/408524/insights/eyAgyaeT
 - **Image lightbox opens by page**: https://us.posthog.com/project/408524/insights/toSbcyFe
+- **Scroll depth reached by milestone**: https://us.posthog.com/project/408524/insights/mOtydFVe
+- **YouTube embed clicks over time**: https://us.posthog.com/project/408524/insights/OlUqQOdE
+- **Lightbox opened vs closed**: https://us.posthog.com/project/408524/insights/nD06xrv4
 
 ### Setup notes
 
