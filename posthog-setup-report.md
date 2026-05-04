@@ -1,7 +1,7 @@
 <wizard-report>
 # PostHog post-wizard report
 
-The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; committed for GitHub Pages) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags.
+The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; **gitignored**, not committed) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags.
 
 | Event | Description | File(s) |
 |---|---|---|
@@ -24,7 +24,7 @@ We've built some insights and a dashboard for you to keep an eye on user behavio
 
 ### Setup notes
 
-- For local overrides, copy `posthog-config.example.js` or keep secrets only in `.env` when generating HTML locally. Production serves committed `posthog-config.js` from the repo root.
+- Keep `posthog-config.js` out of git; copy from `posthog-config.example.js` locally. For GitHub Pages, inject this file at deploy (e.g. Actions writing from secrets) or accept that analytics only run where the file exists.
 - `posthog-config.example.js` is committed as a template showing the required format.
 
 ### Agent skill
