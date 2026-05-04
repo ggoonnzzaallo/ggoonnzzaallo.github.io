@@ -1,7 +1,7 @@
 <wizard-report>
 # PostHog post-wizard report
 
-The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; **gitignored**, not committed) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags. A second pass added scroll depth tracking, YouTube embed interaction detection, and lightbox close tracking.
+The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; **committed** for GitHub Pages “Deploy from branch”) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags. A second pass added scroll depth tracking, YouTube embed interaction detection, and lightbox close tracking.
 
 | Event | Description | File(s) |
 |---|---|---|
@@ -30,7 +30,7 @@ We've built some insights and a dashboard for you to keep an eye on user behavio
 
 ### Setup notes
 
-- Keep `posthog-config.js` out of git; copy from `posthog-config.example.js` locally. **Production:** `.github/workflows/deploy-pages.yml` generates `posthog-config.js` from Actions secrets (`POSTHOG_KEY`, optional `POSTHOG_HOST`) then deploys via GitHub Pages. In the repo **Settings → Pages**, set the source to **GitHub Actions** (not “Deploy from branch”).
+- **Simplest production setup:** commit `posthog-config.js` (browser key is public by design) and use **Settings → Pages → Deploy from a branch** (`main` / root). **Optional:** keep the key out of git and use **GitHub Actions** as the Pages source with `POSTHOG_KEY` / `POSTHOG_HOST` secrets; the workflow can also inject over a committed file if the secret is set.
 - `posthog-config.example.js` is committed as a template showing the required format.
 
 ### Agent skill

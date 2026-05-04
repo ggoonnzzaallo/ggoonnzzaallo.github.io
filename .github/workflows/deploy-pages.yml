@@ -41,7 +41,11 @@ jobs:
           const key = process.env.POSTHOG_KEY;
           const host = process.env.POSTHOG_HOST || "https://us.i.posthog.com";
           if (!key) {
-            console.error("Add repository secret POSTHOG_KEY (PostHog project API key, phc_…)");
+            if (fs.existsSync("posthog-config.js")) {
+              console.log("No POSTHOG_KEY secret; using committed posthog-config.js.");
+              process.exit(0);
+            }
+            console.error("Add POSTHOG_KEY secret or commit posthog-config.js.");
             process.exit(1);
           }
           const body =
