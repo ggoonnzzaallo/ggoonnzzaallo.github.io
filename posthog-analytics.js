@@ -1,6 +1,5 @@
 /* PostHog analytics – shared across all pages.
-   Requires posthog-config.js (gitignored) to be loaded first,
-   which must set window.POSTHOG_KEY and window.POSTHOG_HOST. */
+   posthog-config.js must load first and set window.POSTHOG_KEY and window.POSTHOG_HOST. */
 (function () {
   var key = window.POSTHOG_KEY;
   var host = window.POSTHOG_HOST;

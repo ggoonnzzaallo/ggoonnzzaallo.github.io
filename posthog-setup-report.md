@@ -1,7 +1,7 @@
 <wizard-report>
 # PostHog post-wizard report
 
-The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two new files are introduced: `posthog-config.js` (gitignored, holds the project key and host populated from `.env`) and `posthog-analytics.js` (committed, token-free, reads config from `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags.
+The wizard has completed a deep integration of PostHog analytics into this static HTML portfolio site. Because the site has no build step or package manager, PostHog is loaded via the official JavaScript snippet pattern. Two files are used: `posthog-config.js` (project key + host; committed for GitHub Pages) and `posthog-analytics.js` (reads `window.POSTHOG_KEY` / `window.POSTHOG_HOST`). Both script tags were added to `index.html` and every page under `pages/`. All event tracking is implemented via a single delegated click listener in `posthog-analytics.js`, keeping page files untouched beyond the two added `<script>` tags.
 
 | Event | Description | File(s) |
 |---|---|---|
@@ -24,7 +24,7 @@ We've built some insights and a dashboard for you to keep an eye on user behavio
 
 ### Setup notes
 
-- `posthog-config.js` is gitignored. For local development it was generated from `.env` automatically. For production (GitHub Pages), generate this file via a GitHub Actions workflow that reads `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` from repository secrets and writes `posthog-config.js` before the deploy step.
+- For local overrides, copy `posthog-config.example.js` or keep secrets only in `.env` when generating HTML locally. Production serves committed `posthog-config.js` from the repo root.
 - `posthog-config.example.js` is committed as a template showing the required format.
 
 ### Agent skill
