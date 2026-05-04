@@ -1,0 +1,64 @@
+# Builds the static site for GitHub Pages and injects PostHog config from secrets
+# (posthog-config.js is gitignored locally so it is not committed).
+#
+# After merging: Repo → Settings → Pages → Source: GitHub Actions (not “Deploy from branch”).
+# Repo → Settings → Secrets and variables → Actions → add:
+#   POSTHOG_KEY   = your PostHog project API key (phc_…)
+#   POSTHOG_HOST  = https://us.i.posthog.com   (or your region)
+
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Write PostHog config from secrets
+        env:
+          POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
+          POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
+        run: |
+          node << 'NODE'
+          const fs = require("fs");
+          const key = process.env.POSTHOG_KEY;
+          const host = process.env.POSTHOG_HOST || "https://us.i.posthog.com";
+          if (!key) {
+            console.error("Add repository secret POSTHOG_KEY (PostHog project API key, phc_…)");
+            process.exit(1);
+          }
+          const body =
+            "/* Generated in CI; do not commit posthog-config.js */\n" +
+            "window.POSTHOG_KEY = " + JSON.stringify(key) + ";\n" +
+            "window.POSTHOG_HOST = " + JSON.stringify(host) + ";\n";
+          fs.writeFileSync("posthog-config.js", body);
+          NODE
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

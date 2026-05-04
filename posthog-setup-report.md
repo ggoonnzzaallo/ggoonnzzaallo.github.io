@@ -30,7 +30,7 @@ We've built some insights and a dashboard for you to keep an eye on user behavio
 
 ### Setup notes
 
-- Keep `posthog-config.js` out of git; copy from `posthog-config.example.js` locally. For GitHub Pages, inject this file at deploy (e.g. Actions writing from secrets) or accept that analytics only run where the file exists.
+- Keep `posthog-config.js` out of git; copy from `posthog-config.example.js` locally. **Production:** `.github/workflows/deploy-pages.yml` generates `posthog-config.js` from Actions secrets (`POSTHOG_KEY`, optional `POSTHOG_HOST`) then deploys via GitHub Pages. In the repo **Settings → Pages**, set the source to **GitHub Actions** (not “Deploy from branch”).
 - `posthog-config.example.js` is committed as a template showing the required format.
 
 ### Agent skill
