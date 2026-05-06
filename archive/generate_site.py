@@ -240,6 +240,7 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gonzalo Graham</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -292,6 +293,7 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(title_plain)} - Gonzalo Builds</title>
+  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>
@@ -660,6 +662,7 @@ def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(title_plain)} - Gonzalo Builds</title>
+  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>
@@ -1169,6 +1172,7 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(title_plain)} - Gonzalo Builds</title>
+  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
 </head>
 <body>

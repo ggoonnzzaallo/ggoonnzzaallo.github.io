@@ -1,11 +1,95 @@
 /* SITE_CSS_LOCKED: generate_site.py write_styles skips while this marker exists */
 * { box-sizing: border-box; }
+:root {
+  color-scheme: light;
+  --page-bg: #ffffff;
+  --text-primary: #111111;
+  --text-muted: #666666;
+  --text-secondary: #555555;
+  --link: #0b57d0;
+  --sticky-bg: #ffffff;
+  --sticky-border: #e8e8e8;
+  --sticky-shadow: rgba(0, 0, 0, 0.04);
+  --footer-border: #e5e5e5;
+  --btn-border: #dddddd;
+  --btn-bg: #fafafa;
+  --focus-ring: #0b57d0;
+  --card-bg: #ffffff;
+  --card-border: #dddddd;
+  --card-hover-border: #0b57d0;
+  --card-hover-shadow: rgba(0, 0, 0, 0.08);
+  --invert-hover-bg: #111111;
+  --invert-hover-border: #111111;
+  --invert-hover-text: #ffffff;
+  --invert-hover-year: #b3b3b3;
+  --hero-bg: #ffffff;
+  --media-item-bg: #ffffff;
+  --media-item-border: #dddddd;
+  --media-item-heading: #555555;
+  --caption-text: #111111;
+  --media-bg: #ffffff;
+  --pre-bg: #f6f6f6;
+  --social-hover-shadow: rgba(0, 0, 0, 0.06);
+  --linkedin-hover-border: #0a66c2;
+  --linkedin-hover-bg: #f0f7ff;
+  --linkedin-hover-text: #0a66c2;
+  --x-hover-border: #111111;
+  --x-hover-bg: #f4f4f4;
+  --youtube-hover-border: #cc0000;
+  --youtube-hover-bg: #fff5f5;
+  --youtube-hover-text: #cc0000;
+  --compact-card-hover-shadow: rgba(0, 0, 0, 0.28);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #121418;
+  --text-primary: #eceef2;
+  --text-muted: #9aa3b2;
+  --text-secondary: #b4bcc8;
+  --link: #8ab4f8;
+  --sticky-bg: #121418;
+  --sticky-border: #2a3038;
+  --sticky-shadow: rgba(0, 0, 0, 0.35);
+  --footer-border: #2a3038;
+  --btn-border: #3d4450;
+  --btn-bg: #1c2129;
+  --focus-ring: #8ab4f8;
+  --card-bg: #1c2129;
+  --card-border: #3d4450;
+  --card-hover-border: #8ab4f8;
+  --card-hover-shadow: rgba(0, 0, 0, 0.45);
+  --invert-hover-bg: #2d3544;
+  --invert-hover-border: #8ab4f8;
+  --invert-hover-text: #ffffff;
+  --invert-hover-year: #9aa3b2;
+  --hero-bg: #121418;
+  --media-item-bg: #1c2129;
+  --media-item-border: #3d4450;
+  --media-item-heading: #b4bcc8;
+  --caption-text: #eceef2;
+  --media-bg: #121418;
+  --pre-bg: #252b34;
+  --social-hover-shadow: rgba(0, 0, 0, 0.25);
+  --linkedin-hover-border: #6ea8ff;
+  --linkedin-hover-bg: #1a2332;
+  --linkedin-hover-text: #8ec5ff;
+  --x-hover-border: #c8ced9;
+  --x-hover-bg: #2a3038;
+  --youtube-hover-border: #ff6b6b;
+  --youtube-hover-bg: #2a2224;
+  --youtube-hover-text: #ff8a8a;
+  --compact-card-hover-shadow: rgba(0, 0, 0, 0.5);
+}
+html {
+  transition: background-color 0.28s ease, color 0.28s ease;
+}
 body {
   margin: 0;
   padding-inline: clamp(24px, 12vw, 220px);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #111111;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  transition: background-color 0.28s ease, color 0.28s ease;
 }
 body.lightbox-open {
   overflow: hidden;
@@ -23,11 +107,11 @@ body.lightbox-open {
 .header h1 {
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  color: #111111;
+  color: var(--text-primary);
 }
 .header h1 .card-year {
   font-size: 0.85em;
-  color: #666666;
+  color: var(--text-muted);
   font-weight: 500;
 }
 .header p {
@@ -35,10 +119,10 @@ body.lightbox-open {
   max-width: none;
   font-size: clamp(0.92rem, 2.1vw, 1.05rem);
   line-height: 1.55;
-  color: #555555;
+  color: var(--text-secondary);
 }
 .back-link {
-  color: #0b57d0;
+  color: var(--link);
   text-decoration: none;
   display: inline-block;
   margin-bottom: 14px;
@@ -50,9 +134,10 @@ body.lightbox-open {
   z-index: 40;
   padding-bottom: 12px;
   margin-bottom: 8px;
-  background: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  background: var(--sticky-bg);
+  border-bottom: 1px solid var(--sticky-border);
+  box-shadow: 0 6px 18px var(--sticky-shadow);
+  transition: background-color 0.28s ease, border-color 0.28s ease;
 }
 .social-nav {
   display: flex;
@@ -85,7 +170,8 @@ body.lightbox-open {
 .site-footer {
   margin-top: 40px;
   padding: 28px clamp(8px, 2vw, 20px) 0;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--footer-border);
+  transition: border-color 0.28s ease;
 }
 .social-btn {
   display: inline-flex;
@@ -93,21 +179,21 @@ body.lightbox-open {
   gap: 10px;
   padding: 10px 14px;
   border-radius: 10px;
-  border: 1px solid #dddddd;
-  background: #fafafa;
-  color: #111111;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.25;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.28s ease, background 0.28s ease, color 0.28s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .social-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px var(--social-hover-shadow);
 }
 .social-btn:focus-visible {
-  outline: 2px solid #0b57d0;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 .social-btn__icon {
@@ -125,24 +211,24 @@ body.lightbox-open {
   text-align: left;
 }
 .social-btn--linkedin:hover {
-  border-color: #0a66c2;
-  background: #f0f7ff;
-  color: #0a66c2;
+  border-color: var(--linkedin-hover-border);
+  background: var(--linkedin-hover-bg);
+  color: var(--linkedin-hover-text);
 }
 .social-btn--linkedin:hover .social-btn__icon {
-  color: #0a66c2;
+  color: var(--linkedin-hover-text);
 }
 .social-btn--x:hover {
-  border-color: #111111;
-  background: #f4f4f4;
+  border-color: var(--x-hover-border);
+  background: var(--x-hover-bg);
 }
 .social-btn--youtube:hover {
-  border-color: #cc0000;
-  background: #fff5f5;
-  color: #cc0000;
+  border-color: var(--youtube-hover-border);
+  background: var(--youtube-hover-bg);
+  color: var(--youtube-hover-text);
 }
 .social-btn--youtube:hover .social-btn__icon {
-  color: #cc0000;
+  color: var(--youtube-hover-text);
 }
 @media (max-width: 520px) {
   .social-btn {
@@ -159,19 +245,19 @@ body.lightbox-open {
 .card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 0;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.28s ease, background-color 0.28s ease, color 0.28s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .card:hover {
-  border-color: #0b57d0;
+  border-color: var(--card-hover-border);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 28px var(--card-hover-shadow);
 }
 /* Index grid: inverted hover (trial) */
 .grid--compact-cards .card {
@@ -183,22 +269,23 @@ body.lightbox-open {
     box-shadow 0.15s ease;
 }
 .grid--compact-cards .card:hover {
-  background: #111111;
-  border-color: #111111;
-  color: #ffffff;
+  background: var(--invert-hover-bg);
+  border-color: var(--invert-hover-border);
+  color: var(--invert-hover-text);
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 14px 36px var(--compact-card-hover-shadow);
 }
 .grid--compact-cards .card:hover .card-body,
 .grid--compact-cards .card:hover .card-body h2 {
-  color: #ffffff;
+  color: var(--invert-hover-text);
 }
 .grid--compact-cards .card:hover .card-year {
-  color: #b3b3b3;
+  color: var(--invert-hover-year);
 }
 .card-hero {
   aspect-ratio: 16 / 9;
-  background: #ffffff;
+  background: var(--hero-bg);
+  transition: background-color 0.28s ease;
 }
 .card-hero-img {
   width: 100%;
@@ -227,7 +314,7 @@ body.lightbox-open {
   flex-shrink: 0;
   overflow: hidden;
   padding: 0;
-  background: #ffffff;
+  background: var(--hero-bg);
   box-sizing: border-box;
 }
 .grid--compact-cards .card-hero-img {
@@ -261,12 +348,12 @@ body.lightbox-open {
 }
 .card-year {
   font-size: 0.85em;
-  color: #666666;
+  color: var(--text-muted);
   font-weight: 500;
 }
 .card p {
   margin: 0;
-  color: #555555;
+  color: var(--text-secondary);
 }
 .media-list {
   margin-top: 28px;
@@ -327,15 +414,16 @@ body.lightbox-open {
   padding-block: 0;
 }
 .media-item {
-  background: #ffffff;
-  border: 1px solid #dddddd;
+  background: var(--media-item-bg);
+  border: 1px solid var(--media-item-border);
   border-radius: 10px;
   padding: 20px 22px;
+  transition: background-color 0.28s ease, border-color 0.28s ease;
 }
 .media-item h3 {
   margin: 0 0 10px;
   font-size: 0.95rem;
-  color: #555555;
+  color: var(--media-item-heading);
 }
 .media-figure {
   margin: 0;
@@ -379,7 +467,7 @@ body.lightbox-open {
   line-height: 1.6;
   text-align: center;
   text-decoration: none;
-  color: #111111;
+  color: var(--caption-text);
 }
 .content-item .media-caption--tight {
   margin-top: 0;
@@ -407,9 +495,10 @@ body.lightbox-open {
   display: block;
   border-radius: 2px;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--media-bg);
   max-height: 80vh;
   object-fit: contain;
+  transition: background-color 0.28s ease;
 }
 .hero-media-item {
   padding-inline: 0;
@@ -423,7 +512,7 @@ body.lightbox-open {
   max-height: none;
 }
 .file-link {
-  color: #0b57d0;
+  color: var(--link);
 }
 .content-item p,
 .content-item blockquote,
@@ -979,8 +1068,9 @@ body.lightbox-open {
   overflow-x: auto;
   padding: 12px 14px;
   border-radius: 8px;
-  background: #f6f6f6;
+  background: var(--pre-bg);
   font-size: 0.9em;
+  transition: background-color 0.28s ease;
 }
 .markdown-body code {
   font-size: 0.92em;
@@ -1075,4 +1165,35 @@ body.lightbox-open {
 .content-item blockquote.twitter-tweet,
 .content-item .twitter-tweet.twitter-tweet-rendered {
   margin-inline: auto !important;
+}
+.theme-toggle {
+  position: fixed;
+  top: max(14px, calc(env(safe-area-inset-top, 0px) + 8px));
+  right: max(14px, calc(env(safe-area-inset-right, 0px) + 8px));
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px var(--sticky-shadow);
+  transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.theme-toggle:hover {
+  transform: translateY(-1px);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.theme-toggle svg {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
