@@ -4,10 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page not found — Gonzalo Graham</title>
-  <meta http-equiv="refresh" content="0;url=/">
-  <script>location.replace("/");</script>
+  <script>
+(function () {
+  var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
+  if (path === "/") {
+    location.replace("/");
+    return;
+  }
+  var last = path.split("/").pop();
+  if (last.indexOf(".") === -1) {
+    location.replace(path + ".html");
+    return;
+  }
+  location.replace("/");
+})();
+  </script>
+  <meta http-equiv="refresh" content="3;url=/">
 </head>
 <body>
-  <p><a href="/">Continue to the home page</a>.</p>
+  <p>If you are not redirected, <a href="/">go to the home page</a>.</p>
 </body>
 </html>
