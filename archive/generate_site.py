@@ -247,7 +247,8 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
   <main class="container">
     <header class="header">
       <h1>Gonzalo Graham</h1>
-      <p>Welcome to my portfolio. Here are some personal projects I’ve enjoyed working on in my free time.</p>
+      <p>Born in Peru, forged at uWaterloo. I’ve known since day 1 I wanted to build performance machines. Currently focused on becoming a hardcore roboticist.</p>
+      <p>This is my highlight reel of things I’ve built outside of work; click on any of the thumbnails for details.</p>
     </header>
 {SOCIAL_NAV_TOP}
     <section class="grid grid--compact-cards">
