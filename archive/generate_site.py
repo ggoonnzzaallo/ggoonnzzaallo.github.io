@@ -11,6 +11,8 @@ import os
 import re
 import socket
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
+from xml.sax.saxutils import escape as xml_escape
 
 from dotenv import load_dotenv
 from posthog import Posthog
@@ -26,13 +28,168 @@ _posthog = Posthog(
 _DISTINCT_ID = socket.gethostname()
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = ROOT / "assets"
 PAGES_DIR = ROOT / "pages"
 MARKDOWNS_DIR = ROOT / "markdowns"
 STYLE_FILE = ROOT / "site.css"
 INDEX_FILE = ROOT / "index.html"
 MANIFEST_FILE = ROOT / "content_manifest.json"
+
+DEFAULT_SITE_ORIGIN = "https://gonzalobuilds.com"
+DEFAULT_OG_IMAGE_PATH = "assets/Thumbnail/thumbnail_light.jpg"
+
+
+def manifest_site_origin(manifest: dict | None) -> str:
+    raw = str((manifest or {}).get("site_url") or "").strip()
+    if raw:
+        parsed = urlparse(raw)
+        if parsed.scheme and parsed.netloc:
+            return f"{parsed.scheme}://{parsed.netloc}"
+    return DEFAULT_SITE_ORIGIN
+
+
+def absolute_asset_url(site_origin: str, root_relative_path: str) -> str:
+    base = site_origin.rstrip("/") + "/"
+    return urljoin(base, root_relative_path.lstrip("/"))
+
+
+def page_canonical_url(site_origin: str, section_slug: str) -> str:
+    base = site_origin.rstrip("/") + "/"
+    return urljoin(base, f"pages/{section_slug}.html")
+
+
+def strip_simple_tags(s: str) -> str:
+    return re.sub(r"<[^>]+>", "", s)
+
+
+def clip_description(text: str, max_len: int = 158) -> str:
+    text = " ".join(text.split())
+    if len(text) <= max_len:
+        return text
+    cut = text[: max_len - 1]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut + "\u2026"
+
+
+def first_media_local_path(blocks: list[dict]) -> str | None:
+    for b in blocks:
+        if b.get("type") == "media" and b.get("local_path"):
+            return str(b["local_path"])
+    return None
+
+
+def description_from_manifest_blocks(blocks: list[dict], title_plain: str) -> str:
+    for b in blocks:
+        if b.get("type") == "text" and str(b.get("tag", "")).lower() == "p":
+            t = strip_simple_tags(str(b.get("text") or "")).strip()
+            t = " ".join(t.split())
+            if len(t) > 40:
+                return clip_description(t)
+            if t:
+                return clip_description(t)
+    return clip_description(
+        f"{title_plain} — photos, video, and notes from Gonzalo Graham's engineering portfolio."
+    )
+
+
+def markdown_plain_preview(body: str) -> str:
+    text = re.sub(r"```.*?```", " ", body, flags=re.DOTALL)
+    text = re.sub(r"`[^`]+`", " ", text)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"^#+\s*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"[*_>#]", " ", text)
+    text = html.unescape(text)
+    return " ".join(text.split())
+
+
+def markdown_meta_description(meta: dict[str, str], body: str, title_plain: str) -> str:
+    manual = (meta.get("description") or "").strip()
+    if manual:
+        return clip_description(manual)
+    preview = markdown_plain_preview(body)
+    if preview:
+        return clip_description(preview)
+    return clip_description(
+        f"{title_plain} — write-up and media from Gonzalo Graham's engineering portfolio."
+    )
+
+
+def first_image_src_from_html_fragment(fragment: str) -> str | None:
+    m = re.search(r'<img\s[^>]*src="([^"]+)"', fragment, re.IGNORECASE)
+    return m.group(1) if m else None
+
+
+def absolute_url_from_section_page_src(site_origin: str, src: str) -> str | None:
+    if not src:
+        return None
+    if src.startswith("http://") or src.startswith("https://"):
+        return src
+    path = src
+    if path.startswith("../"):
+        path = path[3:]
+    elif path.startswith("./"):
+        path = path[2:]
+    return absolute_asset_url(site_origin, path)
+
+
+def seo_meta_tags(
+    *,
+    description: str,
+    canonical_url: str,
+    share_title: str,
+    og_image_absolute: str | None,
+    og_type: str = "article",
+    site_name: str = "Gonzalo Graham",
+) -> str:
+    esc = html.escape
+    lines = [
+        f'  <meta name="description" content="{esc(description)}">',
+        '  <meta name="robots" content="index, follow">',
+        f'  <link rel="canonical" href="{esc(canonical_url)}">',
+        f'  <meta property="og:type" content="{esc(og_type)}">',
+        f'  <meta property="og:url" content="{esc(canonical_url)}">',
+        f'  <meta property="og:title" content="{esc(share_title)}">',
+        f'  <meta property="og:description" content="{esc(description)}">',
+        f'  <meta property="og:site_name" content="{esc(site_name)}">',
+    ]
+    if og_image_absolute:
+        lines.append(f'  <meta property="og:image" content="{esc(og_image_absolute)}">')
+    lines.extend(
+        [
+            '  <meta name="twitter:card" content="summary_large_image">',
+            f'  <meta name="twitter:title" content="{esc(share_title)}">',
+            f'  <meta name="twitter:description" content="{esc(description)}">',
+        ]
+    )
+    if og_image_absolute:
+        lines.append(f'  <meta name="twitter:image" content="{esc(og_image_absolute)}">')
+    return "\n".join(lines) + "\n"
+
+
+def write_robots_and_sitemap(site_origin: str, section_slugs: list[str]) -> None:
+    origin = site_origin.rstrip("/")
+    robots_txt = "\n".join(
+        ["User-agent: *", "Allow: /", "", f"Sitemap: {origin}/sitemap.xml", ""]
+    )
+    (ROOT / "robots.txt").write_text(robots_txt, encoding="utf-8")
+
+    urls = [f"{origin}/"]
+    for slug in sorted(set(section_slugs)):
+        urls.append(page_canonical_url(site_origin, slug))
+
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for u in urls:
+        parts.append(f"  <url><loc>{xml_escape(u)}</loc></url>")
+    parts.append("</urlset>")
+    parts.append("")
+    (ROOT / "sitemap.xml").write_text("\n".join(parts), encoding="utf-8")
+
 
 # Social links (index top + section page footers). Keep in sync with index.html when curated.
 _SOCIAL_LINK_ROWS = """        <a class="social-btn social-btn--linkedin" href="https://www.linkedin.com/in/gonzaloesp/" target="_blank" rel="noopener noreferrer">
@@ -262,7 +419,7 @@ def build_index(sections: list[tuple[str, str, int]]) -> None:
     INDEX_FILE.write_text(page, encoding="utf-8")
 
 
-def build_section_page(section_dir: Path) -> tuple[str, str, int]:
+def build_section_page(section_dir: Path, site_origin: str) -> tuple[str, str, int]:
     section_slug = section_dir.name
     section_title = title_from_slug(section_slug)
     index_titles = parse_index_section_titles()
@@ -288,14 +445,35 @@ def build_section_page(section_dir: Path) -> tuple[str, str, int]:
             "</article>"
         )
 
+    doc_title = f"{title_plain} - Gonzalo Builds"
+    description = clip_description(
+        f"{title_plain} — photo gallery and project notes by Gonzalo Graham."
+    )
+    og_root_path: str | None = None
+    for media in media_files:
+        if media.suffix.lower() in IMAGE_EXTENSIONS:
+            og_root_path = f"assets/{section_slug}/{media.name}"
+            break
+    og_image = absolute_asset_url(
+        site_origin, og_root_path if og_root_path else DEFAULT_OG_IMAGE_PATH
+    )
+    seo = seo_meta_tags(
+        description=description,
+        canonical_url=page_canonical_url(site_origin, section_slug),
+        share_title=doc_title,
+        og_image_absolute=og_image,
+    )
+
     page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
-  <script src="../theme.js"></script>
+  <title>{html.escape(doc_title)}</title>
+{seo}  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
+  <script src="../posthog-config.js"></script>
+  <script src="../posthog-analytics.js"></script>
 </head>
 <body>
   <main class="container">
@@ -619,10 +797,11 @@ def postprocess_markdown_html(html: str) -> str:
     return html
 
 
-def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] | None:
+def build_section_page_from_markdown(section_slug: str, site_origin: str) -> tuple[str, str, int] | None:
     """
     If markdowns/{slug}.md exists, render it into pages/{slug}.html and skip manifest blocks for that page.
     Image paths in Markdown should be relative to the output HTML (e.g. ../assets/Double_Yc/foo.webp).
+    Optional YAML frontmatter key: description (used for meta description / sharing).
     """
     md_path = MARKDOWNS_DIR / f"{section_slug}.md"
     if not md_path.is_file():
@@ -636,7 +815,7 @@ def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] 
             "Install dependencies: pip install -r requirements.txt"
         ) from e
 
-    _meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+    meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
     if not body.strip():
         raise SystemExit(f"Markdown body is empty: {md_path}")
 
@@ -657,14 +836,30 @@ def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] 
         f'<div class="markdown-body">{body_html}</div>'
         "</article>"
     )
+    doc_title = f"{title_plain} - Gonzalo Builds"
+    description = markdown_meta_description(meta, body, title_plain)
+    img_rel = first_image_src_from_html_fragment(body_html)
+    og_image = (
+        absolute_url_from_section_page_src(site_origin, img_rel)
+        if img_rel
+        else absolute_asset_url(site_origin, DEFAULT_OG_IMAGE_PATH)
+    )
+    seo = seo_meta_tags(
+        description=description,
+        canonical_url=page_canonical_url(site_origin, section_slug),
+        share_title=doc_title,
+        og_image_absolute=og_image,
+    )
     page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
-  <script src="../theme.js"></script>
+  <title>{html.escape(doc_title)}</title>
+{seo}  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
+  <script src="../posthog-config.js"></script>
+  <script src="../posthog-analytics.js"></script>
 </head>
 <body>
   <main class="container">
@@ -685,7 +880,7 @@ def build_section_page_from_markdown(section_slug: str) -> tuple[str, str, int] 
     return section_slug, section_title, 1
 
 
-def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
+def build_section_page_from_manifest(page_data: dict, site_origin: str) -> tuple[str, str, int]:
     section_slug = page_data["slug"]
     section_title = title_from_slug(section_slug)
     index_titles = parse_index_section_titles()
@@ -1165,6 +1360,24 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
             ),
             "media-pair--clare-n",
         )
+    custom_desc = str(page_data.get("description") or "").strip()
+    if custom_desc:
+        description = clip_description(custom_desc)
+    else:
+        description = description_from_manifest_blocks(normalized_blocks, title_plain)
+    media_path = first_media_local_path(normalized_blocks)
+    og_image = (
+        absolute_asset_url(site_origin, media_path)
+        if media_path
+        else absolute_asset_url(site_origin, DEFAULT_OG_IMAGE_PATH)
+    )
+    doc_title = f"{title_plain} - Gonzalo Builds"
+    seo = seo_meta_tags(
+        description=description,
+        canonical_url=page_canonical_url(site_origin, section_slug),
+        share_title=doc_title,
+        og_image_absolute=og_image,
+    )
     blocks = [block_to_markup(output_file, block) for block in normalized_blocks]
     blocks = [b for b in blocks if b]
     page = f"""<!DOCTYPE html>
@@ -1172,9 +1385,11 @@ def build_section_page_from_manifest(page_data: dict) -> tuple[str, str, int]:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{html.escape(title_plain)} - Gonzalo Builds</title>
-  <script src="../theme.js"></script>
+  <title>{html.escape(doc_title)}</title>
+{seo}  <script src="../theme.js"></script>
   <link rel="stylesheet" href="../site.css">
+  <script src="../posthog-config.js"></script>
+  <script src="../posthog-analytics.js"></script>
 </head>
 <body>
   <main class="container">
@@ -1387,21 +1602,26 @@ def main() -> None:
         write_styles()
 
         sections = []
+        site_origin = DEFAULT_SITE_ORIGIN
         if MANIFEST_FILE.exists():
             manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
+            site_origin = manifest_site_origin(manifest)
             pages = manifest.get("pages", [])
             for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
                 slug = page_data.get("slug", "")
-                from_md = build_section_page_from_markdown(slug) if slug else None
+                from_md = build_section_page_from_markdown(slug, site_origin) if slug else None
                 if from_md:
                     sections.append(from_md)
                 else:
-                    sections.append(build_section_page_from_manifest(page_data))
+                    sections.append(build_section_page_from_manifest(page_data, site_origin))
         else:
             for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
-                sections.append(build_section_page(section_dir))
+                sections.append(build_section_page(section_dir, site_origin))
 
         build_index(sections)
+
+        page_slugs = sorted({p.stem for p in PAGES_DIR.glob("*.html")})
+        write_robots_and_sitemap(site_origin, page_slugs)
         print(f"Generated {len(sections)} section pages in {PAGES_DIR}")
 
         if _posthog:
