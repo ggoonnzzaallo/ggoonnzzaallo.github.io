@@ -4017,6 +4017,11 @@
           "provider": "youtube"
         },
         {
+          "type": "embed",
+          "url": "https://www.youtube.com/embed/ES03YULi3qo?si=YladjSk2K95lDC6D&wmode=opaque",
+          "provider": "youtube"
+        },
+        {
           "type": "link",
           "url": "https://www.gonzalobuilds.com/projects/build-a-dog",
           "text": "Next Next Antarctic (2024-2025)"
