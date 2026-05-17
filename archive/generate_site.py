@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 """
-Generate a static GitHub Pages structure from downloaded assets.
+Build auxiliary site files (robots.txt, sitemap.xml) and optionally scaffold pages.
+
+Source of truth
+---------------
+* **Curated pages** live in ``pages/*.html`` (and ``markdowns/*.md`` for a few sections).
+  Edit those directly; they are not regenerated unless you pass ``--regenerate-pages``.
+* **content_manifest.json** is a legacy Squarespace crawl plus optional sync target.
+  Run ``archive/sync_manifest_from_pages.py`` after editing HTML so the manifest
+  reflects the site—it must not be treated as the page source of truth.
+* **index.html** is curated when it contains ``INDEX_CURATED`` in the first ~800 bytes.
+
+Default run (no flags): write robots + sitemap only; never overwrite section HTML.
 """
 
 from __future__ import annotations
 
+import argparse
 import html
 import json
 import os
@@ -294,6 +306,39 @@ def parse_numeric_suffix(filename: str) -> int:
 
 def relpath(from_path: Path, to_path: Path) -> str:
     return os.path.relpath(to_path, start=from_path.parent).replace("\\", "/")
+
+
+def page_is_curated(slug: str) -> bool:
+    """
+    True when an existing section page should not be rebuilt from the manifest.
+
+    Hand-built galleries (media-pair / triplet / quad) are not representable from
+  the crawl manifest alone. Markdown sections use markdowns/{slug}.md instead.
+    """
+    if (MARKDOWNS_DIR / f"{slug}.md").is_file():
+        return True
+    page = PAGES_DIR / f"{slug}.html"
+    if not page.is_file():
+        return False
+    head = page.read_text(encoding="utf-8")[:1600]
+    if "PAGE_CURATED" in head:
+        return True
+    if re.search(r'class="media-(?:pair|triplet|quad)', head):
+        return True
+    return False
+
+
+def section_meta_from_disk(slug: str) -> tuple[str, str, int]:
+    """Slug, plain title, and rough block count for sitemap/index helpers."""
+    page = PAGES_DIR / f"{slug}.html"
+    count = 0
+    if page.is_file():
+        count = len(re.findall(r'<article class="content-item', page.read_text(encoding="utf-8")))
+    index_titles = parse_index_section_titles()
+    if slug in index_titles:
+        _, plain = index_titles[slug]
+        return slug, plain, count
+    return slug, title_from_slug(slug), count
 
 
 def parse_index_section_titles() -> dict[str, tuple[str, str]]:
@@ -1587,6 +1632,28 @@ body {
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Emit robots.txt and sitemap.xml from the live site (default). "
+        "Optionally regenerate pages from the manifest (destructive)."
+    )
+    parser.add_argument(
+        "--regenerate-pages",
+        action="store_true",
+        help="Overwrite pages/*.html from content_manifest.json / markdowns/ "
+        "(skips curated pages unless --force).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="With --regenerate-pages, overwrite even curated section HTML.",
+    )
+    parser.add_argument(
+        "--write-styles",
+        action="store_true",
+        help="Regenerate site.css from the built-in template (skipped when SITE_CSS_LOCKED).",
+    )
+    args = parser.parse_args()
+
     if not ASSETS_DIR.exists():
         raise SystemExit("assets folder not found. Run crawl first.")
 
@@ -1594,41 +1661,86 @@ def main() -> None:
         _posthog.capture(
             distinct_id=_DISTINCT_ID,
             event="site_generation_started",
-            properties={},
+            properties={"regenerate_pages": args.regenerate_pages},
         )
 
     try:
         PAGES_DIR.mkdir(parents=True, exist_ok=True)
-        write_styles()
+        if args.write_styles:
+            write_styles()
 
-        sections = []
+        sections: list[tuple[str, str, int]] = []
         site_origin = DEFAULT_SITE_ORIGIN
-        if MANIFEST_FILE.exists():
-            manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
-            site_origin = manifest_site_origin(manifest)
-            pages = manifest.get("pages", [])
-            for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
-                slug = page_data.get("slug", "")
-                from_md = build_section_page_from_markdown(slug, site_origin) if slug else None
-                if from_md:
-                    sections.append(from_md)
-                else:
-                    sections.append(build_section_page_from_manifest(page_data, site_origin))
-        else:
-            for section_dir in sorted([d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()):
-                sections.append(build_section_page(section_dir, site_origin))
+        regenerated = 0
+        skipped_curated: list[str] = []
 
-        build_index(sections)
+        if args.regenerate_pages:
+            if MANIFEST_FILE.exists():
+                manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
+                site_origin = manifest_site_origin(manifest)
+                pages = manifest.get("pages", [])
+                for page_data in sorted(pages, key=lambda p: p.get("slug", "").lower()):
+                    slug = page_data.get("slug", "")
+                    if not slug:
+                        continue
+                    if page_is_curated(slug) and not args.force:
+                        skipped_curated.append(slug)
+                        sections.append(section_meta_from_disk(slug))
+                        continue
+                    from_md = build_section_page_from_markdown(slug, site_origin)
+                    if from_md:
+                        sections.append(from_md)
+                        regenerated += 1
+                    else:
+                        sections.append(build_section_page_from_manifest(page_data, site_origin))
+                        regenerated += 1
+            else:
+                for section_dir in sorted(
+                    [d for d in ASSETS_DIR.iterdir() if d.is_dir()], key=lambda p: p.name.lower()
+                ):
+                    slug = section_dir.name
+                    if page_is_curated(slug) and not args.force:
+                        skipped_curated.append(slug)
+                        sections.append(section_meta_from_disk(slug))
+                        continue
+                    sections.append(build_section_page(section_dir, site_origin))
+                    regenerated += 1
+            build_index(sections)
+        else:
+            if MANIFEST_FILE.exists():
+                manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
+                site_origin = manifest_site_origin(manifest)
+            for page_path in sorted(PAGES_DIR.glob("*.html")):
+                sections.append(section_meta_from_disk(page_path.stem))
 
         page_slugs = sorted({p.stem for p in PAGES_DIR.glob("*.html")})
         write_robots_and_sitemap(site_origin, page_slugs)
-        print(f"Generated {len(sections)} section pages in {PAGES_DIR}")
+
+        if args.regenerate_pages:
+            print(f"Regenerated {regenerated} section page(s) in {PAGES_DIR}")
+            if skipped_curated:
+                print(
+                    "Skipped curated pages (use --force to overwrite): "
+                    + ", ".join(skipped_curated)
+                )
+        else:
+            print(
+                f"Wrote robots.txt and sitemap.xml ({len(page_slugs)} section URLs). "
+                "Section HTML was not modified."
+            )
+            print(
+                "To refresh content_manifest.json from pages, run: "
+                "python archive/sync_manifest_from_pages.py"
+            )
 
         if _posthog:
             _posthog.capture(
                 distinct_id=_DISTINCT_ID,
                 event="site_generation_completed",
-                properties={"pages_generated": len(sections)},
+                properties={
+                    "pages_generated": regenerated,
+                    "regenerate_pages": args.regenerate_pages,
+                },
             )
     except Exception as exc:
         if _posthog:

@@ -1,0 +1,27 @@
+---
+description: Editing rules for pages/*.html and site.css — preserve galleries, captions, and video embeds
+globs: pages/**/*.html,site.css,index.html,content_manifest.json,archive/generate_site.py,archive/sync_manifest_from_pages.py
+alwaysApply: false
+---
+
+# Editing `pages/*.html` and `site.css`
+
+## Page HTML patterns (preserve when touching a file)
+
+- **Galleries**: `<div class="media-pair media-pair--*">` with per-page aspect-ratio classes in `site.css`
+- **Captions**: `<figcaption class="media-caption media-caption--tight">` with `<span class="caption-label">Left:</span>` / `Right:` / `Center:` (underlined via CSS)
+- **Videos**: `<figure class="media-figure"><video controls preload="metadata" playsinline class="media">` — do not drop `<video>` blocks
+- **Caravel-style singles**: figure + `figcaption.media-caption--single` with `<u>` for multi-part labels
+
+Do not replace the above with one-image-per-row manifest output or plain `<figcaption>` without classes.
+
+## `site.css` gallery rules
+
+- Pair/triplet images use **natural height** (`height: auto` on `.media`), not fixed `clamp()` bands that letterbox
+- Named column ratios (`media-pair--amy-a`, etc.) exist per page — do not delete or flatten to `1fr 1fr` without user request
+- Caption tight spacing: `.content-item:has(> .media-pair)` rules — do not remove when fixing spacing
+
+## Manifest and generators
+
+- **Do not** use `content_manifest.json` to rebuild HTML for pages that already exist on disk
+- After intentional HTML edits, suggest `sync_manifest_from_pages.py` — never auto-run unless user asks

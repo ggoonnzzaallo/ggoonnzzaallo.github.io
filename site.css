@@ -411,6 +411,15 @@ body.lightbox-open {
 .media-list > .content-item:has(+ .content-item--caption-tight) + .content-item--caption-tight {
   margin-top: calc(-1lh - 0.2rem);
 }
+/* Gallery + caption in the same article (pair/triplet/quad or single figure). */
+.content-item:has(> .media-pair, > .media-triplet, > .media-quad, > .media-figure + figcaption) {
+  padding-bottom: 0;
+}
+.content-item:has(> .media-pair, > .media-triplet, > .media-quad) .media-caption--tight,
+.content-item:has(> .media-figure + figcaption.media-caption) {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
 /* Text-only blocks: horizontal padding only; vertical rhythm comes from .media-list gap */
 .content-item:has(> p) {
   padding-block: 0;
@@ -918,7 +927,7 @@ body.lightbox-open {
   /* Ratios from native dimensions of Drones_3/4 for equal visual height. */
   grid-template-columns: 1.3333fr 0.7501fr !important;
 }
-/* Pair/triplet/quad rows: equal band height; img fills cell, object-fit contain (no crop, aspect preserved). */
+/* Pair/triplet/quad: column fr ratios match image aspects; natural height (no letterboxing). */
 .content-item .media-pair .media-figure,
 .content-item .media-triplet .media-figure,
 .content-item .media-quad .media-figure,
@@ -927,8 +936,6 @@ body.lightbox-open {
   margin: 0;
   display: block;
   min-width: 0;
-  min-height: 0;
-  height: clamp(140px, 30vmin, 520px);
 }
 .content-item .media-pair .media,
 .content-item .media-triplet .media,
@@ -936,8 +943,8 @@ body.lightbox-open {
 .markdown-body .media-pair .media,
 .markdown-body .media-triplet .media {
   width: 100%;
-  height: 100%;
-  max-height: none;
+  height: auto;
+  max-height: 80vh;
   object-fit: contain;
   object-position: center;
 }
@@ -1033,25 +1040,6 @@ body.lightbox-open {
   }
   .content-item .media-dual-stack__right {
     grid-template-rows: auto;
-  }
-  /* Stacked pair/triplet/quad: drop fixed band height so each image uses natural aspect ratio. */
-  .content-item .media-pair .media-figure,
-  .content-item .media-triplet .media-figure,
-  .content-item .media-quad .media-figure,
-  .markdown-body .media-pair .media-figure,
-  .markdown-body .media-triplet .media-figure {
-    height: auto;
-    display: block;
-  }
-  .content-item .media-pair .media,
-  .content-item .media-triplet .media,
-  .content-item .media-quad .media,
-  .markdown-body .media-pair .media,
-  .markdown-body .media-triplet .media {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: contain;
   }
 }
 /* Ensure a clear one-line gap between top hero image and first paragraph in markdown pages. */

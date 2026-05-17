@@ -19,7 +19,7 @@ I’m skipping some steps here but we eventually talked to everyone in our waitl
   <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_4.webp" /></figure>
 </div>
 
-<u>Left:</u> Our Product Hunt launch scoring 3rd place for the day. <u>Center:</u> Wesley, my co-founder pitching usedouble.com at the YC W23 demo day. <u>Right:</u> Final usedouble.com landing page.
+<figcaption class="media-caption media-caption--tight"><span class="caption-label">Left:</span> Our Product Hunt launch scoring 3rd place for the day. <span class="caption-label">Center:</span> Wesley, my co-founder pitching usedouble.com at the YC W23 demo day. <span class="caption-label">Right:</span> Final usedouble.com landing page.</figcaption>
 
 There are many thinks to be said about this first product that we launched. This is the first time I write about a software project and I don’t think listing everything we tried would be useful, or listing our lessons would be helpful (without the full context). Once again, I’m going to jump ahead and let you know that we end up pivoting from this product roughly a year in.
 
@@ -36,7 +36,7 @@ So why pivot? The decision came after a couple of months working with some big n
   <figure class="media-figure"><img class="media" loading="lazy" alt="" src="../assets/Double_Yc/Double_Yc_6.webp" /></figure>
 </div>
 
-<u>Left:</u> One of our launch posts on Reddit with hundreds of upvotes and comments. <u>Right:</u> Our VS Code marketplace extension page with over 30,000 installs.
+<figcaption class="media-caption media-caption--tight"><span class="caption-label">Left:</span> One of our launch posts on Reddit with hundreds of upvotes and comments. <span class="caption-label">Right:</span> Our VS Code marketplace extension page with over 30,000 installs.</figcaption>
 
 The main motivation for working on AI coding tools (which is super cliche, as most developers love building developer tools) was that the biggest tool at the time, GitHub Copilot, was fully of bugs and the GitHub team was not moving fast towards fixing them. There were super upvoted GitHub issues unanswered that were over a year old. We’ve written about it [here](https://docs.double.bot/copilot) ([Archive link](https://archive.is/ze9yh) just in case). The other motivation was that AI coding copilots was a rapidly growing market, and from what we could tell at the time it was likely the AI application with the most traction (in $ amount).
 

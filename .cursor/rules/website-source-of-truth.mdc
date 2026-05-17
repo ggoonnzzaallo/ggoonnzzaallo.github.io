@@ -1,0 +1,43 @@
+---
+description: Protect curated site HTML/CSS; never regenerate page content from manifest without explicit user approval
+alwaysApply: true
+---
+
+# Website content is hand-curated (do not overwrite)
+
+This portfolio site is **not** generated from `content_manifest.json` for day-to-day edits. Treat live files as authoritative.
+
+## Source of truth
+
+| Artifact | Role |
+|----------|------|
+| `pages/*.html` | **Canonical** page content, galleries, captions, videos |
+| `index.html` | **Canonical** home (has `INDEX_CURATED` — do not regenerate) |
+| `site.css` | **Canonical** layout (has `SITE_CSS_LOCKED` — do not run `write_styles`) |
+| `markdowns/*.md` | Source for pages that use markdown (e.g. `Double_Yc`) |
+| `content_manifest.json` | **Derived** crawl/archive — update FROM pages, not the other way around |
+
+## Forbidden unless the user explicitly asks
+
+- Running `archive/generate_site.py --regenerate-pages` or `--force`
+- Rewriting `pages/*.html` body from `content_manifest.json`
+- Bulk-regenerating section pages while adding SEO, sitemap, or tooling
+- Removing `media-pair` / `media-triplet` / `media-quad` layouts, `media-caption` blocks, `<video>`, or `caption-label` (Left/Right) copy
+- Changing gallery **formatting** in `site.css` (pair heights, caption spacing, column ratios) without a specific user request
+
+## Allowed without asking (narrow)
+
+- `python archive/generate_site.py` with **no flags** → only `robots.txt` + `sitemap.xml`
+- `python archive/sync_manifest_from_pages.py` when user wants manifest synced **from** HTML
+- Editing a **specific** page/section the user named in the current task
+- Adding SEO `<head>` tags **without** changing `<section class="media-list">` body
+
+## Before changing layout or restoring content
+
+1. **Read** the file and match existing patterns (`media-pair--*`, `figcaption.media-caption--tight`, `caption-label`).
+2. If recovering lost content, prefer **`git show e5ddac1:pages/<slug>.html`** (or user-named commit), merge body + keep current SEO head — **not** manifest regeneration.
+3. If a page has galleries (`class="media-pair"`), it is curated — treat as restore-only from git or surgical edits.
+
+## Optional marker
+
+Add `<!-- PAGE_CURATED -->` in the first ~20 lines of a page to document that it must not be manifest-regenerated.
