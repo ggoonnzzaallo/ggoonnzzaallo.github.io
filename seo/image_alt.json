@@ -1,0 +1,1620 @@
+{
+  "site_origin": "https://www.gonzalobuilds.com",
+  "images": {
+    "assets/Home/Home_13.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Amy_20152016/Amy_20152016_2.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Field Test Day, HOT model jig measuring power output of our divers.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_3.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: This is what a submarine race looks like if you've never seen one.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_4.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: MDF Cutting for the hull mould.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_5.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Center: Stacking it all together!",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_6.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: MDF Glueing for the hull mould.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_7.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Dusty machine with 1 piece out of 5.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_8.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Center: The future was so bright I had to close my eyes.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_9.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: Mould together, huge win for the whole team.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_10.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: MDF Mould w/ epoxy coat.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_11.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: MDF Mould w/ polyurethane primer coating.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_12.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Fibers and core in the mould.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_13.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Center: Infusion mesh and consumables in the mould.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_14.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: Post-infusion, fully saturated.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_15.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Demoulding.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_16.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: The marriage/bonding of the two halves.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_17.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Other than building a submarine, I also built a giant shark for Orientation week that year.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_18.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: Control systems 3D printed hub.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_19.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Left: Amy, first time in the pool.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_20.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: Buoyancy / Ballasting issues.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Amy_20152016/Amy_20152016_22.webp": {
+      "alt": "Submarine Gen I: Amy (2015-2016) — Right: Amy back from the UK with battle scars.",
+      "page": "pages/Amy_20152016.html",
+      "source": "figcaption"
+    },
+    "assets/Home/Home_8.webp": {
+      "alt": "Human Sized Drones (2020) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Atlas_2020/Atlas_2020_2.webp": {
+      "alt": "Human Sized Drones (2020) — project photo 2",
+      "page": "pages/Atlas_2020.html",
+      "source": "fallback"
+    },
+    "assets/Atlas_2020/Atlas_2020_3.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Body-filling cockpit mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_4.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Sanding cockpit mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_5.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Assembling cockpit mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_6.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Sealing cockpit mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_7.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Creating templates of moulds.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_8.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Cutting carbon for the cockpit.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_9.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Installing mould flanges.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_10.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Cockpit layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_11.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Another cockpit layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_12.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Fitting foam core on 2nd mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_13.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Fitting foam core.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_14.gif": {
+      "alt": "Human Sized Drones (2020) — Right: 2nd act of layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_15.gif": {
+      "alt": "Human Sized Drones (2020) — Left: 2nd act of layup, 2nd half.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_16.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Cockpit trimming.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_17.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Cockpit marriage.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_18.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Cockpit marriage part 2.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_19.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Assembling wing moulds.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_20.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Sanding wing moulds.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_21.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Sanding control surface moulds.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_22.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Control surface layup #1.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_23.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Control surface layup #2.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_24.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Control surface layup #3.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_25.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Control surface layup #4.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_26.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Control surface layup #5.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_27.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Control surface layup #6.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_28.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Control surface layup #7.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_29.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Control surface layup #8.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_30.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Control surface demould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_31.gif": {
+      "alt": "Human Sized Drones (2020) — Center: In-borne wing layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_32.gif": {
+      "alt": "Human Sized Drones (2020) — Right: In-borne wing layup part 2.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_33.gif": {
+      "alt": "Human Sized Drones (2020) — Left: Second in-borne wing layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_34.gif": {
+      "alt": "Human Sized Drones (2020) — Center: Out-borne wing layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_35.gif": {
+      "alt": "Human Sized Drones (2020) — Right: Second out-borne wing layup.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_36.webp": {
+      "alt": "Human Sized Drones (2020) — Left: Posing with a 62 inch propeller blade.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_37.webp": {
+      "alt": "Human Sized Drones (2020) — Right: Me and the small and full scale passenger cells, plus another half in the mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_38.webp": {
+      "alt": "Human Sized Drones (2020) — Left: First time sitting inside the passenger cell.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Atlas_2020/Atlas_2020_39.webp": {
+      "alt": "Human Sized Drones (2020) — Right: After pulling out the first half of the cockpit off the mould.",
+      "page": "pages/Atlas_2020.html",
+      "source": "figcaption"
+    },
+    "assets/Home/Home_9.webp": {
+      "alt": "Bigger Drones (2019-2020) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_2.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 2",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_3.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 3",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_4.webp": {
+      "alt": "Bigger Drones (2019-2020) — Laser cut wing top view.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "manifest"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_5.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 5",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_7.webp": {
+      "alt": "Bigger Drones (2019-2020) — Wing core plus motors and propellers.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "manifest"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_6.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 7",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_8.webp": {
+      "alt": "Bigger Drones (2019-2020) — Left: Shroud layup in progress.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_9.webp": {
+      "alt": "Bigger Drones (2019-2020) — Center: Propulsion assembly.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_10.webp": {
+      "alt": "Bigger Drones (2019-2020) — Right: Winglets bonding process.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_11.webp": {
+      "alt": "Bigger Drones (2019-2020) — Left: Fully assembled 1/2 scale drone.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_12.webp": {
+      "alt": "Bigger Drones (2019-2020) — Right: Big drone vs. small drone.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_13.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 8",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_14.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 9",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_15.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 10",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_16.webp": {
+      "alt": "Bigger Drones (2019-2020) — project photo 11",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "fallback"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_17.webp": {
+      "alt": "Bigger Drones (2019-2020) — Left: Red wrap.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_18.webp": {
+      "alt": "Bigger Drones (2019-2020) — Center: Flying in a parking lot.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_19.webp": {
+      "alt": "Bigger Drones (2019-2020) — Right: Flying at the park.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_20.webp": {
+      "alt": "Bigger Drones (2019-2020) — Left: Passenger cell 3D CAD.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_21.webp": {
+      "alt": "Bigger Drones (2019-2020) — Center: Mould work at home.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_22.webp": {
+      "alt": "Bigger Drones (2019-2020) — Right: Passenger cell demoulded.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_24.webp": {
+      "alt": "Bigger Drones (2019-2020) — Center: First flight w/ passenger cell.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Bigdrones_2019/Bigdrones_2019_25.webp": {
+      "alt": "Bigger Drones (2019-2020) — Right: First time flying outside w/ passenger cell.",
+      "page": "pages/Bigdrones_2019.html",
+      "source": "figcaption"
+    },
+    "assets/Home/Home_12.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_2.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — project photo 2",
+      "page": "pages/Bolt_20162017.html",
+      "source": "fallback"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_3.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Render of Bolt.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_4.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Engineering 3D CAD Model of Bolt.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_5.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Bolt's mould, start of construction.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_6.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Amy’s mould, Bolt’s mould, and Amy’s hull.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_7.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Foam mould after sanding.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_8.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Foam mould after fibre glass sealing.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_9.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Foam mould after filling and priming.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_10.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Male mould layup in progress.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_11.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Vacuum assisted wet layup.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_12.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: First half demoulding.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_13.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Hatches marked & trimmed.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_14.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Foam core hull reinforcements.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_15.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Foam core hatch reinforcements.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_16.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Hull on jig for marriage.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_17.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Hull going through the paint process.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_18.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Forming the sand mould.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_19.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Melting the foam positive.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_20.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Casted part off mould.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_21.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Plaster mould for casted fins.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_22.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: 3D printed mould for fibre glass fins.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_23.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Machined fin mould.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_24.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Fin pour.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_25.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Cured casted fin in mould.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_26.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Casting of the safety buoy.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_27.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: SLA 3D printed safety strobe bracket.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_28.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: SLS 3D printed nylon propeller hub.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_29.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Thermoforming window mould.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_30.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Thermoformed PETG window.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_31.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: CNC’d propeller blades.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_32.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Center: Welded sheet metal control system structures.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_33.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: Controls handle.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_34.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Left: Bolt in its final form.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Bolt_20162017/Bolt_20162017_35.webp": {
+      "alt": "Submarine Gen II: Bolt (2016-207) — Right: The team and I preparing for a dive in Maryland.",
+      "page": "pages/Bolt_20162017.html",
+      "source": "figcaption"
+    },
+    "assets/Home/home_2.jpg": {
+      "alt": "Quadruped Robot (2024-2025) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Capstone/system_3.jpg": {
+      "alt": "Capstone Project (2019) — project photo 1",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/system_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 2",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/system_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 3",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/machining_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 4",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 5",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 6",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_3.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 7",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_4.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 8",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_5.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 9",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/assembly_6.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 10",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/battery_1.jpg": {
+      "alt": "Capstone Project (2019) — project photo 11",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/finalbattery_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 12",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/finalbattery_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 13",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/battery_analysis_1.png": {
+      "alt": "Capstone Project (2019) — project photo 14",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/battery_analysis_2.png": {
+      "alt": "Capstone Project (2019) — project photo 15",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_cad_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 16",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_cad_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 17",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 18",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 19",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_3.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 20",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_4.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 21",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_5.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 22",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_6.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 23",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_7.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 24",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_8.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 25",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_2.jpg": {
+      "alt": "Capstone Project (2019) — project photo 26",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_11.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 27",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_12.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 28",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_10.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 29",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_build_13.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 30",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_final_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 31",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/aero_1.jpg": {
+      "alt": "Capstone Project (2019) — project photo 32",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_analysis_2.png": {
+      "alt": "Capstone Project (2019) — project photo 33",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_analysis_4.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 34",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_analysis_1.png": {
+      "alt": "Capstone Project (2019) — project photo 35",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_analysis_3.png": {
+      "alt": "Capstone Project (2019) — project photo 36",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_test_1.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 37",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_test_2.jpeg": {
+      "alt": "Capstone Project (2019) — project photo 38",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_3.jpg": {
+      "alt": "Capstone Project (2019) — project photo 39",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Capstone/final_4.jpg": {
+      "alt": "Capstone Project (2019) — project photo 40",
+      "page": "pages/Capstone_Project_2019.html",
+      "source": "fallback"
+    },
+    "assets/Home/capstone_hero.jpg": {
+      "alt": "Capstone Project (2019) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Drones_20182019/Drones_20182019_21.webp": {
+      "alt": "Drones (2018-2019) — Right: Winning an engineering analysis award.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Home/Home_7.webp": {
+      "alt": "Caravel Robotics (2021) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_2.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 2",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_3.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 3",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_4.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 4",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_5.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 5",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_6.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 6",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_7.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 7",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_8.gif": {
+      "alt": "Caravel Robotics (2021) — Left: Driving with more confidence.",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "figcaption"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_9.gif": {
+      "alt": "Caravel Robotics (2021) — Right: Shakedown.",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "figcaption"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_10.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 8",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_11.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 9",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_12.gif": {
+      "alt": "Caravel Robotics (2021) — Left: Lights on.",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "figcaption"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_13.gif": {
+      "alt": "Caravel Robotics (2021) — Right: Food on board.",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "figcaption"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_14.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 10",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_15.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 11",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Caravel_Robotics_2021/Caravel_Robotics_2021_16.webp": {
+      "alt": "Caravel Robotics (2021) — project photo 12",
+      "page": "pages/Caravel_Robotics_2021.html",
+      "source": "fallback"
+    },
+    "assets/Home/Home_11.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Clare_20172019/Clare_20172019_2.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Hobie pedal system on a kayak, its natural habitat.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_3.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Propulsion test jig.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_4.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Extract of a hull design presentation.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_5.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Extract of a hull design presentation",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_6.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Plug 3D CAD and manufacturing guide.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_7.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Main fuselage plug foam cutouts.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_8.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Putting together the main fuselage plug.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_9.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Sealing plug with fibre glass.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_10.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Body filling and sanding the plugs.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_11.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Looking good!",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_12.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Spraying sanding primer onto the plugs.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_13.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Primed plugs ready for more sanding.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_14.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Primed main fuselage plug.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_15.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Main fuselage flange.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_16.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Primed aft plug w/ flanges.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_17.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Final mould.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_18.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Waxing the plug.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_19.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Wet layup in progress.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_20.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Vacuum sealing the plug.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_21.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: One half of the main fuselage mould, outside, black gelcoat.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_22.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Final main fuselage mould cavity.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_23.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Fibres and core going into the mould.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_24.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Mesh and infusion lines routing.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_25.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: PVA + Clear gelcoat on the mould.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_26.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Main fuselage under vacuum.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_27.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Saturated main fuselage.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_28.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Main fuselage curing.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_29.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Demoulding party.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_30.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Top fuselage trimmed.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_31.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Hatch layup in progress.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_32.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Fuselage marriage.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_33.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Filling the bottom fuselage.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_34.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: Fuselage going through paint.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_35.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Desktop router.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_36.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Center: Claire’s metal frame.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_37.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: CNC’d and formed hingers.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_38.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Left: Claire back from competition, with battle scars.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Clare_20172019/Clare_20172019_39.webp": {
+      "alt": "Submarine Gen III: Claire (2017-2019) — Right: The inside of Claire, as seen by the pilot.",
+      "page": "pages/Clare_20172019.html",
+      "source": "figcaption"
+    },
+    "assets/Home/Home_3.webp": {
+      "alt": "Double (2023-2025) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Double_Yc/Double_Yc_2.webp": {
+      "alt": "Double (2023-2025) — Left: Our Product Hunt launch scoring 3rd place for the day.",
+      "page": "pages/Double_Yc.html",
+      "source": "figcaption"
+    },
+    "assets/Double_Yc/Double_Yc_3.webp": {
+      "alt": "Double (2023-2025) — Center: Wesley, my co-founder pitching usedouble.com at the YC W23 demo day.",
+      "page": "pages/Double_Yc.html",
+      "source": "figcaption"
+    },
+    "assets/Double_Yc/Double_Yc_4.webp": {
+      "alt": "Double (2023-2025) — Right: Final usedouble.com landing page.",
+      "page": "pages/Double_Yc.html",
+      "source": "figcaption"
+    },
+    "assets/Double_Yc/Double_Yc_5.webp": {
+      "alt": "Double (2023-2025) — project photo 2",
+      "page": "pages/Double_Yc.html",
+      "source": "fallback"
+    },
+    "assets/Double_Yc/Double_Yc_6.webp": {
+      "alt": "Double (2023-2025) — project photo 3",
+      "page": "pages/Double_Yc.html",
+      "source": "fallback"
+    },
+    "assets/Home/Home_10.webp": {
+      "alt": "Drones (2018-2019) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Drones_20182019/Drones_20182019_2.webp": {
+      "alt": "Drones (2018-2019) — project photo 2",
+      "page": "pages/Drones_20182019.html",
+      "source": "fallback"
+    },
+    "assets/Drones_20182019/Drones_20182019_3.webp": {
+      "alt": "Drones (2018-2019) — Left: Controls experiment swing.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_4.webp": {
+      "alt": "Drones (2018-2019) — Right: 3D printed propeller + stator.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_5.webp": {
+      "alt": "Drones (2018-2019) — Left: MAVIS getting primer sprayed on.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_6.webp": {
+      "alt": "Drones (2018-2019) — Right: MAVIS on its final form.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_7.webp": {
+      "alt": "Drones (2018-2019) — Left: MAVIS in its natural tether position.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_8.webp": {
+      "alt": "Drones (2018-2019) — Center: Take-off outside of ground effect.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_9.webp": {
+      "alt": "Drones (2018-2019) — Right: MAVIS first take-off.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_10.webp": {
+      "alt": "Drones (2018-2019) — Left: MAVIS 2.0 Airframe.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_11.webp": {
+      "alt": "Drones (2018-2019) — Right: MAVIS 2.0 on the tether, sans props.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_12.webp": {
+      "alt": "Drones (2018-2019) — project photo 3",
+      "page": "pages/Drones_20182019.html",
+      "source": "fallback"
+    },
+    "assets/Drones_20182019/Drones_20182019_13.webp": {
+      "alt": "Drones (2018-2019) — project photo 4",
+      "page": "pages/Drones_20182019.html",
+      "source": "fallback"
+    },
+    "assets/Drones_20182019/Drones_20182019_14.webp": {
+      "alt": "Drones (2018-2019) — project photo 5",
+      "page": "pages/Drones_20182019.html",
+      "source": "fallback"
+    },
+    "assets/Drones_20182019/Drones_20182019_15.webp": {
+      "alt": "Drones (2018-2019) — project photo 6",
+      "page": "pages/Drones_20182019.html",
+      "source": "fallback"
+    },
+    "assets/Drones_20182019/Drones_20182019_16.webp": {
+      "alt": "Drones (2018-2019) — Left: CNC’d a foam wing.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_17.webp": {
+      "alt": "Drones (2018-2019) — Center: Dual-rotor foam drone.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_18.webp": {
+      "alt": "Drones (2018-2019) — Right: Drone taking off.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_19.webp": {
+      "alt": "Drones (2018-2019) — Left: Winning a $2.5k pitch competition.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_20.webp": {
+      "alt": "Drones (2018-2019) — Center: Winning a $5k pitch competition.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_22.webp": {
+      "alt": "Drones (2018-2019) — Off-the-shelf drone flight.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_23.webp": {
+      "alt": "Drones (2018-2019) — Off-the-shelf drone flight.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_24.webp": {
+      "alt": "Drones (2018-2019) — Off-the-shelf drone flight.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_25.webp": {
+      "alt": "Drones (2018-2019) — Left: Winning a $50k pitch competition.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Drones_20182019/Drones_20182019_26.webp": {
+      "alt": "Drones (2018-2019) — Right: Y Combinator Interview.",
+      "page": "pages/Drones_20182019.html",
+      "source": "figcaption"
+    },
+    "assets/Home/kscale_hero.jpg": {
+      "alt": "K-Scale Hackathon (2024-2025) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/llm_hero.jpg": {
+      "alt": "LLM Experiments (2023-2024) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/patent_hero.jpg": {
+      "alt": "My 1st US Patent (2019) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/Home_6.webp": {
+      "alt": "Ninja Delivery (2021-2022) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Ninja_Delivery/bikes_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 2",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bikes_3.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 3",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/store_inside_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 4",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/store_inside_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 5",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/store_inside_3.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 6",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/store_inside_4.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 7",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_5.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 8",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_6.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 9",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 10",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_3.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 11",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_4.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 12",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 13",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 14",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_3.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 15",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_7.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 16",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/OOH_8.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 17",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/mailer_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 18",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/mailer_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 19",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_4.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 20",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_5.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 21",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/bag_6.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 22",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/special_valentines_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 23",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/special_valentines_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 24",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/backpack_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 25",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/backpack_2.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 26",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/backpack__4.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 27",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/backpack_5.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 28",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Ninja_Delivery/final_store_1.jpeg": {
+      "alt": "Ninja Delivery (2021-2022) — project photo 29",
+      "page": "pages/Ninja_Delivery_20212022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_1.webp": {
+      "alt": "Red Bull Flugtag (2022) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_2.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 2",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_3.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 3",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_4.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 4",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_5.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 5",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_6.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 6",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_7.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 7",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_8.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 8",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_9.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 9",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_10.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 10",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_11.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 11",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_12.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 12",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_13.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 13",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_14.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 14",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_15.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 15",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_16.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 16",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_17.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 17",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_18.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 18",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_19.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 19",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_20.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 20",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_21.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 21",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_22.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 22",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_23.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 23",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_24.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 24",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_25.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 25",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_26.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 26",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_27.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 27",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_28.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 28",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_29.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 29",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_30.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 30",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_31.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 31",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_32.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 32",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_33.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 33",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_34.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 34",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_35.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 35",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_36.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 36",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_37.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 37",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Red_Bull_Flugtag_2022/Red_Bull_Flugtag_2022_38.webp": {
+      "alt": "Red Bull Flugtag (2022) — project photo 38",
+      "page": "pages/Red_Bull_Flugtag_2022.html",
+      "source": "fallback"
+    },
+    "assets/Home/robot_hand_hero.jpg": {
+      "alt": "Robot Hands (2026) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/so100_hero.jpg": {
+      "alt": "SO-100 Experiments (2025) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/Home_1.webp": {
+      "alt": "Self Balancing Robot (2025-2026) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Home/Home_5.webp": {
+      "alt": "Wingsuit Propulsion (2022) — project thumbnail",
+      "page": "index.html",
+      "source": "index_card"
+    },
+    "assets/Wingsuit_Propulsion_2022/Wingsuit_Propulsion_2022_2.webp": {
+      "alt": "Wingsuit Propulsion (2022) — project photo 2",
+      "page": "pages/Wingsuit_Propulsion_2022.html",
+      "source": "fallback"
+    }
+  }
+}

@@ -183,24 +183,24 @@ def seo_meta_tags(
 
 def write_robots_and_sitemap(site_origin: str, section_slugs: list[str]) -> None:
     origin = site_origin.rstrip("/")
-    robots_txt = "\n".join(
-        ["User-agent: *", "Allow: /", "", f"Sitemap: {origin}/sitemap.xml", ""]
-    )
-    (ROOT / "robots.txt").write_text(robots_txt, encoding="utf-8")
+    try:
+        from seo_heads import write_sitemap_with_lastmod
 
-    urls = [f"{origin}/"]
-    for slug in sorted(set(section_slugs)):
-        urls.append(page_canonical_url(site_origin, slug))
-
-    parts = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ]
-    for u in urls:
-        parts.append(f"  <url><loc>{xml_escape(u)}</loc></url>")
-    parts.append("</urlset>")
-    parts.append("")
-    (ROOT / "sitemap.xml").write_text("\n".join(parts), encoding="utf-8")
+        page_paths = [PAGES_DIR / f"{slug}.html" for slug in section_slugs if (PAGES_DIR / f"{slug}.html").is_file()]
+        write_sitemap_with_lastmod(page_paths)
+    except ImportError:
+        urls = [f"{origin}/"]
+        for slug in sorted(set(section_slugs)):
+            urls.append(page_canonical_url(site_origin, slug))
+        parts = [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        ]
+        for u in urls:
+            parts.append(f"  <url><loc>{xml_escape(u)}</loc></url>")
+        parts.append("</urlset>")
+        parts.append("")
+        (ROOT / "sitemap.xml").write_text("\n".join(parts), encoding="utf-8")
 
 
 # Social links (index top + section page footers). Keep in sync with index.html when curated.

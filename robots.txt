@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.gonzalobuilds.com/sitemap.xml
+Sitemap: https://www.gonzalobuilds.com/sitemap-images.xml

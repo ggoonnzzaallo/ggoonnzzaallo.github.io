@@ -27,10 +27,18 @@ This portfolio site is **not** generated from `content_manifest.json` for day-to
 
 ## Allowed without asking (narrow)
 
-- `python archive/generate_site.py` with **no flags** → only `robots.txt` + `sitemap.xml`
+- `python archive/generate_site.py` with **no flags** → only `robots.txt` + `sitemap.xml` (+ `sitemap-images.xml` when `seo/image_alt.json` exists)
+- `python archive/seo_apply_all.py` → refresh `seo/image_alt.json`, apply `img` alts, regenerate sitemaps
 - `python archive/sync_manifest_from_pages.py` when user wants manifest synced **from** HTML
 - Editing a **specific** page/section the user named in the current task
 - Adding SEO `<head>` tags **without** changing `<section class="media-list">` body
+
+## SEO scripts (metadata only — no visible copy)
+
+- **`seo/image_alt.json`**: derived alt text from figcaptions / index cards; not shown on page
+- **`archive/apply_image_seo.py`**: may change only `img alt` and `title` attributes
+- **`archive/seo_heads.py`**: may change only `<head>` (meta, JSON-LD, favicons)
+- Do **not** run `seo_heads.patch_html_file` bulk over all pages unless the user asks — it rewrites entire `<head>` blocks
 
 ## Before changing layout or restoring content
 
